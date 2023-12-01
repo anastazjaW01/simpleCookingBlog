@@ -6,7 +6,6 @@
     </head>
     <body>
         <h3>New project !</h3>
-        <h2>Start with g
         <h4>New Simple Bog</h4>
     </body>
 </html>
