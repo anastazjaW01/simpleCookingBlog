@@ -12,6 +12,8 @@
     <div class="container-fluid p-0 m-0 ">
         
         <div class="login col-4 offset-4">
+            <img src="path13547.svg" width=34 height="34"/>
+            <svg ></svg>
         <h3> Login </h3>
         <br><br>
         <form>
@@ -23,9 +25,10 @@
                 <input type="password" class="form-control border-success" id="password" name="password" placeholder="Hasło">
                 <span id="eyeButton" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
                 <label for="password">Password</label><br>
-                <button type="submit" class="btn btn-success" id="logowanie" name="submit">Sing in</button><br><br>
-                <p style="color: #0f5132; font-size: small">You dont have an account yet?</p>
-                <a href="rejestracja.php"> <button type="button" class="btn btn-secondary" id="createAccount" >Sing up</button></a>
+                <button type="submit" class="btn btn-success col-12" id="logowanie" name="submit">Sing in</button>
+                <a class="link-underline-opacity-0  link-dark" style="font-size:small">Forgot password?</a><br><br>
+                <p style="color: #0f5132; font-size: small">You dont have an account yet?
+                <a class="link-success fw-bold " href="rejestracja.php" style="font-size: small">Sing up</a></p>
             </div>
         </form>
         </div>

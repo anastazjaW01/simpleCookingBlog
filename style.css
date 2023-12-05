@@ -4,10 +4,10 @@ body{
     min-height: 100vh;
     background: linear-gradient(
             to top,
-            whitesmoke 0%,
-            whitesmoke 50%,
-            rgb(45, 147, 59) 50%,
-            rgb(45, 147, 59) 100%
+            #faf9f7 0%,
+            #faf9f7 50%,
+            #257157 50%,
+            #257157 100%
     );
     display: flex;
 }
@@ -22,7 +22,7 @@ body{
 }
 
 h3{
-    color: black;
+    color: #18604a;
     text-align: center;
 }
 
@@ -40,12 +40,12 @@ h3{
 
 .bi-eye-fill{
     cursor: pointer;
-    color:#75b798;
+    color:#6ab29c;
 }
 
 .footter{
     position: fixed;
     bottom: 0;
     clear: both;
-    color: #0f5132;
+    color: #18604a;
 }
