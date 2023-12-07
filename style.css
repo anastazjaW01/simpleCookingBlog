@@ -28,12 +28,37 @@ h3{
 
 .form1{
     position: center;
-    margin-left: 5%;
+}
+
+.fp{
+    text-decoration: none;
+    color: #aeabab;
+    float: right;
+}
+
+.fp:hover{
+    text-decoration: underline;
+    color: #827f7f;
+    float: right;
+    cursor: pointer;
+}
+
+#miarka {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 6px !important;
 }
 
 #eyeButton{
     position: absolute;
-    top:6%;
+    top:10%;
+    right: 7%;
+    font-size: 150%;
+}
+
+#eyeButton1{
+    position: absolute;
+    top:8%;
     right: 7%;
     font-size: 150%;
 }
@@ -44,8 +69,9 @@ h3{
 }
 
 .footter{
-    position: fixed;
-    bottom: 0;
+    margin: auto;
+    margin-top: 5.5%;
+    text-align: center;
     clear: both;
-    color: #18604a;
+    color: hsl(162, 60%, 24%);
 }

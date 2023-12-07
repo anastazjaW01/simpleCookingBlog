@@ -21,14 +21,21 @@
                 <input type="email" id="email" name="email" value=""  class="form-control border-success" placeholder="jan-kowalski@example.com">
                 <label for="email">Email</label>
             </div>
-            <div class=" form1 form-floating mt-3">
+            <div class=" form1 form-floating mt-2">
                 <input type="password" class="form-control border-success" id="password" name="password" placeholder="Hasło">
                 <span id="eyeButton" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
                 <label for="password">Password</label>
-                <a class="fp link mt-1" style="font-size:small"> Forgot password?</a><br>
-                <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="logowanie" name="submit">Sing in</button>
-                <p style="color: #0f5132; font-size: small">You dont have an account yet?
-                <a class="link-success fw-bold " href="singUp.php" style="font-size: small">Sing up</a></p>
+                <div  class="progress" id="miarka">
+                        <div id="silaHasla" class="progress-bar bg-danger" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                </div>
+            </div>
+            <div class="form1 form-floating mt-2 mb-2" >
+                <input spellcheck="false" id="cpassword" name="cpassword" value="" onkeyup="disableButton()"  type="password"  class="form-control border-success"  placeholder="Powtórz hasło" required>
+                <span id="eyeButton1" onclick="showHide1()"><i class="bi bi-eye-fill" id="icon1" onclick="changeIcon1()"></i></span>
+                <label for="cpassword">Re password</label>
+                <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="logowanie" name="submit">Sing up</button>
+                <p style="color: #0f5132; font-size: small">You have account?
+                <a class="link-success fw-bold " href="index.php" style="font-size: small">Sing in</a></p>
             </div>
         </form>
         </div>
