@@ -25,7 +25,7 @@
                 <input type="password" class="form-control border-success" id="password" name="password" placeholder="Hasło">
                 <span id="eyeButton" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
                 <label for="password">Password</label>
-                <a class="fp link mt-1" style="font-size:small"> Forgot password?</a><br>
+                <a href="forgotPass.php" class="fp link mt-1" style="font-size:small"> Forgot password?</a><br>
                 <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="logowanie" name="submit">Sing in</button>
                 <p style="color: #0f5132; font-size: small">You dont have an account yet?
                 <a class="link-success fw-bold " href="singUp.php" style="font-size: small">Sing up</a></p>
@@ -39,6 +39,6 @@
         </footer>
         </div>
     </div>
-    <script src="scripts/showPassword.js"></script>
+    <script src="eyeChange.js"></script>
     </body>
 </html>

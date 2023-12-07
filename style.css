@@ -43,10 +43,14 @@ h3{
     cursor: pointer;
 }
 
-#miarka {
+.bg-lightgreen{
+    background-color: lightgreen;
+}
+
+#passStr{
     margin-top: 2%;
     margin-bottom: 2%;
-    height: 6px !important;
+    height: 5px !important;
 }
 
 #eyeButton{
@@ -62,6 +66,7 @@ h3{
     right: 7%;
     font-size: 150%;
 }
+
 
 .bi-eye-fill{
     cursor: pointer;
