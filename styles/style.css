@@ -34,6 +34,48 @@ h3{
     text-decoration: none;
     color: #aeabab;
     float: right;
+    font-size:small;
+}
+
+.wrongEmail{
+    color: #af3535;
+    font-size:small;
+    text-align: left;
+}
+
+.btn-success{
+    background-color: #257157;
+    border-color: #257157;
+}
+
+.btn-success:hover{
+    background-color: #18604a;
+    border-color: #18604a;
+}
+
+input[type='checkbox'] {
+    height: 15px;
+    width: 15px;
+}
+
+input[type='checkbox']:checked {
+    background-color: #257157;
+    border-color: #18604a;
+    height: 15px;
+    width: 15px;
+}
+
+.form-check-input:focus{
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 168, 47, 0.6);
+}
+
+.form-control:focus {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(4, 151, 43, 0.6);
+}
+
+.checkBtn{
+color:#666;
+font-size:small;
 }
 
 .fp:hover{
