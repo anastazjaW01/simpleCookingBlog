@@ -41,6 +41,7 @@ h3{
     color: #af3535;
     font-size:small;
     text-align: left;
+    padding-left: 1%;
 }
 
 .btn-success{
@@ -97,18 +98,37 @@ font-size:small;
 
 #eyeButton{
     position: absolute;
-    top:10%;
+    top:20%;
     right: 7%;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 #eyeButton1{
     position: absolute;
-    top:8%;
+    top:10%;
     right: 7%;
-    font-size: 150%;
+    font-size: 120%;
 }
 
+.eyeButton2{
+    position: absolute;
+    top:10% !important;
+    right: 7%;
+    font-size: 120%;
+}
+
+#infoButton{
+    position: absolute;
+    top:30%;
+    right: 7%;
+    font-size: 100%;
+}
+
+.bi-info-circle{
+    cursor: pointer;
+    color: #6ab29c;
+
+}
 
 .bi-eye-fill{
     cursor: pointer;

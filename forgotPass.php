@@ -21,9 +21,6 @@
                 <input type="email" id="email" name="email" value=""  class="form-control border-success" placeholder="jan-kowalski@example.com">
                 <label for="email">Email</label>
             </div>
-            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
-  Popover on top
-</button>
             <div class=" form1 mt-3">
                 <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="send" name="submit" onclick="changeText()">Send</button>
             </div>

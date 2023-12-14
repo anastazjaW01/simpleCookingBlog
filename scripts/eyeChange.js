@@ -1,5 +1,6 @@
 let state=false;
 let state1=true;
+let state2=false;
 
 function showHide(){
 
@@ -23,6 +24,7 @@ function showHide1(){
     }
 }
 
+
 function changeIcon(){
     let icon=document.getElementById("icon");
     icon.classList.toggle("bi-eye-slash-fill");
@@ -32,3 +34,4 @@ function changeIcon1(){
     let icon=document.getElementById("icon1");
     icon.classList.toggle("bi-eye-slash-fill");
 }
+

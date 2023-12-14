@@ -23,7 +23,7 @@
             </div>
             <div class=" form1 form-floating mt-3">
                 <input type="password" class="form-control border-success" id="password" name="password" placeholder="Hasło">
-                <span id="eyeButton" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
+                <span id="eyeButton" class="eyeButton2" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
                 <label for="password">Password</label>
                 <div class="row mt-1">
                     <div class="col-6">

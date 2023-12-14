@@ -13,19 +13,20 @@
         <div class="row">
         <div class="login col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 ">
         <div class="row">
-        <img class="" src="images/path13547.svg" width=50 height="50"/>
+        <a href="home.php" class="d-flex justify-content-center"><img src="images/path13547.svg" width=50 height="50"/></a>
             <h3>Simple Cooking</h3> 
         </div>
         <form>
             <div class="form1 form-floating mt-2">
                 <input type="email" id="email" name="email" value=""  class="form-control border-success" placeholder="jan-kowalski@example.com" required>
+                <span id="infoButton"><i class="bi bi-info-circle tt" id="info" title="Example e-mail should look like example@gmail.com"></i></span>
                 <label for="email">Email</label>
             </div>
             <div class="row wrongEmail mt-1">
-                <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle " viewBox="0 0 16 16">
+                <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
-                </svg> Email address should look like example@gmail.com</p>
+                </svg> Wrong e-mail address! Try again.</p>
                 </div>
             <div class=" form1 form-floating mt-2">
                 <input type="password" class="form-control border-success" id="password" name="password" placeholder="Hasło" required>
@@ -35,13 +36,19 @@
                     <div id="passwordStrength" class="progress-bar bg-danger" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
                 </div>
             </div>
+            <div class="row wrongEmail mt-1">
+                <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+                </svg> The password must be at least 8 characters long</p>
+                </div>
             <div class="form1 form-floating mt-2 mb-2" >
                 <input spellcheck="false" id="cpassword" name="cpassword" value="" onkeyup="disableButton()"  type="password"  class="form-control border-success"  placeholder="Powtórz hasło" required>
                 <span id="eyeButton1" onclick="showHide1()"><i class="bi bi-eye-fill" id="icon1" onclick="changeIcon1()"></i></span>
                 <label for="cpassword">Re password</label>
                 <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="logowanie" name="submit">Sing up</button>
                 <p style="color: #0f5132; font-size: small">You have account?
-                <a class="link-success fw-bold tt" href="index.php" style="font-size: small" id="example"  data-bs-placement="bottom" title="Default tooltip">Sing in</a></p>
+                <a class="link-success fw-bold" href="index.php" style="font-size: small" id="example"  data-bs-placement="bottom">Sing in</a></p>
             </div>
         </form>
         </div>
