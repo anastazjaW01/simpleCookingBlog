@@ -1,0 +1,60 @@
+body{
+    background-color: #faf9f7;
+}
+
+.number{
+    color: #18604a;
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px #666;
+}
+
+.rotate{
+    animation: rotation 8s infinite linear;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+}
+
+@keyframes rotation {
+from{
+    transform: rotate(0deg);
+}
+to{
+    transform: rotate(360deg);
+}
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.text404{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.styleBtn{
+    width: 250px;
+}
+
+.btnHome{
+display: flex;
+justify-content: center;
+text-decoration: none;
+margin-top: 5%;
+}
+
+.btn-success{
+    background-color: #18604a;
+    border-color:#18604a;
+}
+
+.btn-success:hover{
+    background-color: #114a39;
+    border-color: #114a39;
+}
