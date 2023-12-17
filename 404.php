@@ -18,7 +18,9 @@
             <div class="col-6 offset-3">
                 <h2>PAGE NOT FOUND</h2>
                 <p class="text404">This site may have been deleted or never existed. The cause of the error can also stand on the server side. 
-                           <br>Try typing the page address again or go back to the home page and browse further.</p>
+                Make sure there are no typos or extra spaces.
+                Try typing the page address again or go back to the home page.
+            </p>
             </div>
         </div>
         <div class="row">
