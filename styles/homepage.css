@@ -4,5 +4,24 @@ body{
 
 .kolorek{
     height: 10%;
-    background-color: #6ab29c !important;
+    background-color: #d5dcda !important;
+}
+
+.logo{
+        transition: transform .4s ease-in-out;
+}
+
+.logo:hover{
+    
+    transform: rotate(180deg);
+}
+
+search:active{
+    border: 0 !important;
+    box-shadow: none;
+}
+
+search:focus{
+    border: 0 !important;
+    box-shadow: none;
 }
