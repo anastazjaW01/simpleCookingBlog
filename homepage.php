@@ -59,9 +59,23 @@
     </div>  
     </div>
     </nav>
-    <div class="">
+    <div class="row">
 
 
+    </div>
+    <footer class="footer">
+        <div class="row mt-1">
+            <div class="col-4">Contact:<i class="bi bi-envelope-arrow-up-fill" style="color:white;"></i><br>
+            anastazjawierzbicka14@gmail.com
+            </div>
+            <div class="col-4"> &#169; Anastazja Wierzbicka <br>2024</div>
+            <div class="col-4">
+            <a class="smLink" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+            <a class="smLink" href="https://pl.linkedin.com/"><i class="bi bi-linkedin"></i></a>
+            <a class="smLink" href="https://github.com/"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </footer>
     </div>
     </body>
 </html>
