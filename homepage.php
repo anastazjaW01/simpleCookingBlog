@@ -11,7 +11,7 @@
     <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <div class="container-fluid p-0">
-    <nav class="kolorek navbar navbar-expand-lg bg-body-tertiary p-0">
+    <nav class="color navbar navbar-expand-lg bg-body-tertiary p-0">
     <div class="container-fluid">
     <a class="navbar-brand" aria-current="page" href="#"><img class="img-fluid m-2 logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid " width="80" height="80" src="images/textGreen.svg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,17 +59,146 @@
     </div>  
     </div>
     </nav>
-    <div class="row">
 
+    <div class="container-fluid" style="margin-bottom: 5%;">
+    <div class="row offset-2  d-flex justify-content-center mx-5 px-5">
+    <h3 class="d-flex justify-content-center pt-4">Hello foodie!</h3>
+
+  <div class="card big-card border flex-row mb-5 mt-3 p-0">
+      <div class="card-left"><img src="images/test1.jpg" class="card-img-top img-fluid img-big" alt="New"></div>
+    <div class="card-body card-right">
+      <h4 class="card-title ct-bg"><a href="#">Card title</a></h4>
+      <p class="card-subtitle cst-bg">Author | Category</p>
+      <p class="card-text start-text"> This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+      </p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 2 days ago</small></p>
+    </div>
+  </div>
+</div>
+
+    <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center mb-3">
+    <div class="card little-card">
+  <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
+  <div class="card-body">
+    <h5 class="card-title">Recipe title</h5>
+    <p class="card-subtitle">Author | Category</p>
+    <p class="card-subtitle"><small class="date">12.01.2024</small></p>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-success" style="width:70%;">Read more</a>
+  </div>
+</div>
+</div>
 
     </div>
+    </div>
+
     <footer class="footer">
-        <div class="row mt-1">
-            <div class="col-4">Contact:<i class="bi bi-envelope-arrow-up-fill" style="color:white;"></i><br>
-            anastazjawierzbicka14@gmail.com
+        <div class="row mt-1" style="width: 100%;">
+            <div class="col-lg-4 col-sm-12 footer-elem">
+              <a class="nolink" href="mailto:anxxxxxxxxxxxzzyyya15@gmail.com"><p><i class="bi bi-envelope-fill"></i>
+               <br>anxxxxxxxxxxxzzyyya15@gmail.com</p></a>
             </div>
-            <div class="col-4"> &#169; Anastazja Wierzbicka <br>2024</div>
-            <div class="col-4">
+            <div class="col-lg-4 col-sm-12 footer-elem"> &#169; Anastazja Wierzbicka <br>2024</div>
+            <div class="col-lg-4 col-sm-12 footer-elem">
             <a class="smLink" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
             <a class="smLink" href="https://pl.linkedin.com/"><i class="bi bi-linkedin"></i></a>
             <a class="smLink" href="https://github.com/"><i class="bi bi-github"></i></a>
