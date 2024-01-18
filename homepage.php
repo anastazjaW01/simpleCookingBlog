@@ -11,19 +11,20 @@
     <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <div class="container-fluid p-0">
-    <nav class="color navbar navbar-expand-lg bg-body-tertiary p-0">
+    <!--Navbar--> 
+    <nav class="color-nav navbar navbar-expand-lg bg-body-tertiary p-0">
     <div class="container-fluid">
-    <a class="navbar-brand" aria-current="page" href="#"><img class="img-fluid m-2 logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid " width="80" height="80" src="images/textGreen.svg"></a>
+    <a class="navbar-brand" aria-current="page" href="homePage.php"><img class="img-fluid m-2 logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid " width="80" height="80" src="images/textGreen.svg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link login-link" href="#">Home</a>
+                <a class="nav-link login-link" href="homePage.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link login-link" href="#">About it</a>
+                <a class="nav-link login-link" href="about.php">About</a>
             </li>         
             <!--data-bs-auto-close="outside" -->
             <li class="nav-item dropdown login-link">
@@ -49,7 +50,7 @@
             </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link login-link" href="#">Log in</a>
+                <a class="nav-link login-link" href="index.php">Log in</a>
             </li>
         </ul>
         <form class="d-flex input-group justify-content-end searchForm mt-2 mt-sm-2 mt-md-2" role="search">
@@ -59,7 +60,7 @@
     </div>  
     </div>
     </nav>
-
+    <!--Container-->
     <div class="container-fluid" style="margin-bottom: 5%;">
     <div class="row offset-2  d-flex justify-content-center mx-5 px-5">
     <h3 class="d-flex justify-content-center pt-4">Hello foodie!</h3>
@@ -190,7 +191,7 @@
 
     </div>
     </div>
-
+<!--Footer-->
     <footer class="footer">
         <div class="row mt-1" style="width: 100%;">
             <div class="col-lg-4 col-sm-12 footer-elem">

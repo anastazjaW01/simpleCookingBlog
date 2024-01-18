@@ -7,12 +7,7 @@ body{
     background-color: #faf9f7;
 }
 
-h3{
-    color: #18604a;
-}
-
 /* NAVBAR */
-
 .color-nav{
     height: 10%;
     background-color: #ECEADF !important;
@@ -80,6 +75,108 @@ width: 100%;
     width: 100%;
 }
 
+/**Center Section **/
+
+.section{
+  min-height: 100vh;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  color: #18604a;
+}
+
+.section.snp {
+    background-color: #257157;
+    color: #ECEADF;
+}
+
+.title-section{
+    color: #18604a;
+    font-size: 90px;
+    font-weight: bold;
+}
+
+.row>*{
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+/* Arrow */
+
+.arrow {
+    position: relative;
+    margin-top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.arrow span {
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid #18604a;
+    border-right: 5px solid #18604a;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+.reveal{
+    font-size: 22px;
+    position:relative;
+    transform: translateY(0);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.show-section{
+    transform: translateY(50px);
+    opacity: 1;
+}
+
+/* Image */
+
+.img-container{
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    mask-image: url("http://localhost/simpleCookingBlog/images/blobb.svg");
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+}
+
 /***** Media *****/
 
 @media only screen and (max-width: 992px) {
@@ -111,86 +208,19 @@ width: 100%;
         padding-bottom: 1%;
     }
 
+    .reveal{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
     .footer-elem{
         margin-bottom: 2%;
     }
   }
-
-  @media only screen and (max-width:1096px) {
-    .big-card{
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-
-    .card-left{
-        width: 100% !important;
-    }
-  }
-  
-
-/***** Cards *****/
-
-.big-card{
-    box-shadow: 6px 6px 6px -6px #666;
-}
-
-.card-left{
-    width: 100%;
-}
-
-.card-right{
-padding-top: 3%;
-padding-right: 2%;
-}
-
-.img-big{
-max-height: 450px;
-height: 100%;
-}
-
-.start-text{
-    text-wrap: wrap;
-    text-align: justify;
-}
-
-.ct-bg a{
-    color: #2f8b6b !important;
-    text-decoration: none;
-    }
-    
-.cst-bg{
-    color:#849992 !important;
-    }
-
-.little-card{
-    box-shadow: 6px 6px 6px -6px #666;
-    width: 18rem;
-}
-
-.img-card{
-    height: 190.925px;
-    overflow: hidden;
-}
-
-.img-card img{
-    transition: .5s ease;
-}
-
-.img-card:hover img{
-    transform: scale(1.5);
-}
-
-.date{
-    color:#999999 !important;
-}
-
-.card-title{
-color: #4b4b4b !important;
-}
-
-.card-subtitle{
-    color:#666 !important;
-}
 
 /***** Footer *****/ 
 
@@ -204,8 +234,9 @@ color: #4b4b4b !important;
     height: 10%;
     padding-top: 1%;
     display: flex;
-    position: static;
+    position:relative;
     bottom: 0;
+    clear: both;
 }
 
 .footer-elem{
