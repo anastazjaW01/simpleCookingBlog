@@ -5,6 +5,14 @@ body{
     padding: 0;
     margin: 0;
     background-color: #faf9f7;
+    overflow-x: hidden;
+}
+
+html{
+    width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 /* NAVBAR */
@@ -231,12 +239,10 @@ height: 100%;
     font-size: small;
     box-shadow: 0px -1px 9px 2px #666666ca;
     width: 100%;
-    height: 10%;
     padding-top: 1%;
     display: flex;
-    position:relative;
+    position:absolute;
     bottom: 0;
-    clear: both;
 }
 
 .footer-elem{
