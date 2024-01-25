@@ -63,9 +63,20 @@
 
         <!--Container-->
 <div class="container-fluid main-container"> 
-    <div class="row title-cat">Search Panel</div>
+    <div class="row search-title d-flex justify-content-center mb-5 mt-5">
+      <div class="search-panel col-lg-8 col-md-10 col-sm-12 d-flex justify-content-between p-3" style="height: 30%;">
+    <div class="search-txt">"Searching phrase"</div>
+    <div><i class="bi bi-search search-icon"></i></div>
+    </div>
+      <!--Error-->
+    <div class="search-none col-lg-8 col-md-10 col-sm-12 p-3 d-flex justify-content-center visually-hidden">
+    <div class="pe-2"><i class="bi bi-search"></i></div>
+    <div>"No results for your search phrase."</div>
+    </div>
+
+    </div>
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <div class="elem col-lg-4 col-md-6 col-sm-12 col-12 mb-5">
          <div class="card little-card">
          <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
          <div class="card-body">
@@ -77,7 +88,7 @@
          </div>
     </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 col-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -89,7 +100,7 @@
   </div>
 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 col-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -102,7 +113,7 @@
 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 col-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -114,7 +125,7 @@
   </div>
 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 col-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -126,7 +137,7 @@
   </div>
 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 col-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">

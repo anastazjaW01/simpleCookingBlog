@@ -21,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link login-link" href="homePage.php">Home</a>
+                <a class="nav-link login-link active" href="homePage.php">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link login-link" href="about.php">About</a>
@@ -79,7 +79,7 @@
     </div>
 
   <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+    <div class="elem col-lg-4 col-md-6 col-sm-12 mb-3">
     <div class="card little-card">
     <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
     <div class="card-body">
@@ -92,7 +92,7 @@
     </div>
   </div>
 
-  <div class="col-lg-4 col-md-6 col-sm-12  mb-3">
+  <div class="elem col-lg-4 col-md-6 col-sm-12  mb-3">
     <div class="card little-card">
     <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
     <div class="card-body">
@@ -104,7 +104,7 @@
   </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+<div class="elem col-lg-4 col-md-6 col-sm-12 mb-3">
     <div class="card little-card">
   <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -116,7 +116,7 @@
   </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+<div class="elem col-lg-4 col-md-6 col-sm-12 mb-3">
     <div class="card little-card">
   <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -128,7 +128,7 @@
   </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+<div class="elem col-lg-4 col-md-6 col-sm-12 mb-3">
     <div class="card little-card">
   <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -140,7 +140,7 @@
   </div>
 </div>
 </div>
-<div class="col-lg-4 col-md-6 col-sm-12 mb-3">
+<div class="elem col-lg-4 col-md-6 col-sm-12 mb-3">
     <div class="card little-card">
   <div class="img-card"><img src="images/test1.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">

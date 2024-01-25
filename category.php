@@ -28,7 +28,7 @@
             </li>         
             <!--data-bs-auto-close="outside" -->
             <li class="nav-item dropdown login-link">
-            <a class="nav-link dropdown-toggle" href="category.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle active" href="category.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Category</a>
             <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="category.php">Soups</a></li>
@@ -62,10 +62,15 @@
     </nav>
 
         <!--Container-->
-<div class="container-fluid main-container"> 
-    <div class="row title-cat"><h1>Category</h1></div>
+    <div class="container-fluid main-container">
+
+    <div class="row parent">
+    <div id="child_background"></div>
+    <h1 class="col-2 offset-5 d-flex justify-content-center align-content-center">Category</h1>
+    </div>
+
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+        <div class="elem col-lg-4 col-md-6 col-sm-12 mb-5">
          <div class="card little-card">
          <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
          <div class="card-body">
@@ -77,8 +82,8 @@
          </div>
     </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
-            <div class="card little-card">
+      <div class="elem col-lg-4 col-md-6 col-sm-12 mb-5">
+      <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
     <h5 class="card-title">Recipe title</h5>
@@ -89,7 +94,7 @@
   </div>
 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -102,7 +107,7 @@
 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -114,7 +119,7 @@
   </div>
 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -126,7 +131,7 @@
   </div>
 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 mb-5">
+            <div class="elem col-lg-4 col-md-6 col-sm-12 mb-5">
             <div class="card little-card">
   <div class="img-card"><img src="images/basil2.jpg" class="card-img-top" alt="Recipe photo"></div>
   <div class="card-body">
@@ -138,8 +143,9 @@
   </div>
 </div>
 </div>
-</div>
-</div>
+    </div>
+
+    </div>
 
         <!--Footer-->
     <footer class="footer">

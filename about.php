@@ -61,7 +61,7 @@
     </div>
     </nav>  
     <!--Container--> 
-    <div class="container-fluid  ps-0 pe-0" style="padding-bottom:10%;">
+    <div class="container-fluid content-cont ps-0 pe-0" style="padding-bottom:10%;">
     <div class="section">
     <div class="row">
         <p class="title-section ">Meet us!</p>
@@ -73,12 +73,12 @@
     </div>
     </div>
     <div class="section snp">
-    <div class="row reveal">
+    <div class="row reveal align-items-center">
     <div class="col-6 img-p">
             <div class="img-container">
             <img class="img-fluid" src="images/soup0.jpg" alt="pic1"></div>
         </div>
-        <div class="col-6">
+        <div class="col-6 text-styling">
             <p><h2>Welcome to <small>Simple</small><b>Cooking</b>!</h2>
                 At Simple Cooking, we believe that the heart of every home is its kitchen. 
                 Our culinary journey began with a passion for creating delicious and memorable meals 
@@ -87,10 +87,10 @@
         </div>
     </div></div>
     <div class="section">
-    <div class="row reveal" >
-        <div class="col-6">
+    <div class="row reveal align-items-center" >
+        <div class="col-6 text-styling">
         <p><h2>Who We Are?</h2>
-        We are a team of food enthusiasts dedicated to exploring the diverse
+         We are a team of food enthusiasts dedicated to exploring the diverse
          and exciting world of culinary delights. Our goal is to share our love 
          for cooking and eating through mouthwatering recipes, helpful tips, 
          and engaging stories. We understand that food is more than just fuel;
@@ -103,12 +103,12 @@
         </div>
     </div></div>
     <div class="section snp">
-    <div class="row reveal">
+    <div class="row reveal align-items-center">
     <div class="col-6 img-p pb-5">
         <div class="img-container">
         <img class="img-fluid" src="images/cookingMan.jpg" alt="pic1"></div>
         </div>
-        <div class="col-6">
+        <div class="col-6 text-styling">
         <p><h2>What You'll Find Here?</h2>
            <ul>
             <li><b>Inspiring Recipes:</b> From quick and easy weekday dinners to impressive
@@ -125,8 +125,8 @@
         </div>
     </div></div>
     <div class="section">
-    <div class="row reveal" >
-        <div class="col-6">
+    <div class="row reveal align-items-center" >
+        <div class="col-6 text-styling">
         <p><h2>Why We Do It?</h2>
         Food is a universal language that transcends borders and brings people together. 
         We are on a mission to inspire and empower you to create memorable moments in

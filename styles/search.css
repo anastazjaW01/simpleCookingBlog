@@ -105,6 +105,10 @@ width: 100%;
         width: 50% !important;
         margin-left: 25%;
         }
+    
+    .main-container{
+        padding-bottom: 20% !important;
+    }
 
     .searchForm{
         justify-content: center !important;
@@ -116,8 +120,31 @@ width: 100%;
     }
   }
 
-  /** MAIN **/
+  @media only screen and (max-width: 768px) {
 
+    .main-container{
+        padding-bottom: 35% !important;
+    }
+
+    .little-card{
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+
+    .elem{
+        padding: 0%;
+    }
+  }
+
+@media all and (width: 768px){
+
+    .little-card{
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+}
+
+  /** MAIN **/
 
   .main-container{
     padding-bottom: 5%;
@@ -126,22 +153,46 @@ width: 100%;
     padding-right: 4%;
   }
 
-  h1{
-    padding-bottom: 3%;
+  /** Search **/
+
+.search-panel{
+background-color: #fefefe;
+border: 3px solid #18604a;
+border-radius: 20px 20px 20px 20px;
+box-shadow: 6px 6px 6px -6px #666666b1;
+}
+
+.search-none{
+    font-size:150%;
+    color:#7c7c7c
+}
+
+.search-txt{
+color: #7c7c7c;
+font-size: 150%;
+text-transform: uppercase;
+padding-left: 3%;
+}
+
+.search-icon{
     color: #18604a;
-    text-align: center;
-    text-shadow: 1px 2px 2px #3b3b3b4f;
-  }
+    font-size: 150%;
+    -webkit-text-stroke: 2px #18604a;
+}
+
+  /** Cards **/
 
   .little-card{
     box-shadow: 6px 6px 6px -6px #666;
-    margin-left: 14%;
-    margin-right: 14%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .img-card{
     height: 190.925px;
     overflow: hidden;
+    border-top-left-radius: var(--bs-card-inner-border-radius) !important;
+    border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
 
 .img-card img{
@@ -150,6 +201,11 @@ width: 100%;
 
 .img-card:hover img{
     transform: scale(1.5);
+}
+
+.img-card:hover{
+    border-top-left-radius: var(--bs-card-inner-border-radius) !important;
+    border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
 
 .date{

@@ -105,6 +105,10 @@ width: 100%;
         width: 50% !important;
         margin-left: 25%;
         }
+    
+    .main-container{
+        padding-bottom: 22% !important;
+    }
 
     .searchForm{
         justify-content: center !important;
@@ -115,6 +119,29 @@ width: 100%;
         margin-bottom: 2%;
     }
   }
+
+  @media only screen and (max-width:768px){
+    .main-container{
+        padding-bottom: 35% !important;
+    }
+
+    .little-card{
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .elem{
+        padding: 0%;
+    }
+  }
+
+  @media all and (width: 768px){
+
+    .little-card{
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+}
 
   @media only screen and (max-width:1096px) {
     .big-card{
@@ -131,7 +158,7 @@ width: 100%;
 /***** Cards *****/
 
 .main-container{
-    padding-bottom: 35%;
+    padding-bottom: 8%;
     margin-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
@@ -171,13 +198,15 @@ height: 100%;
 
 .little-card{
     box-shadow: 6px 6px 6px -6px #666;
-    margin-left: 14%;
-    margin-right: 14%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .img-card{
     height: 190.925px;
     overflow: hidden;
+    border-top-left-radius: var(--bs-card-inner-border-radius) !important;
+    border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
 
 .img-card img{
@@ -186,6 +215,11 @@ height: 100%;
 
 .img-card:hover img{
     transform: scale(1.5);
+}
+
+.img-card:hover{
+    border-top-left-radius: var(--bs-card-inner-border-radius) !important;
+    border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
 
 .date{

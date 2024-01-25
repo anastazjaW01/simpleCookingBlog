@@ -19,7 +19,7 @@ h3{
 }
 
 .logo{
-        transition: transform .4s ease-in-out;
+    transition: transform .4s ease-in-out;
 }
 
 .logo:hover{
@@ -111,45 +111,105 @@ width: 100%;
         padding-bottom: 1%;
     }
 
+    .main-container{
+        padding-bottom: 20% !important;
+    }
+
     .footer-elem{
         margin-bottom: 2%;
     }
   }
 
-  /** MAIN **/
+  @media only screen and (max-width: 768px){
 
-  .title-cat{
-    background-image: url("http://localhost/simpleCookingBlog/images/salad.jpg");
-    border-radius: 20px 35px 20px 35px;
-    margin-left:5%;
-    margin-right: 5%;
-    margin-bottom: 5%;
-    box-shadow: 6px 6px 6px -6px #666;
+    .main-container{
+        padding-bottom: 35% !important;
+    }
+
+    .little-card{
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+
+    .elem{
+        margin: 0;
+        padding: 0;
+    }
+
+    .img-card{
+        height: 200px !important;
+    }
   }
 
-  .main-container{
+  @media all and (width: 768px){
+
+    .little-card{
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+    }
+}
+
+  /** MAIN **/
+
+.main-container{
     padding-bottom: 5%;
     margin-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
   }
 
-  h1{
-    padding-bottom: 3%;
-    color: #18604a;
-    text-align: center;
-    text-shadow: 1px 2px 2px #3b3b3b4f;
+  /** Category title **/
+
+.parent{
+    height: 100%;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
   }
 
-  .little-card{
+#child_background{
+    height: 300px;
+    background-image: url("http://localhost/simpleCookingBlog/images/salad.jpg");
+    background-position: center;
+    mask-image: url("http://localhost/simpleCookingBlog/images/titleShape.svg");
+    -webkit-mask-image: url("http://localhost/simpleCookingBlog/images/titleShape.svg");
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    align-content: center;
+    transition: 1s ease;
+  }
+
+#child_background:hover{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+h1{
+    position: relative;
+    height: 60px;
+    top: -170px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ECEADF;
+    text-shadow: 1px 2px 2px #3b3b3b4f;
+}
+
+  /** Cards **/
+
+.little-card{
     box-shadow: 6px 6px 6px -6px #666;
-    margin-left: 14%;
-    margin-right: 14%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .img-card{
     height: 190.925px;
     overflow: hidden;
+    border-top-left-radius: var(--bs-card-inner-border-radius) !important;
+    border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
 
 .img-card img{
@@ -158,6 +218,11 @@ width: 100%;
 
 .img-card:hover img{
     transform: scale(1.5);
+}
+
+.img-card:hover{
+    border-top-left-radius: var(--bs-card-inner-border-radius) !important;
+    border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
 
 .date{
