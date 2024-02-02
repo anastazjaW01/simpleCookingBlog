@@ -109,6 +109,34 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
+                        <div class="accordion accordion-flush" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button btn-success collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Add comment...
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <form class="form-check p-0 d-flex flex-column align-items-end">
+                                    <textarea class="form-check border-success mb-1" id="comment" name="comment" rows="3" placeholder="Write something nice..." style="width: 100%;"></textarea>
+                                    <button class="btn btn-success" type="submit" style="width: 30%;">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
+                        <h4>Comments</h4>
+                        <p class=""><small>User</small> This post has no comments yet</p>
+                        <hr>
+                    </div>
+                </div>
             </div>
             <!--Footer-->
             <footer class="footer">
