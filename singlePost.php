@@ -66,7 +66,7 @@
                 <div class="row m-0 p-0">
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <img class="img-fluid" src="images/cookingVlog.jpg"></div>
-                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
+                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 ">
                         <h2>Title</h2></div>
                         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <p><small>Person 12.04.2024</small></p></div>
@@ -91,16 +91,16 @@
                         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <h4>Ingridients</h4>
                         <ul>
-                            <li class="ingridient"><input type="checkbox" class=""> milk</li>
-                            <li class="ingridient"><input type="checkbox"> sugar</li>
-                            <li class="ingridient"><input type="checkbox"> 1kg flavour</li>
-                            <li class="ingridient"><input type="checkbox"> 2 eggs</li>
-                            <li class="ingridient"><input type="checkbox"> 1 glass water</li>
+                            <li class="ingridient"><input type="checkbox" name="ingridient" checked> milk</li>
+                            <li class="ingridient"><input type="checkbox" name="ingridient"> sugar</li>
+                            <li class="ingridient"><input type="checkbox" name="ingridient"> 1kg flavour</li>
+                            <li class="ingridient"><input type="checkbox" name="ingridient"> 2 eggs</li>
+                            <li class="ingridient"><input type="checkbox" name="ingridient"> 1 glass water</li>
                         </ul></div>
                         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <div>
                             <h4>Recipe</h4>
-                            <p>
+                            <p class="recipe_text">
                             Do zrobienia ciasta na dowolne pierogi potrzebujesz również: czysty blat lub stolnica do wałkowania ciasta; wałek; okrągła wykrawaczka do pierogów lub szklankę średnica około 7-9 cm; bawełniana ściereczka; szeroki garnek; i cedzak do łowienia pierogów.
                             Kalorie policzone zostały na podstawie użytych przeze mnie składników. Jest to więc orientacyjna ilość kalorii, ponieważ Twoje składniki mogą mieć inną ilość kalorii niż te, których użyłam ja. Podczas liczenia kalorii nie uwzględniłam wybranego przez Ciebie farszu. Podałam kaloryczność "pustego" pieroga zakładając, że wyszło Ci 60 sztuk.
                             Do szerokiej miski przesiej mąkę. Dodaj sól oraz olej np. rzepakowy. Olej z pestek winogron oraz inne oleje o delikatnym smaku również się sprawdzą. Wlej szklankę gorącej, przegotowanej wody (250 ml) i wyrabiaj chwilę ciasto - najlepiej ręcznie. Na początku, jeśli ciasto jest gorące, możesz je zamieszać łyżką.
