@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/singlePost.css?v=<?php echo time(); ?>">
         <link rel="Shortcut icon" href="images/pathwhite.svg">
+        <script src="scripts/singlePost.js"></script>
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -90,12 +91,12 @@
                         </div>
                         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <h4>Ingridients</h4>
-                        <ul>
-                            <li class="ingridient"><input type="checkbox" name="ingridient" checked> milk</li>
-                            <li class="ingridient"><input type="checkbox" name="ingridient"> sugar</li>
-                            <li class="ingridient"><input type="checkbox" name="ingridient"> 1kg flavour</li>
-                            <li class="ingridient"><input type="checkbox" name="ingridient"> 2 eggs</li>
-                            <li class="ingridient"><input type="checkbox" name="ingridient"> 1 glass water</li>
+                        <ul id="ingridientsList">
+                            <li class="ingridient" onclick="deleteIngridient(this)"><span> milk</span></li>
+                            <li class="ingridient" onclick="deleteIngridient(this)"><span>sugar</span></li>
+                            <li class="ingridient" onclick="deleteIngridient(this)"><span>1kg flavour</span></li>
+                            <li class="ingridient" onclick="deleteIngridient(this)"><span> eggs</span></li>
+                            <li class="ingridient" onclick="deleteIngridient(this)"><span>1 glass water</span></li>
                         </ul></div>
                         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <div>

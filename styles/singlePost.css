@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 body{
     width: 100%;
     height: 100%;
@@ -142,21 +143,30 @@ width: 100%;
     color:#666666;
   }
 
-  ul{
-    list-style: none;
+li span{
+    padding-left: 2%;
+}
+
+  li.ingridient{
+    cursor: pointer;
+    list-style-type: none;
   }
 
-  input[type='checkbox'] {
-    height: 15px;
-    width: 15px;
-}
+  li.ingridient::marker{
+    font-family: 'Bootstrap-icons';
+    content: '\F28A';
+    color: #18604a;
+    font-size: small;
+  }
 
-  input[type='checkbox']:checked {
-    background-color: #257157 !important;
-    border-color: #18604a;
-    height: 15px;
-    width: 15px;
-}
+  li.ingridient.done{
+    text-decoration: line-through;
+  }
+
+  li.ingridient.done::marker{
+    font-family: 'Bootstrap-icons';
+    content: '\F26A';
+  }
 
   /**Recipe**/
 
