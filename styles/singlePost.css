@@ -189,6 +189,8 @@ width: 100%;
   .recipe_text{
     text-align: justify;
     text-indent: 20px;
+    padding: 0% 1% 2% 1%;
+    
   }
 
   /** Comment **/

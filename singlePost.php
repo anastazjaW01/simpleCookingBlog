@@ -64,14 +64,14 @@
 
             <!--Container-->
             <div class="container-fluid main-container">
-                <div class="row m-0 p-0">
+                <div class="row p-0">
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <img class="img-fluid post_img" src="images/cookingVlog.jpg"></div>
                         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 ">
                         <h2>Title</h2></div>
                         <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <p><small>Person 12.04.2024</small></p></div>
-                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
+                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 mb-3">
                             <div class="row text-center recipe_info_text">
                                 <div class="col-4">Time</div>
                                 <div class="col-4">Difficulty level</div>
@@ -89,7 +89,7 @@
                                 <div class="col-4"><p><i class="bi bi-pie-chart-fill"></i> 3</p></div>
                             </div>
                         </div>
-                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
+                        <div class="col-lg-3 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <h4>Ingridients</h4>
                         <ul id="ingridientsList">
                             <li class="ingridient" onclick="deleteIngridient(this)"><span> milk</span></li>
@@ -98,7 +98,7 @@
                             <li class="ingridient" onclick="deleteIngridient(this)"><span> eggs</span></li>
                             <li class="ingridient" onclick="deleteIngridient(this)"><span>1 glass water</span></li>
                         </ul></div>
-                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
+                        <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-0">
                         <div>
                             <h4>Recipe</h4>
                             <p class="recipe_text">
