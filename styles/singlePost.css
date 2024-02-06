@@ -139,11 +139,27 @@ width: 100%;
     padding-right: 4%;
   }
 
-  h2,h4{
+  .post_img{
+    box-shadow: 6px 6px 6px -6px #666;
+    margin-bottom: 2%;
+  }
+
+  h2,h4,.recipe_info_text{
     color:#666666;
   }
 
-li span{
+  small{
+    color: #848484;
+  }
+
+  .recipe_info_icon{
+    color: #257157;
+  }
+
+
+/**Ingridient List**/
+
+  li span{
     padding-left: 2%;
 }
 
@@ -172,6 +188,7 @@ li span{
 
   .recipe_text{
     text-align: justify;
+    text-indent: 20px;
   }
 
   /** Comment **/
