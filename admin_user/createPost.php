@@ -63,7 +63,30 @@
 
             <!--Container-->
             <div class="container-fluid main-container">
- 
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-8">
+                                <div>Title</div>
+                                <div>Recipe</div>
+                            </div>
+                            <div class="col-4">Ingridients</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">Photo</div>
+                            <div class="col-2">Time</div>
+                            <div class="col-2">Portion</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row">category</div>
+                        <div class="row">difficult</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">reset</div>
+                    <div class="col-4">submit</div>
+                </div>
             </div>
             <!--Footer-->
             <footer class="footer">
