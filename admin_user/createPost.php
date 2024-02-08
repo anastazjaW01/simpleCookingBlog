@@ -63,30 +63,111 @@
 
             <!--Container-->
             <div class="container-fluid main-container">
+                <form>
                 <div class="row">
                     <div class="col-8">
-                        <div class="row">
+                        <div class="row" style="height: 80%;">
                             <div class="col-8">
-                                <div>Title</div>
-                                <div>Recipe</div>
+                                <div><div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="Fruit salad">
+                                         <label for="floatingInput">Title</label>
+                                </div></div>
+                                <div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" style="height: 100%;" placeholder="Write recipe text here..." id="floatingTextarea"></textarea>
+                                    <label for="floatingTextarea">Recipe</label>
+                                </div>
+                                </div>
                             </div>
-                            <div class="col-4">Ingridients</div>
+                            <div class="col-4">Ingridients
+                                <div>
+                                    <i class="bi bi-dot"></i>
+                                    <input type="text">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div>
+                                    <i class="bi bi-dot"></i>
+                                    <input type="text">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div>
+                                    <i class="bi bi-dot"></i>
+                                    <input type="text">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div>
+                                    <i class="bi bi-dot"></i>
+                                    <input type="text">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div>
+                                    <i class="bi bi-dot"></i>
+                                    <input type="text">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div>
+                                    <i class="bi bi-dot"></i>
+                                    <input type="text">
+                                    <i class="bi bi-x"></i>
+                                </div>
+                                <div>
+                                <i class="bi bi-plus"></i>Add ingredient
+                                </div>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-8">Photo</div>
-                            <div class="col-2">Time</div>
-                            <div class="col-2">Portion</div>
+                        <div class="row" style="height: 20%;">
+                            <div class="col-8">Image
+                            <div class="mb-3">
+                                <input class="form-control" type="file" accept=".jpg, .jpeg, .png" id="formFile">
+                            </div>    
+                            </div>
+                            <div class="col-2">Time
+                                <div class="input-group mb-3">
+                                 <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-clock-fill"></i></label>
+                                    <select class="form-select" id="inputGroupSelect01">
+                                         <option selected>Choose...</option>
+                                         <option value="1">One</option>
+                                         <option value="2">Two</option>
+                                         <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-2">Portion
+                            <div class="input-group mb-3">
+                                 <label class="input-group-text" for="inputGroupSelect02"><i class="bi bi-pie-chart-fill"></i></label>
+                                    <select class="form-select" id="inputGroupSelect02">
+                                         <option selected>Choose...</option>
+                                         <option value="1">One</option>
+                                         <option value="2">Two</option>
+                                         <option value="3">Three</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="row">category</div>
-                        <div class="row">difficult</div>
+                        <div class="row" style="height: 80%;">Category
+                            <label><input class="" type="radio" value="1" name="category">1</label>
+                            <label><input class="" type="radio" value="2" name="category">2</label>
+                            <label><input class="" type="radio" value="3" name="category">3</label>
+                            <label><input class="" type="radio" value="4" name="category">4</label>
+                            <label><input class="" type="radio" value="5" name="category">5</label>
+                        </div>
+                        <div class="row" style="height: 20%;"><p>Difficult</p>
+                                 <p><i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </p>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4">reset</div>
-                    <div class="col-4">submit</div>
+                <div class="row mt-3">
+                    <div class="col-4"><button class="btn btn-success" type="reset">Reset</button></div>
+                    <div class="col-4"><button class="btn btn-success" type="submit">Submit</button></div>
                 </div>
+                </form>
             </div>
             <!--Footer-->
             <footer class="footer">
