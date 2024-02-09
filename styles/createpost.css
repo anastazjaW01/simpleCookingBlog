@@ -128,7 +128,6 @@ width: 100%;
 
   }
 
-
   /** MAIN **/
 
   .main-container{
@@ -138,6 +137,27 @@ width: 100%;
     padding-right: 4%;
   }
 
+  /** Star Rating **/
+
+ .star_rating{
+    display: flex;
+    justify-content: left;
+    flex-direction: row-reverse;
+    list-style: none;
+ }
+
+  .star_rating li{
+    -webkit-text-stroke: 1px #18604a;
+    color: #ffffff;
+    float: right;
+    padding-right: 1%;
+  }
+
+  .star_rating li:hover, 
+  .star_rating li:hover ~ li{
+        color: #18604a;
+        cursor: pointer;
+  }
 
  /***** Footer *****/ 
 
