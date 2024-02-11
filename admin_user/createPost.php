@@ -6,7 +6,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
         <link rel="stylesheet" href="../styles/createpost.css?v=<?php echo time(); ?>">
-        <link rel="Shortcut icon" href="../images/pathwhite.svg">
+        <link rel="Shortcut icon" href="../images/pathwhite.svg"> 
     </head>
     <body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
@@ -155,11 +155,11 @@
                         </div>
                         <div class="row" style="height: 20%;"><p class="section-title">Difficult</p>
                                  <ul class="star_rating">
-                                    <li><i class="bi bi-star-fill"></i></li>
-                                    <li><i class="bi bi-star-fill"></i></li>
-                                    <li><i class="bi bi-star-fill"></i></li>
-                                    <li><i class="bi bi-star-fill"></i></li>
-                                    <li><i class="bi bi-star-fill"></i></li>
+                                    <li class="star" id="5"><i class="bi bi-star-fill"></i></li>
+                                    <li class="star" id="4"><i class="bi bi-star-fill"></i></li>
+                                    <li class="star" id="3"><i class="bi bi-star-fill"></i></li>
+                                    <li class="star" id="2"><i class="bi bi-star-fill"></i></li>
+                                    <li class="star" id="1"><i class="bi bi-star-fill"></i></li>
                                 </ul>
                         </div>
                     </div>
@@ -187,5 +187,6 @@
             </footer>
             
         </div>
+        <script src="../scripts/createPost.js?v=<?php echo time(); ?>"></script>
     </body>
 </html>

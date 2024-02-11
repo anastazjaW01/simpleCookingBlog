@@ -159,6 +159,14 @@ width: 100%;
         cursor: pointer;
   }
 
+  .star{
+    color: #ffffff;
+  }
+
+  .selected{
+    color: #18604a !important;
+  }
+
  /***** Footer *****/ 
 
  .footer{
