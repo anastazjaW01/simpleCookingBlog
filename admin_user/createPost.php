@@ -154,13 +154,13 @@
                             <label><input class="" type="radio" value="5" name="category">5</label>
                         </div>
                         <div class="row" style="height: 20%;"><p class="section-title">Difficult</p>
-                                 <ul class="star_rating">
-                                    <li class="star" id="5"><i class="bi bi-star-fill"></i></li>
-                                    <li class="star" id="4"><i class="bi bi-star-fill"></i></li>
-                                    <li class="star" id="3"><i class="bi bi-star-fill"></i></li>
-                                    <li class="star" id="2"><i class="bi bi-star-fill"></i></li>
-                                    <li class="star" id="1"><i class="bi bi-star-fill"></i></li>
-                                </ul>
+                            <ul class="star_rating">
+                                <li class="star" id="5"><label><input type="radio" value="5" name="star"><i class="bi bi-star-fill"></i></label></li>
+                                <li class="star" id="4"><label><input type="radio" value="4" name="star"><i class="bi bi-star-fill"></i></label></li>
+                                <li class="star" id="3"><label><input type="radio" value="3" name="star"><i class="bi bi-star-fill"></i></label></li>
+                                <li class="star" id="2"><label><input type="radio" value="2" name="star"><i class="bi bi-star-fill"></i></label></li>
+                                <li class="star" id="1"><label><input type="radio" value="1" name="star"><i class="bi bi-star-fill"></i></label></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

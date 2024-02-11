@@ -167,6 +167,14 @@ width: 100%;
     color: #18604a !important;
   }
 
+  li label{
+    cursor: pointer;
+  }
+
+  li label input[type="radio"]{
+    display: none;
+  }
+
  /***** Footer *****/ 
 
  .footer{
