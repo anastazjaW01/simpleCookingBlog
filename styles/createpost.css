@@ -137,6 +137,12 @@ width: 100%;
     padding-right: 4%;
   }
 
+  /** Title **/
+
+  h6{
+    color: #6b6b6b;
+  }
+
   /** Star Rating **/
 
  .star_rating{
@@ -175,7 +181,7 @@ width: 100%;
     display: none;
   }
 
-  /** Add ingridient **/
+  /** List of ingredients **/
 
   .ingredients{
     background-color: #ffffff;
@@ -220,6 +226,8 @@ width: 100%;
     color: #e50000;
   }
 
+  /** Add ingredient**/
+
   .bi-plus{
     font-weight: bold;
     -webkit-text-stroke: 1px;
@@ -235,6 +243,28 @@ width: 100%;
     color: #bababa;
     cursor: pointer;
   }
+
+  /** Category **/
+
+  input[type="radio"]{
+    accent-color: #257157;
+  }
+
+  /** Time and Portion**/
+  .bi-clock-fill, .bi-pie-chart-fill{
+    color: #18604a;
+  }
+
+  .form-select {
+    transition: 0.5s;
+}
+
+  .form-select:focus {
+    border-color: #18604a;
+    color: #bababa;
+    outline: 0;
+    box-shadow: none;
+}
 
  /***** Footer *****/ 
 

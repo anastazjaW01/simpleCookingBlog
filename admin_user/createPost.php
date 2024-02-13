@@ -79,7 +79,7 @@
                                 </div>
                                 </div>
                             </div>
-                            <div class="col-4 ingredients" id="ingredients">Ingredients
+                            <div class="col-4 ingredients" id="ingredients"><h6>Ingredients</h6>
                                 <div class="ingredient">
                                     <i class="bi bi-dot"></i>
                                     <input type="text" placeholder="ingredient">
@@ -91,44 +91,44 @@
                             </div>
                         </div>
                         <div class="row" style="height: 20%;">
-                            <div class="col-8">Image
+                            <div class="col-8"><h6>Image</h6>
                             <div class="mb-3">
                                 <input class="form-control" type="file" accept=".jpg, .jpeg, .png" id="formFile">
                             </div>    
                             </div>
-                            <div class="col-2">Time
+                            <div class="col-2"><h6>Time</h6>
                                 <div class="input-group mb-3">
                                  <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-clock-fill"></i></label>
                                     <select class="form-select" id="inputGroupSelect01">
-                                         <option selected>Choose...</option>
-                                         <option value="1">One</option>
-                                         <option value="2">Two</option>
-                                         <option value="3">Three</option>
+                                         <option selected>...</option>
+                                         <option value="1">30min</option>
+                                         <option value="2">1h</option>
+                                         <option value="3">1.5h</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-2">Portion
+                            <div class="col-2"><h6>Portion</h6>
                             <div class="input-group mb-3">
                                  <label class="input-group-text" for="inputGroupSelect02"><i class="bi bi-pie-chart-fill"></i></label>
                                     <select class="form-select" id="inputGroupSelect02">
-                                         <option selected>Choose...</option>
-                                         <option value="1">One</option>
-                                         <option value="2">Two</option>
-                                         <option value="3">Three</option>
+                                         <option selected>...</option>
+                                         <option value="1">1</option>
+                                         <option value="2">2</option>
+                                         <option value="3">3</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="row" style="height: 80%;">Category
+                        <div class="row" style="height: 80%;"><h6>Category</h6>
                             <label><input class="" type="radio" value="1" name="category">1</label>
                             <label><input class="" type="radio" value="2" name="category">2</label>
                             <label><input class="" type="radio" value="3" name="category">3</label>
                             <label><input class="" type="radio" value="4" name="category">4</label>
                             <label><input class="" type="radio" value="5" name="category">5</label>
                         </div>
-                        <div class="row" style="height: 20%;"><p class="section-title">Difficult</p>
+                        <div class="row" style="height: 20%;"><h6>Difficult</h6>
                             <ul class="star_rating">
                                 <li class="star" id="5"><label><input type="radio" value="5" name="star"><i class="bi bi-star-fill"></i></label></li>
                                 <li class="star" id="4"><label><input type="radio" value="4" name="star"><i class="bi bi-star-fill"></i></label></li>
