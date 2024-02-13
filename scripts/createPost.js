@@ -1,3 +1,5 @@
+//RATING STARS
+
 document.addEventListener("DOMContentLoaded",function(){
     //Get all elements with class star and input type="radio"
     const stars = document.querySelectorAll('.star input[type="radio"]');
@@ -24,4 +26,31 @@ document.addEventListener("DOMContentLoaded",function(){
     });
 });
 
+//INGREDIENT
 
+function add_ingredient(){
+
+    //add div
+    var ingridient = document.createElement("div");
+    ingridient.classList.add("ingredient");
+
+    //add dot icon
+    var dot = document.createElement("i");
+    dot.classList.add("bi", "bi-dot");
+    ingridient.appendChild(dot);
+
+    //add input
+    var input = document.createElement("input");
+    input.type="text";
+    ingridient.appendChild(input);
+
+    //add x icon
+    var x = document.createElement("i");
+    x.classList.add("bi", "bi-x");
+    x.id="remove";
+    ingridient.appendChild(x);
+
+    //set elements
+    let ingredients = document.getElementById("ingredients");
+    ingredients.insertBefore(ingridient, ingredients.lastElementChild);
+}

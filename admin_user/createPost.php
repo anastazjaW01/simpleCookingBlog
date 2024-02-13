@@ -79,13 +79,13 @@
                                 </div>
                                 </div>
                             </div>
-                            <div class="col-4 ingredients">Ingredients
+                            <div class="col-4 ingredients" id="ingredients">Ingredients
                                 <div class="ingredient">
                                     <i class="bi bi-dot"></i>
                                     <input type="text" placeholder="ingredient">
                                     <i class="bi bi-x" id="remove"></i>
                                 </div>
-                                <div class="add_ingredient" id="add_ingredient">
+                                <div class="add_ingredient" id="add_ingredient" onclick="add_ingredient()">
                                 <i class="bi bi-plus"></i>Add next
                                 </div>
                             </div>
