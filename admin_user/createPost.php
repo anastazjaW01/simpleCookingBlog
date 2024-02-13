@@ -79,39 +79,14 @@
                                 </div>
                                 </div>
                             </div>
-                            <div class="col-4">Ingridients
-                                <div>
+                            <div class="col-4 ingredients">Ingredients
+                                <div class="ingredient">
                                     <i class="bi bi-dot"></i>
-                                    <input type="text">
-                                    <i class="bi bi-x"></i>
+                                    <input type="text" placeholder="ingredient">
+                                    <i class="bi bi-x" id="remove"></i>
                                 </div>
-                                <div>
-                                    <i class="bi bi-dot"></i>
-                                    <input type="text">
-                                    <i class="bi bi-x"></i>
-                                </div>
-                                <div>
-                                    <i class="bi bi-dot"></i>
-                                    <input type="text">
-                                    <i class="bi bi-x"></i>
-                                </div>
-                                <div>
-                                    <i class="bi bi-dot"></i>
-                                    <input type="text">
-                                    <i class="bi bi-x"></i>
-                                </div>
-                                <div>
-                                    <i class="bi bi-dot"></i>
-                                    <input type="text">
-                                    <i class="bi bi-x"></i>
-                                </div>
-                                <div>
-                                    <i class="bi bi-dot"></i>
-                                    <input type="text">
-                                    <i class="bi bi-x"></i>
-                                </div>
-                                <div>
-                                <i class="bi bi-plus"></i>Add ingredient
+                                <div class="add_ingredient" id="add_ingredient">
+                                <i class="bi bi-plus"></i>Add next
                                 </div>
                             </div>
                         </div>
@@ -164,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
+                <div class="row mt-3 pt-3">
                     <div class="col-4"><button class="btn btn-success" type="reset">Reset</button></div>
                     <div class="col-4"><button class="btn btn-success" type="submit">Submit</button></div>
                 </div>
