@@ -48,9 +48,17 @@ function add_ingredient(){
     var x = document.createElement("i");
     x.classList.add("bi", "bi-x");
     x.id="remove";
+    x.onclick = function (){
+        removeIngredient(x);
+    };
     ingridient.appendChild(x);
 
     //set elements
     let ingredients = document.getElementById("ingredients");
     ingredients.insertBefore(ingridient, ingredients.lastElementChild);
+}
+
+//remove ingredient 
+function removeIngredient(xy){
+    xy.parentNode.remove();
 }
