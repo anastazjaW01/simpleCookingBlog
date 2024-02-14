@@ -137,6 +137,14 @@ width: 100%;
     padding-right: 4%;
   }
 
+  /** Form style**/
+
+  .form-control:focus, .form-select:focus{
+    border-color: #ababab;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #ECEADF;
+  }
+
   /** Title **/
 
   h6{
@@ -183,8 +191,11 @@ width: 100%;
 
   /** List of ingredients **/
 
-  .ingredients{
+  .ingredients, .category, .difficult{
     background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #dfdfdf;
+    padding-top: 0.5%;
   }
 
   .ingredient{
@@ -259,11 +270,8 @@ width: 100%;
     transition: 0.5s;
 }
 
-  .form-select:focus {
-    border-color: #18604a;
+.form-select:focus {
     color: #bababa;
-    outline: 0;
-    box-shadow: none;
 }
 
  /***** Footer *****/ 
