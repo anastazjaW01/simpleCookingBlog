@@ -104,7 +104,7 @@ function selectPortionGenerate(selectTag){
 }
 
 //CATEGORY
-//creating lists with category
+//creating lists with categories
 let categoryList = ["bread", "desserts", "fish", "meat", "salad", "snacks", "soups", "vege"];
 let worldCuisinesList = ["American", "Indian", "Italian", "Japanese", "Polish", "Spanish"];
 
@@ -121,8 +121,10 @@ function createCategorySection(x, list, startIndex) {
     //Loop to create elements for both sides
     for (var i = 0; i < list.length; i++) {
         let side = i < list.length/2 ? sideLeft : sideRight;
+        //create label
         let label = document.createElement("label");
         side.appendChild(label);
+        //create input
         let category = document.createElement("input");
         category.type = "radio";
         category.name = "category";
@@ -131,6 +133,22 @@ function createCategorySection(x, list, startIndex) {
         let labelText = document.createTextNode(" " + list[i]);
         label.appendChild(labelText);
     }
+}
+
+//Function to create upper section with categories 
+function categorySectionCreate(x) {
+    createCategorySection(x, categoryList, 0);
+}
+
+//Function to create bottom section with categories
+function worldCuisineSectionCreate(x) {
+    //create subtitle
+    let subtitle = document.createElement("p");
+    subtitle.classList.add("ps-2", "p-0", "m-0");
+    subtitle.textContent = "Cuisines of the world";
+    x.appendChild(subtitle);
+
+    createCategorySection(x, worldCuisinesList, 8);
 }
 
 
