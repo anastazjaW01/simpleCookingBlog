@@ -62,3 +62,40 @@ function add_ingredient(){
 function removeIngredient(xy){
     xy.parentNode.remove();
 }
+
+//SELECT TIME & PORTION
+
+//function to generate time options
+function selectTimeGenerate(selectTag){
+
+    for(var i = 0.5; i <= 6; i=i+0.5){
+
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i+"h";
+        selectTag.appendChild(option);
+
+    }
+}
+
+//function to generate portion options
+function selectPortionGenerate(selectTag){
+
+    for(var i = 1; i <= 8; i++){
+
+        var option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        selectTag.appendChild(option);
+
+    }
+}
+
+window.onload = function(){
+
+    var timeSelect = document.getElementById("timeSelect");
+    var portionSelect = document.getElementById("portionSelect");
+
+    selectTimeGenerate(timeSelect);
+    selectPortionGenerate(portionSelect);
+}

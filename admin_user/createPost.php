@@ -98,23 +98,17 @@
                             </div>
                             <div class="col-2 ps-0"><h6>Time</h6>
                                 <div class="input-group mb-3">
-                                 <label class="input-group-text" for="inputGroupSelect01"><i class="bi bi-clock-fill"></i></label>
-                                    <select class="form-select" id="inputGroupSelect01">
-                                         <option selected>...</option>
-                                         <option value="1">30min</option>
-                                         <option value="2">1h</option>
-                                         <option value="3">1.5h</option>
+                                 <label class="input-group-text" for="timeSelect"><i class="bi bi-clock-fill"></i></label>
+                                    <select class="form-select" id="timeSelect">
+                                         
                                     </select>
                                 </div>
                             </div>
                             <div class="col-2 pe-0"><h6>Portion</h6>
                             <div class="input-group mb-3">
-                                 <label class="input-group-text" for="inputGroupSelect02"><i class="bi bi-pie-chart-fill"></i></label>
-                                    <select class="form-select" id="inputGroupSelect02">
-                                         <option selected>...</option>
-                                         <option value="1">1</option>
-                                         <option value="2">2</option>
-                                         <option value="3">3</option>
+                                 <label class="input-group-text" for="portionSelect"><i class="bi bi-pie-chart-fill"></i></label>
+                                    <select class="form-select" id="portionSelect">
+                                       
                                     </select>
                                 </div>
                             </div>
