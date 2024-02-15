@@ -151,4 +151,10 @@ function worldCuisineSectionCreate(x) {
     createCategorySection(x, worldCuisinesList, 8);
 }
 
+//Calling both functions after the page is loaded
+window.onload = function () {
+    var categorySection = document.getElementById("category");
+    categorySectionCreate(categorySection);
+    worldCuisineSectionCreate(categorySection);
+};
 
