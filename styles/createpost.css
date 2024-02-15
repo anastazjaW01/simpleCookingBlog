@@ -259,6 +259,15 @@ width: 100%;
 
   input[type="radio"]{
     accent-color: #257157;
+    color: #6b6b6b;
+  }
+
+  .left-cat{
+    width: 50%;
+  }
+
+  .right-cat{
+    width: 50%;
   }
 
   /** Time and Portion**/

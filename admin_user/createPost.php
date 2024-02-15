@@ -116,11 +116,27 @@
                     </div>
                     <div class="offset-1 col-2">
                         <div class="row category" style="height: 80%;"><h6>Category</h6>
-                            <label><input class="" type="radio" value="1" name="category">1</label>
-                            <label><input class="" type="radio" value="2" name="category">2</label>
-                            <label><input class="" type="radio" value="3" name="category">3</label>
-                            <label><input class="" type="radio" value="4" name="category">4</label>
-                            <label><input class="" type="radio" value="5" name="category">5</label>
+                            <div class="left-cat">
+                            <label><input type="radio" value="1" name="category"> soups</label>
+                            <label><input type="radio" value="2" name="category"> desserts</label>
+                            <label><input type="radio" value="3" name="category"> salad</label>
+                            <label><input type="radio" value="4" name="category"> fish</label>
+                            </div>
+                            <div class="right-cat">
+                            <label><input type="radio" value="5" name="category"> snacks</label>
+                            <label><input type="radio" value="6" name="category"> bread</label>
+                            <label><input type="radio" value="7" name="category"> meat</label>
+                            <label><input type="radio" value="8" name="category"> vege</label>
+                            </div>
+                            <p class="ps-2 p-0 m-0">Cuisines of the world</p>
+                            <div class="left-cat">
+                            <label><input type="radio" value="9" name="category"> Indian</label>
+                            <label><input type="radio" value="10" name="category"> Italian</label>
+                            <label><input type="radio" value="11" name="category"> American</label></div>
+                            <div class="right-cat">
+                            <label><input type="radio" value="12" name="category"> Spanish</label>
+                            <label><input type="radio" value="13" name="category"> Japanese</label>
+                            <label><input type="radio" value="14" name="category"> Polish</label></div>       
                         </div>
                         <div class="row difficult mt-3" style="height: 20%;"><h6>Difficult</h6>
                             <ul class="star_rating">
