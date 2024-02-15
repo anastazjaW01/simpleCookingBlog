@@ -91,11 +91,46 @@ function selectPortionGenerate(selectTag){
     }
 }
 
-window.onload = function(){
+    //run functions when page loads
+    window.onload = function(){
 
+    //get id from select tags 
     var timeSelect = document.getElementById("timeSelect");
     var portionSelect = document.getElementById("portionSelect");
 
+    //run function to generate time and portion
     selectTimeGenerate(timeSelect);
     selectPortionGenerate(portionSelect);
 }
+
+//CATEGORY
+//creating lists with category
+let categoryList = ["bread", "desserts", "fish", "meat", "salad", "snacks", "soups", "vege"];
+let worldCuisinesList = ["American", "Indian", "Italian", "Japanese", "Polish", "Spanish"];
+
+function createCategorySection(x, list, startIndex) {
+    //category on left side
+    let sideLeft = document.createElement("div");
+    sideLeft.classList.add("left-cat");
+    x.appendChild(sideLeft);
+    //category on right side
+    let sideRight = document.createElement("div");
+    sideRight.classList.add("right-cat");
+    x.appendChild(sideRight);
+
+    //Loop to create elements for both sides
+    for (var i = 0; i < list.length; i++) {
+        let side = i < list.length/2 ? sideLeft : sideRight;
+        let label = document.createElement("label");
+        side.appendChild(label);
+        let category = document.createElement("input");
+        category.type = "radio";
+        category.name = "category";
+        category.value = startIndex + i + 1;
+        label.appendChild(category);
+        let labelText = document.createTextNode(" " + list[i]);
+        label.appendChild(labelText);
+    }
+}
+
+
