@@ -63,7 +63,41 @@
 
             <!--Container-->
             <div class="container-fluid main-container">
-                
+            <div class="row"></div>
+            <div class="row">
+                <div class="offset-1 col-2 side-panel">
+                    <h5>Side panel</h5>
+                    <div class="manage-panel">ADD POST</div>
+                    <div class="manage-panel">MANAGE POSTS</div>
+                    <div class="manage-panel">MANAGE COMMENTS</div>
+                    <div class="manage-panel">MANAGE USERS</div>
+                </div>
+                <div class="col-8 info-tabel">
+                    <h5>Your posts</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Title</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Authotr</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Edit</th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td><button>Edit</button></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             </div>
             <!--Footer-->
             <footer class="footer">
