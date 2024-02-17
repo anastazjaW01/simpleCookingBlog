@@ -82,7 +82,16 @@ width: 100%;
 
 /***** Media *****/
 
-@media only screen and (max-width: 992px) {
+/* LG */
+@media only screen and (min-width: 992px) {
+.col-lg-2x {
+  flex: 0 0 auto;
+  width: 23.66666667%;
+}
+}
+
+/* MD */
+@media only screen and (max-width: 991.98px) {
     .block-menu:hover .sub-menu{
         display: block;
         margin-left: 0%;
@@ -118,7 +127,36 @@ width: 100%;
     .footer-elem{
         margin-bottom: 2%;
     }
+
+     /* Recipe */
+
+  #floatingTextarea{
+    min-height: 308px !important;
   }
+    /* Category & Difficult */
+    .category, .difficult{
+      margin-right: 0.1rem !important;
+      margin-left: 0.1rem !important;
+      height: auto !important;
+      display: flex;
+      align-content: center;
+    }
+
+    .category{
+      width: 60%;
+    }
+
+    .difficult{
+      width: 30%;
+    }
+
+    .right-section{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  /* SM */
 
   @media only screen and (max-width: 768px){
 
@@ -126,12 +164,34 @@ width: 100%;
         padding-bottom: 35% !important;
     }
 
+    /* Category & Difficult */
+
+    .category{
+      width: 100%;
+    }
+
+    .difficult{
+      width: 100%;
+    }
+
+    .right-section{
+      display: block !important;
+      justify-content: unset;
+    }
+  }
+
+  /* XS */
+  @media only screen and (max-width: 576px){
+
+    .main-container{
+        padding-bottom: 35% !important;
+    }
   }
 
   /** MAIN **/
 
   .main-container{
-    padding-bottom: 8%;
+    padding-bottom: 6%;
     margin-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
@@ -149,6 +209,12 @@ width: 100%;
 
   h6{
     color: #6b6b6b;
+  }
+
+  /* Recipe */
+
+  #floatingTextarea{
+    min-height: 220px;
   }
 
   /** Star Rating **/
@@ -262,12 +328,14 @@ width: 100%;
     color: #6b6b6b;
   }
 
-  .left-cat{
+  .left-cat, .right-cat{
     width: 50%;
-  }
-
-  .right-cat{
-    width: 50%;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
   }
 
   /** Time and Portion**/
