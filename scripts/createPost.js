@@ -91,18 +91,6 @@ function selectPortionGenerate(selectTag){
     }
 }
 
-    //run functions when page loads
-    window.onload = function(){
-
-    //get id from select tags 
-    var timeSelect = document.getElementById("timeSelect");
-    var portionSelect = document.getElementById("portionSelect");
-
-    //run function to generate time and portion
-    selectTimeGenerate(timeSelect);
-    selectPortionGenerate(portionSelect);
-}
-
 //CATEGORY
 //creating lists with categories
 let categoryList = ["bread", "desserts", "fish", "meat", "salad", "snacks", "soups", "vege"];
@@ -153,8 +141,18 @@ function worldCuisineSectionCreate(x) {
 
 //Calling both functions after the page is loaded
 window.onload = function () {
+
+    //get id from category section
     var categorySection = document.getElementById("category");
     categorySectionCreate(categorySection);
     worldCuisineSectionCreate(categorySection);
+
+       //get id from select tags 
+       var timeSelect = document.getElementById("timeSelect");
+       var portionSelect = document.getElementById("portionSelect");
+   
+       //run function to generate time and portion
+       selectTimeGenerate(timeSelect);
+       selectPortionGenerate(portionSelect);
 };
 
