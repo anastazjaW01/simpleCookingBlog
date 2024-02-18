@@ -130,6 +130,9 @@ width: 100%;
     padding-left: 4%;
     padding-right: 4%;
   }
+ h4{
+    color: rgba(0, 0, 0, 0.75);
+  }
 
 /** Side Panel **/
 
@@ -143,13 +146,23 @@ width: 100%;
     min-height: 100px;
   }
 
-  .manage-panel:hover{
+   a .manage-panel:hover{
     cursor: pointer;
     background-color: #18604a;
   }
 
+   a .manage-panel.active{
+    cursor:default;
+    background-color: #18604a;
+    color: #d8d7ce;
+  }
+
   .manage{
     box-shadow: 6px 6px 6px -6px #666;
+  }
+
+  .manage a{
+    text-decoration: none;
   }
 
 /** Table **/
@@ -181,7 +194,7 @@ width: 100%;
     top: 0;
     background-color: #ECEADF;
     border-bottom: 1px solid #b4b4b4;
-    color: rgba(0, 0, 0, 0.65)
+    color: rgba(0, 0, 0, 0.65);
   }
 
   /** Button **/

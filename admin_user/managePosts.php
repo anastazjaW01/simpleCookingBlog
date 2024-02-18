@@ -63,14 +63,14 @@
 
             <!--Container-->
             <div class="container-fluid main-container">
-            <div class="row"></div>
+            <div class="row"><h4>Hello User!</h4></div>
             <div class="row">
                 <div class="col-3 side-panel">
                     <div class="manage">
-                    <div class="manage-panel">ADD POST</div>
-                    <div class="manage-panel">MANAGE POSTS</div>
-                    <div class="manage-panel">MANAGE COMMENTS</div>
-                    <div class="manage-panel">MANAGE USERS</div>
+                    <a href="createPost.php"><div class="manage-panel">ADD POST</div></a>
+                    <a href="managePosts.php"><div class="manage-panel active">MANAGE POSTS</div></a>
+                    <a href="manageComments.php"><div class="manage-panel">MANAGE COMMENTS</div></a>
+                    <a href="manageUsers.php"><div class="manage-panel">MANAGE USERS</div></a>
                     </div>
                 </div>
                 <div class="col-8 info-table ">
