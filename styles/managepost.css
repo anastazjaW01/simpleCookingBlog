@@ -112,14 +112,57 @@ width: 100%;
         justify-content: center !important;
         padding-bottom: 1%;
     }
+
+    /* Main */
     
     .main-container{
         padding-bottom: 20% !important;
     }
 
+    h4{
+        text-align: center;
+    }
+
+    /* Side Panel */
+
+    .manage{
+        display: flex;
+    }
+
+    .manage a{
+        width: 25%;
+    }
+
+    /* Footer */
+
     .footer-elem{
         margin-bottom: 2%;
     }
+}
+
+/* SM */
+@media only screen and (max-width: 768px) {
+    
+    .main-container{
+        padding-bottom: 30% !important;
+    }
+}
+
+/* XS */
+@media only screen and (max-width: 576px) {
+    
+    .main-container{
+        padding-bottom: 35% !important;
+    }
+
+    .manage{
+        display: block;
+    }
+
+    .manage a{
+        width: 100%;
+    }
+
 }
 
   /** MAIN **/
@@ -130,6 +173,7 @@ width: 100%;
     padding-left: 4%;
     padding-right: 4%;
   }
+
  h4{
     color: rgba(0, 0, 0, 0.75);
   }
