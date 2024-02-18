@@ -65,12 +65,13 @@
             <div class="container-fluid main-container">
             <div class="row"></div>
             <div class="row">
-                <div class="offset-1 col-2 side-panel">
-                    <h5>Side panel</h5>
+                <div class="col-3 side-panel">
+                    <div class="manage">
                     <div class="manage-panel">ADD POST</div>
                     <div class="manage-panel">MANAGE POSTS</div>
                     <div class="manage-panel">MANAGE COMMENTS</div>
                     <div class="manage-panel">MANAGE USERS</div>
+                    </div>
                 </div>
                 <div class="col-8 info-table ">
                     <table class="table">

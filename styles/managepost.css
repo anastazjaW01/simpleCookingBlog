@@ -131,8 +131,28 @@ width: 100%;
     padding-right: 4%;
   }
 
+/** Side Panel **/
 
-  /** Table **/
+  .manage-panel{
+    color: #ECEADF;
+    background-color: #257157;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100px;
+  }
+
+  .manage-panel:hover{
+    cursor: pointer;
+    background-color: #18604a;
+  }
+
+  .manage{
+    box-shadow: 6px 6px 6px -6px #666;
+  }
+
+/** Table **/
 
   .info-table {
     max-height: 400px; 
