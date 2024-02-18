@@ -72,27 +72,66 @@
                     <div class="manage-panel">MANAGE COMMENTS</div>
                     <div class="manage-panel">MANAGE USERS</div>
                 </div>
-                <div class="col-8 info-tabel">
-                    <h5>Your posts</h5>
+                <div class="col-8 info-table ">
                     <table class="table">
-                        <thead>
+                        <thead class="table-light sticky-header">
                             <tr>
-                                <th scope="col">Title</th>
-                                <th scope="col">Category</th>
-                                <th scope="col">Authotr</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
+                                <th scope="col" class="col-3">Title</th>
+                                <th scope="col" class="col-3">Category</th>
+                                <th scope="col" class="col-2">Authotr</th>
+                                <th scope="col" class="col-2">Date</th>
+                                <th scope="col" class="col-1">Edit </th>
+                                <th scope="col" class="col-1">Delete</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td scope="row">1</td>
-                                <td>2</td>
-                                <td>3</td>
-                                <td>4</td>
-                                <td><button>Edit</button></td>
-                                <td><button>Delete</button></td>
+                                <td scope="row">Spaghetti Bolonese</td>
+                                <td>Italian cuisine</td>
+                                <td>Jane1204</td>
+                                <td><small>12-02-2024</small></td>
+                                <td><button class="btn btn-secondary"> Edit </button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Spaghetti Bolonese</td>
+                                <td>Italian cuisine</td>
+                                <td>Jane1204</td>
+                                <td><small>12-02-2024</small></td>
+                                <td><button class="btn btn-secondary"> Edit </button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Spaghetti Bolonese</td>
+                                <td>Italian cuisine</td>
+                                <td>Jane1204</td>
+                                <td><small>12-02-2024</small></td>
+                                <td><button class="btn btn-secondary"> Edit </button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Spaghetti Bolonese</td>
+                                <td>Italian cuisine</td>
+                                <td>Jane1204</td>
+                                <td><small>12-02-2024</small></td>
+                                <td><button class="btn btn-secondary"> Edit </button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Spaghetti Bolonese</td>
+                                <td>Italian cuisine</td>
+                                <td>Jane1204</td>
+                                <td><small>12-02-2024</small></td>
+                                <td><button class="btn btn-secondary"> Edit </button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Spaghetti Bolonese</td>
+                                <td>Italian cuisine</td>
+                                <td>Jane1204</td>
+                                <td><small>12-02-2024</small></td>
+                                <td><button class="btn btn-secondary"> Edit </button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -116,6 +155,5 @@
             </footer>
             
         </div>
-        <script src="../scripts/managePost.js?v=<?php echo time(); ?>"></script>
     </body>
 </html>

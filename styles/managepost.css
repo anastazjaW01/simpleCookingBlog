@@ -90,6 +90,36 @@ width: 100%;
         margin-left: 0%;
         margin-top: 0%;
     }
+
+    .login-link::after{
+        content: "";
+        position: absolute;
+        background-color: #257157;
+        box-shadow: 0 2px 5px rgba(9, 121, 73, 0.762);
+        height: 2px;
+        width: 0%;
+        margin-left: 25%;
+        bottom: -2px;
+        transition: 0.3s;
+    }
+
+    .login-link:hover:after{
+        width: 50% !important;
+        margin-left: 25%;
+        }
+
+    .searchForm{
+        justify-content: center !important;
+        padding-bottom: 1%;
+    }
+    
+    .main-container{
+        padding-bottom: 20% !important;
+    }
+
+    .footer-elem{
+        margin-bottom: 2%;
+    }
 }
 
   /** MAIN **/
@@ -101,6 +131,55 @@ width: 100%;
     padding-right: 4%;
   }
 
+
+  /** Table **/
+
+  .info-table {
+    max-height: 400px; 
+    overflow-y: auto;
+    position: relative;
+  }
+
+  th, td{
+    padding: 8px;
+    text-align: left;
+    border-bottom: #c9c9c9 1px solid;
+  }
+
+  /* striped table */
+  tr:nth-child(odd) {
+    background-color: #eceadf00;
+    }
+
+  tr:nth-child(even) {
+    background-color: #ECEADF;
+    }
+
+  /* Style for thead */
+  .sticky-header th {
+    position: sticky;
+    top: 0;
+    background-color: #ECEADF;
+    border-bottom: 1px solid #b4b4b4;
+    color: rgba(0, 0, 0, 0.65)
+  }
+
+  /** Button **/
+  .btn-danger{
+    background-color:  rgb(203, 62, 62);
+  }
+
+  .btn-danger:hover{
+    background-color:#af3535;
+  }
+
+  .btn-secondary{
+    background-color: #666666e3;
+  }
+
+  .btn-secondary:hover{
+    background-color: #666;
+  }
 
 
  /***** Footer *****/ 
