@@ -1,124 +1,13 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-body{
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    padding: 0;
-    margin: 0;
-    background-color: #faf9f7;
-}
-
-h3{
-    color: #18604a;
-}
-
-/* NAVBAR */
-
-.color-nav{
-    height: 10%;
-    background-color: #ECEADF !important;
-}
-
-.logo{
-    transition: transform .4s ease-in-out;
-}
-
-.logo:hover{
-    
-    transform: rotate(180deg);
-}
-
-.btn-success{
-    background-color: #257157;
-}
-
-.btn-success:hover, .btn-success:focus{
-    background-color: #18604a;
-}
-
-.dropdown-item:focus, .dropdown-item:hover {
-    background-color: #bed5be;
-    color: #ffffff;
-}
-
-.block-menu:hover .sub-menu{
-    display: block;
-    margin-left: 100%;
-    margin-top: -22%;
-}
-
- /***** Navabar Links *****/
-
- .login-link{
-    white-space: nowrap;
-    position: relative;
-    text-align: center;
-}
-
-input:focus-visible{
-    outline: none ;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(50, 154, 78, 0.6);
-}
-
-.login-link::after{
-    content: "";
-    position: absolute;
-    background-color: #257157;
-    box-shadow: 0 2px 5px rgba(108, 110, 109, 0.762);
-    height: 2px;
-    width: 0%;
-    left: 0;
-    bottom: -2px;
-    transition: 0.3s;
-}
-
-.login-link:hover:after{
-width: 100%;
-}
-
-.login-link:active:after{
-    color:black;
-    width: 100%;
-}
 
 /***** Media *****/
 
 @media only screen and (max-width: 992px) {
-    .block-menu:hover .sub-menu{
-        display: block;
-        margin-left: 0%;
-        margin-top: 0%;
-    }
-
-    .login-link::after{
-        content: "";
-        position: absolute;
-        background-color: #257157;
-        box-shadow: 0 2px 5px rgba(9, 121, 73, 0.762);
-        height: 2px;
-        width: 0%;
-        margin-left: 25%;
-        bottom: -2px;
-        transition: 0.3s;
-    }
-
-    .login-link:hover:after{
-        width: 50% !important;
-        margin-left: 25%;
-        }
-
-    .searchForm{
-        justify-content: center !important;
-        padding-bottom: 1%;
-    }
 
     .main-container{
         padding-bottom: 20% !important;
     }
 
-    .footer-elem{
-        margin-bottom: 2%;
-    }
   }
 
   @media only screen and (max-width: 768px){
@@ -128,7 +17,6 @@ width: 100%;
     }
 
   }
-
 
   /** MAIN **/
 
@@ -204,46 +92,4 @@ width: 100%;
   }
 
 
- /***** Footer *****/ 
-
- .footer{
-    background-color: #18604a;
-    color:rgb(215, 215, 215);
-    text-align: center;
-    font-size: small;
-    box-shadow: 0px -1px 9px 2px #666666ca;
-    width: 100%;
-    padding-top: 1%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    clear:both;
-    bottom: 0;
-}
-
-.footer-elem{
-    align-content: center;
-}
-
-.nolink{
-    color: rgb(215, 215, 215);
-    text-decoration: none;
-}
-
-.nolink:hover{
-    color: rgb(255, 255, 255);
-}
-
-.smLink{
-    color: rgba(215, 215, 215);
-    margin: 1%;
-    font-size: 120% !important;
-    transition: 0.3s;
-}
-
-.smLink:hover{
-    transition: 0.3s;
-    color: rgb(255, 255, 255);
-    margin: 4%;
-    font-size: 160% !important;
-}
+ 
