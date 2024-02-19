@@ -1,4 +1,5 @@
 <?php
+$script="";
 if($name=="manageusers"){ 
     $style="managepages";
     $title="Manage Users";

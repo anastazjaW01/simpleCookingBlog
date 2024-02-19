@@ -1,4 +1,5 @@
 <?php
+$script="";
 if($name=="homepage"){ 
     $style=$name;
     $active1="active";
