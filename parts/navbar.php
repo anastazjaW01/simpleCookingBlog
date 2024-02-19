@@ -1,6 +1,4 @@
 <?php
-$style;
-$title;
 if($name=="homepage"){ 
     $style=$name;
     $active1="active";
@@ -9,6 +7,7 @@ if($name=="homepage"){
 elseif($name=="singlePost"){
      $style=$name;
      $title="Recipe";
+     $script="<script src='scripts/singlePost.js'></script>";
     }
 elseif($name=="search"){ 
     $style=$name;
@@ -23,6 +22,7 @@ elseif($name=="about"){
     $style=$name;
     $active3="active";
     $title="About";
+    $script="<script src='scripts/about.js'></script>";
 }
 ?>
 <!DOCTYPE html>
