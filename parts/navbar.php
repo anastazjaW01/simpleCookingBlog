@@ -1,4 +1,7 @@
 <?php
+
+require './config/database.php';
+
 $script="";
 if($name=="homepage"){ 
     $style=$name;
