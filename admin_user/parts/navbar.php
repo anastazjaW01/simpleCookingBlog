@@ -1,4 +1,6 @@
 <?php
+require 'config/database.php';
+require 'test/test.php';
 $script="";
 if($name=="manageusers"){ 
     $style="managepages";
