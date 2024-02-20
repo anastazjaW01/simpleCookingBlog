@@ -1,7 +1,8 @@
 <?php
 session_start();
-const ROOT_URL = 'http://localhost/simpleCookingBlog/';
-const DB_HOST = 'localhost';
-const DB_USER = 'root';
-const DB_PASS = '';
-const DB_NAME = 'cookingBlog';
+
+$root = getenv('ROOT_URL');
+$host = getenv('DB_HOST');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$db_name = getenv('DB_NAME');
