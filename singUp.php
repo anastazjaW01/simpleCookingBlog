@@ -17,7 +17,7 @@ require './config/database.php';
         <div class="row">
         <div class="login col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 ">
         <div class="row">
-        <a href="homePage.php" class="d-flex justify-content-center"><img src="images/path13547.svg" width=50 height="50"/></a>
+        <a href="index.php" class="d-flex justify-content-center"><img src="images/path13547.svg" width=50 height="50"/></a>
             <h3>Simple Cooking</h3> 
         </div>
         <form>
@@ -52,7 +52,7 @@ require './config/database.php';
                 <label for="cpassword">Re password</label>
                 <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="logowanie" name="submit">Sing up</button>
                 <p style="color: #0f5132; font-size: small">You have account?
-                <a class="link-success fw-bold" href="index.php" style="font-size: small" id="example"  data-bs-placement="bottom">Sing in</a></p>
+                <a class="link-success fw-bold" href="singIn.php" style="font-size: small" id="example"  data-bs-placement="bottom">Sing in</a></p>
             </div>
         </form>
         </div>

@@ -46,14 +46,14 @@ elseif($name=="about"){
     <!--Navbar--> 
     <nav class="color-nav navbar navbar-expand-lg bg-body-tertiary p-0">
     <div class="container-fluid">
-    <a class="navbar-brand" aria-current="page" href="homePage.php"><img class="img-fluid m-2 logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid " width="80" height="80" src="images/textGreen.svg"></a>
+    <a class="navbar-brand" aria-current="page" href="index.php"><img class="img-fluid m-2 logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid " width="80" height="80" src="images/textGreen.svg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link login-link <?=$active1?>" href="homePage.php">Home</a>
+                <a class="nav-link login-link <?=$active1?>" href="index.php">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link login-link <?=$active3?>" href="about.php">About</a>
@@ -67,7 +67,7 @@ elseif($name=="about"){
             <li><a class="dropdown-item" href="#">Desserts</a></li>
             <li><a class="dropdown-item" href="#">Salads</a></li>
             <li><a class="dropdown-item" href="#">Snacks</a></li>
-            <li><a class="dropdown-item" href="index.php">Dinners</a></li>
+            <li><a class="dropdown-item" href="#">Dinners</a></li>
             <li><a class="dropdown-item" href="#">Bread</a></li>
             <li><hr class="dropdown-divider"></li>
             <li class="dropend block-menu">
@@ -82,7 +82,7 @@ elseif($name=="about"){
             </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link login-link" href="index.php">Log in</a>
+                <a class="nav-link login-link" href="singIn.php">Log in</a>
             </li>
         </ul>
         <form class="d-flex input-group justify-content-end searchForm mt-2 mt-sm-2 mt-md-2" role="search" action="search.php">
