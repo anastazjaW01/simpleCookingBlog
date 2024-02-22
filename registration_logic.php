@@ -48,20 +48,24 @@ if(empty($login)){
             $_SESSION['signUp'] = "Login or email is already in use!";
         }
     }
-}
-
 
 //back to signup in case of a problem
 if(isset($_SESSION['signUp'])){
     $_SESSION['signUp_data'] = $_POST;
     header('location:'. $root . 'signUp.php');
     die();
+}else{
+    //add new user to database
+    $query_insert_user = "INSERT INTO user (email, login, password, is_admin) VALUES ('$email, '$login', '$hashpassword', 0)";
+    $insert_user_result = mysqli_query($connection, $query_insert_user);
+    if(!mysqli_errno($connection)){
+        //success
+        $_SESSION['signUp-success'] = "Account created! Log in!";
+        header('location: '. $root .'signIn.php');
+        die();
+    }
 }
-
-//add new user to database
-
-
-else{
+}else{
     //if button wasn't clicked
     header('location: '. $root . 'signUp.php');
 }
