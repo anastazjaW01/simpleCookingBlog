@@ -41,7 +41,7 @@ require './config/database.php';
                 </div>
                 <button type="submit" class="btn btn-success col-12 mt-1 mb-1" id="logowanie" name="submit">Sing in</button>
                 <p style="color: #0f5132; font-size: small">You dont have an account yet?
-                <a class="link-success fw-bold " href="singUp.php" style="font-size: small">Sing up</a></p>
+                <a class="link-success fw-bold " href="signUp.php" style="font-size: small">Sing up</a></p>
             </div>
         </form>
         </div>

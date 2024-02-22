@@ -52,7 +52,7 @@ require './config/database.php';
                 <label for="cpassword">Re password</label>
                 <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="logowanie" name="submit">Sing up</button>
                 <p style="color: #0f5132; font-size: small">You have account?
-                <a class="link-success fw-bold" href="singIn.php" style="font-size: small" id="example"  data-bs-placement="bottom">Sing in</a></p>
+                <a class="link-success fw-bold" href="signIn.php" style="font-size: small" id="example"  data-bs-placement="bottom">Sing in</a></p>
             </div>
         </form>
         </div>

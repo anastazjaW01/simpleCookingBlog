@@ -78,7 +78,7 @@ elseif($name=="createpost"){
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link login-link" href="singIn.php">Log in</a>
+                    <a class="nav-link login-link" href="../signIn.php">Log in</a>
                 </li>
                 </ul>
                 <form class="d-flex input-group justify-content-end searchForm mt-2 mt-sm-2 mt-md-2" role="search" action="../search.php">
