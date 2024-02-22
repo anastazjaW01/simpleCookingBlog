@@ -52,7 +52,11 @@ if(empty($login)){
 
 
 //back to signup in case of a problem
-
+if(isset($_SESSION['signUp'])){
+    $_SESSION['signUp_data'] = $_POST;
+    header('location:'. $root . 'signUp.php');
+    die();
+}
 
 //add new user to database
 
