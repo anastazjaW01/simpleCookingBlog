@@ -22,9 +22,9 @@ $specialchar = preg_match('/[\'!^$%&()@#?><,.=_+-]/',$password);
 
 
 //validation of downloaded variables
-if(!$login){
+if(empty($login)){
     $_SESSION['signUp'] = "Please enter your login!";
-}elseif(!$email){
+}elseif(empty($email)){
     $_SESSION['signUp'] = "Please enter your email!";
 }elseif(strlen($password) < 8 || strlen($cpassword) < 8 ){
     $_SESSION['signUp'] = "The password must be at least 8 characters long!";
@@ -34,16 +34,20 @@ if(!$login){
     $_SESSION['signUp'] = "The password must contain numbers!";
 }elseif(!$specialchar){
     $_SESSION['signUp'] = "The password must contain special chars!";
-}else{
+}elseif($password !== $cpassword){
     //match password
-    if($password !== $cpassword){
-        $_SESSION['signUp'] = "Password doesn't match!";
-    }else{
+    $_SESSION['signUp'] = "Password doesn't match!";
+}else
+    {
         //hash password
-
+        $hashpassword = password_hash($password,PASSWORD_DEFAULT);
         //check if email or username exist
+        $query_check_user = "SELECT * FROM users WHERE login='$login' OR email='$email'";
+        $check_user_result = mysqli_query($connection,$query_check_user);
+        if(mysqli_num_rows($check_user_result) > 0){
+            $_SESSION['signUp'] = "Login or email is already in use!";
+        }
     }
-
 }
 
 
@@ -52,7 +56,7 @@ if(!$login){
 
 //add new user to database
 
-}
+
 else{
     //if button wasn't clicked
     header('location: '. $root . 'signUp.php');
