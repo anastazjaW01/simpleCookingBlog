@@ -1,5 +1,12 @@
 <?php
 require './config/database.php';
+
+//Adding session variable retrieval and cleanup after signup process
+$email = isset($_SESSION['signUp_data']['email']) ? $_SESSION['signUp_data']['email'] : null;
+$login = isset($_SESSION['signUp_data']['login']) ? $_SESSION['signUp_data']['login'] : null;
+$password = isset($_SESSION['signUp_data']['password']) ? $_SESSION['signUp_data']['password'] : null;
+$cpassword = isset($_SESSION['signUp_data']['cpassword']) ? $_SESSION['signUp_data']['cpassword'] : null;
+unset($_SESSION['signUp_data']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
