@@ -56,7 +56,7 @@ if(isset($_SESSION['signUp'])){
     die();
 }else{
     //add new user to database
-    $query_insert_user = "INSERT INTO user (email, login, password, is_admin) VALUES ('$email, '$login', '$hashpassword', 0)";
+    $query_insert_user = "INSERT INTO users (email, login, password, is_admin) VALUES ('$email', '$login', '$hashpassword', 0)";
     $insert_user_result = mysqli_query($connection, $query_insert_user);
     if(!mysqli_errno($connection)){
         //success

@@ -1,5 +1,4 @@
 let state=false;
-let state1=true;
 let state2=false;
 
 function showHide(){
@@ -15,12 +14,12 @@ function showHide(){
 
 function showHide1(){
 
-    if(state1){
+    if(state2){
         document.getElementById("cpassword").setAttribute("type","password");
-        state1=true;
+        state2=false;
     }else{
         document.getElementById("cpassword").setAttribute("type", "text");
-        state1=false;
+        state2=true;
     }
 }
 
