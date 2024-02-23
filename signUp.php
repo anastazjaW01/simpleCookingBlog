@@ -45,7 +45,7 @@ unset($_SESSION['signUp_data']);
                 <span id="infoButton"><i class="bi bi-info-circle tt" id="info" title="Example e-mail should look like example@gmail.com"></i></span>
             </div>
             <!-- wrong email alert -->
-            <div class="row wrong-alert alert-hidden mt-1" id="">
+            <div class="row wrong-alert alert-hidden mt-1" id="email-alert">
                 <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
@@ -57,7 +57,7 @@ unset($_SESSION['signUp_data']);
                 <label for="login">Login</label>
             </div>
             <!-- empty login alert -->
-            <div class="row wrong-alert alert-hidden mt-1">
+            <div class="row wrong-alert alert-hidden mt-1" id="login-alert">
                 <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
@@ -72,25 +72,25 @@ unset($_SESSION['signUp_data']);
                 </div>
             </div>
             <!-- wrong password alerts -->
-            <div class="row wrong-alert alert-hidden mt-1">
+            <div class="row wrong-alert alert_pass alert-hidden mt-1" id="alert_pass_length">
                 <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
                 </svg> The password must be at least 8 characters long</p>
             </div>
-            <div class="row wrong-alert alert-hidden mt-1">
+            <div class="row wrong-alert alert_pass alert-hidden mt-1" id="alert_pass_upp_low">
                 <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
                 </svg> The password must contain uppercase and lowercase letters!</p>
             </div>
-            <div class="row wrong-alert alert-hidden mt-1">
+            <div class="row wrong-alert alert_pass alert-hidden mt-1" id="alert_pass_number">
                 <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
                 </svg> The password must contain numbers!</p>
             </div>
-            <div class="row wrong-alert alert-hidden mt-1">
+            <div class="row wrong-alert alert_pass alert-hidden mt-1" id="alert_pass_char">
                 <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
@@ -102,7 +102,7 @@ unset($_SESSION['signUp_data']);
                 <span id="eyeButton1" onclick="showHide1()"><i class="bi bi-eye-fill" id="icon1" onclick="changeIcon1()"></i></span>
                 <label for="cpassword">Re password</label>
                 <!-- password don't match alert -->
-                <div class="row wrong-alert alert-hidden mt-1">
+                <div class="row wrong-alert alert-hidden mt-1" id="match-pass-alert">
                 <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-exclamation-circle mb-1" viewBox="0 0 16 16">
                 <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                 <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
@@ -122,7 +122,7 @@ unset($_SESSION['signUp_data']);
         </div>
     </div>
     <script src="scripts/eyeChange.js?v=<?php echo time(); ?>"></script>
-    <script src="scripts/validation.js"></script>
+    <script src="scripts/validation.js?v=<?php echo time(); ?>"></script>
     <script>
         const tooltip=document.querySelectorAll('.tt')
         tooltip.forEach(t=>{

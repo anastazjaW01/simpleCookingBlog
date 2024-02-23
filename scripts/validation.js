@@ -1,11 +1,48 @@
-//let passwordLength=document.querySelector('.lenght');
-//let number=document.querySelector('.number');
-//let specialSing=document.querySelector('.special_sing');
-//let lowerUpper=document.querySelector('.lower_upper');
-
+//get variables from form
+let alertBoxes = document.querySelectorAll('.alert_pass');
 let password=document.getElementById('password');
+let cpassword = document.getElementById('cpassword');
+let email = document.getElementById('email');
+let login = document.getElementById('login');
 let passwordStrength=document.getElementById('passwordStrength');
+let wasBlurred = false;
 
+//function check password conditions and show/delete alerts when value is change
+password.addEventListener('input', function() {
+    let pass = this.value;
+    let conditions = [
+        pass.length < 8,
+        !pass.match(/([A-Z].*[a-z])|([a-z].*[A-Z])/),
+        !pass.match(/[0-9]/),
+        !pass.match(/[!@#$%^&*?.,]/)
+    ];
+
+    // Show alerts only if field was leaved erlier
+    if (wasBlurred) {
+        alertBoxes.forEach((alert, index) => {
+            alert.classList.toggle('alert-hidden', !conditions[index]);
+        });
+    }
+});
+
+//function check password conditions and show alerts when field was leaved
+password.addEventListener('blur', function() {
+    wasBlurred = true;
+    let pass = this.value;
+    let conditions = [
+        pass.length < 8,
+        !pass.match(/([A-Z].*[a-z])|([a-z].*[A-Z])/),
+        !pass.match(/[0-9]/),
+        !pass.match(/[!@#$%^&*?.,]/)
+    ];
+
+   // Show alerts after leave input field
+    alertBoxes.forEach((alert, index) => {
+        alert.classList.toggle('alert-hidden', !conditions[index]);
+    });
+});
+
+//check password function 
 password.addEventListener('keyup',function(){
     let pass=document.getElementById('password').value;
     checkPassword(pass);
