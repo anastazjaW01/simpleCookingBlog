@@ -65,10 +65,10 @@ unset($_SESSION['signUp_data']);
                 </div>
             <div class=" form1 form-floating mt-2">
                 <input type="password" class="form-control border-success" id="password" name="password" value="<?= $password ?>" placeholder="Hasło" required>
-                <span id="eyeButton" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
+                <span id="eyeButton" onclick="showHide()"><i class="bi bi-eye-fill tt" id="icon" onclick="changeIcon()" title="Show password"></i></span>
                 <label for="password">Password</label>
-                <div  class="progress" id="passStr">
-                    <div id="passwordStrength" class="progress-bar bg-danger" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                <div  class="progress tt" id="passStr" title="Password strenght">
+                    <div id="passwordStrength" class="progress-bar bg-danger tt" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
                 </div>
             </div>
             <!-- wrong password alerts -->
@@ -99,7 +99,7 @@ unset($_SESSION['signUp_data']);
             <!-- end of wrong password alerts -->
             <div class="form1 form-floating mt-2 mb-2" >
                 <input spellcheck="false" id="cpassword" name="cpassword" value="<?= $cpassword ?>" onkeyup="disableButton()"  type="password"  class="form-control border-success"  placeholder="Repeat password" required>
-                <span id="eyeButton1" onclick="showHide1()"><i class="bi bi-eye-fill" id="icon1" onclick="changeIcon1()"></i></span>
+                <span id="eyeButton1" onclick="showHide1()"><i class="bi bi-eye-fill tt" id="icon1" onclick="changeIcon1()" title="Show password"></i></span>
                 <label for="cpassword">Re password</label>
                 <!-- password don't match alert -->
                 <div class="row wrong-alert alert-hidden mt-1" id="match-pass-alert">
