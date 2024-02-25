@@ -101,7 +101,7 @@ elseif($name=="about"){
                     <li><a class="dropdown-item" href="<?= $root ?>admin_user/managePosts.php"><i class="bi bi-person-gear pe-2"></i>Manage panel</a></li>
                     <li><button class="dropdown-item"><i class="bi bi-moon-stars pe-2"></i>Dark mode</a></button></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="<?= $root ?>index.php"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a></li>
+                    <li><a class="dropdown-item" href="<?= $root ?>signOut.php"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a></li>
                 </ul>
             </li>
             <?php else : ?>
