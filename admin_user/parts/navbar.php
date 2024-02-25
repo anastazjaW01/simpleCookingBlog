@@ -1,6 +1,15 @@
 <?php
 require 'config/database.php';
 //require 'test/test.php';
+
+//get user from database
+if(isset($_SESSION['user_id'])){
+    $id = filter_var($_SESSION['user_id'],FILTER_SANITIZE_NUMBER_INT);
+    $query = "SELECT login FROM users WHERE id=$id";
+    $result = mysqli_query($conn, $query);
+    $login = mysqli_fetch_assoc($result);
+}
+
 $script="";
 if($name=="manageusers"){ 
     $style="managepages";
@@ -42,7 +51,7 @@ elseif($name=="createpost"){
             <!--Navbar--> 
             <nav class="color-nav navbar navbar-expand-lg bg-body-tertiary p-0">
                 <div class="container-fluid">
-                <a class="navbar-brand" aria-current="page" href="index.php"><img class="img-fluid m-2 logo" width="40" height="40" src="../images/path13547.svg"><img class="img-fluid " width="80" height="80" src="../images/textGreen.svg"></a>
+                <a class="navbar-brand" aria-current="page" href="<?= $root ?>index.php"><img class="img-fluid m-2 logo" width="40" height="40" src="../images/path13547.svg"><img class="img-fluid " width="80" height="80" src="../images/textGreen.svg"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -77,9 +86,24 @@ elseif($name=="createpost"){
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link login-link" href="../signIn.php">Log in</a>
-                </li>
+                <?php if(isset($_SESSION['user_id'])) : ?>
+            <li class="nav-item dropdown login-link">
+                <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person pe-1"></i><?php echo htmlspecialchars($login['login'])?>
+                </a>
+                <ul class="dropdown-menu sub-menu">
+                    <li><a class="dropdown-item" href="<?= $root ?>admin_user/createPost.php"><i class="bi bi-plus-lg pe-2"></i>Add post</a></li>
+                    <li><a class="dropdown-item" href="<?= $root ?>admin_user/managePosts.php"><i class="bi bi-person-gear pe-2"></i>Manage panel</a></li>
+                    <li><button class="dropdown-item"><i class="bi bi-moon-stars pe-2"></i>Dark mode</a></button></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="<?= $root ?>index.php"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a></li>
+                </ul>
+            </li>
+            <?php else : ?>
+            <li class="nav-item">
+                <a class="nav-link login-link" href="signIn.php">Log in</a>
+            </li>
+            <?php endif; ?>
                 </ul>
                 <form class="d-flex input-group justify-content-end searchForm mt-2 mt-sm-2 mt-md-2" role="search" action="../search.php">
                     <input class="search form-control-sm border-0" type="search" placeholder="Search" aria-label="Search" aria-describedby="searchbtn">
