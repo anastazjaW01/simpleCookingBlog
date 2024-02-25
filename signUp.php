@@ -29,7 +29,7 @@ unset($_SESSION['signUp_data']);
         <div class="row">
         <div class="login col-lg-4 offset-lg-4 col-md-6 offset-md-3 col-sm-8 offset-sm-2 ">
         <div class="row">
-        <a href="index.php" class="d-flex justify-content-center"><img src="images/path13547.svg" width=50 height="50"/></a>
+        <a href="index.php" class="d-flex justify-content-center logo"><img src="images/path13547.svg" width=50 height="50"/></a>
             <h3>Simple Cooking</h3> 
         </div>
         <!-- show alert by php when validation error occurs -->
