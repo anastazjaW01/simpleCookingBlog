@@ -7,12 +7,12 @@ if(isset($_POST['submit'])){
 
     //Get data from database
     $email = htmlspecialchars(filter_var($_POST['email'],FILTER_VALIDATE_EMAIL),ENT_QUOTES);
-    $login = filter_var($_POST['password'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $password = filter_var($_POST['password'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-    if(empty($email)){
+    if(!$email){
         $_SESSION['signIn'] = "Email or login required!";
-    }elseif(empty($password)){
-        $_SESSION['signIn'] = "Email or login required!";
+    }elseif(!$password){
+        $_SESSION['signIn'] = "Password required!";
     }else{
         //Get user from database with the given login or email
         $fetch_user_query = "SELECT * FROM users WHERE email='$email' OR login='$email'";

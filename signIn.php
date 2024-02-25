@@ -1,5 +1,7 @@
 <?php
 require './config/database.php';
+$email = isset($_SESSION['signIn-data']['email']) ? $_SESSION['signIn-data']['email'] : null;
+unset($_SESSION['signIn-data']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,13 +22,24 @@ require './config/database.php';
         <a href="index.php" class="d-flex justify-content-center"><img src="images/path13547.svg" width=50 height="50"/></a>
             <h3>Simple Cooking</h3> 
         </div>
-        <form>
+        <!-- show alert by php when validation error occurs -->
+        <?php if(isset($_SESSION['signIn'])):?>
+            <div>
+            <p class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-circle"></i> 
+            <?=$_SESSION['signIn'];
+                unset($_SESSION['signIn']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+        <?php endif ?>
+        <form action = "<?= $root ?>signIn_logic.php" method="POST" >
             <div class="form1 form-floating mt-2">
-                <input type="email" id="email" name="email" value=""  class="form-control border-success" placeholder="jan-kowalski@example.com">
-                <label for="email">Email</label>
+                <input type="email" id="email" name="email" value="<?= $email ?>"  class="form-control border-success" placeholder="jan-kowalski@example.com">
+                <label for="email">Login or email</label>
             </div>
             <div class=" form1 form-floating mt-3">
-                <input type="password" class="form-control border-success" id="password" name="password" placeholder="Hasło">
+                <input type="password" class="form-control border-success" id="password" name="password" placeholder="Password">
                 <span id="eyeButton" class="eyeButton2" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
                 <label for="password">Password</label>
                 <div class="row mt-1">
