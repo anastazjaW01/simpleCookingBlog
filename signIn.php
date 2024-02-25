@@ -33,6 +33,16 @@ unset($_SESSION['signIn-data']);
             </p>
             </div>
         <?php endif ?>
+          <!-- show alert by php when account is created -->
+          <?php if(isset($_SESSION['signUp-success'])):?>
+            <div>
+            <p class="alert alert-success alert-dismissible fade show d-flex " role="alert">
+            <?=$_SESSION['signUp-success'];
+                unset($_SESSION['signUp-success']);?>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
         <form action = "<?= $root ?>signIn_logic.php" method="POST" >
             <div class="form1 form-floating mt-2">
                 <input type="email" id="email" name="email" value="<?= $email ?>"  class="form-control border-success" placeholder="jan-kowalski@example.com">
@@ -52,9 +62,9 @@ unset($_SESSION['signIn-data']);
                     <div class="col-6">
                     <a href="forgotPass.php" class="fp link"> Forgot password?</a></div>
                 </div>
-                <button type="submit" class="btn btn-success col-12 mt-1 mb-1" id="logowanie" name="submit">Sing in</button>
+                <button type="submit" class="btn btn-success col-12 mt-1 mb-1" id="logowanie" name="submit">Sign in</button>
                 <p style="color: #0f5132; font-size: small">You dont have an account yet?
-                <a class="link-success fw-bold " href="signUp.php" style="font-size: small">Sing up</a></p>
+                <a class="link-success fw-bold " href="signUp.php" style="font-size: small">Sign up</a></p>
             </div>
         </form>
         </div>
