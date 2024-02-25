@@ -9,6 +9,12 @@ if(isset($_SESSION['user_id'])){
     $login = mysqli_fetch_assoc($result);
 }
 
+//get categories from database 
+$main_category_query = "SELECT * FROM categories WHERE type=0";
+$main_category_result = mysqli_query($conn, $main_category_query);
+$addictional_category_query = "SELECT * FROM categories WHERE type=1";
+$addictional_category_result = mysqli_query($conn, $addictional_category_query);
+
 $script="";
 if($name=="homepage"){ 
     $style=$name;
@@ -53,38 +59,35 @@ elseif($name=="about"){
     <!--Navbar--> 
     <nav class="color-nav navbar navbar-expand-lg bg-body-tertiary p-0">
     <div class="container-fluid">
-    <a class="navbar-brand" aria-current="page" href="index.php"><img class="img-fluid m-2 logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid " width="80" height="80" src="images/textGreen.svg"></a>
+    <a class="navbar-brand" aria-current="page" href="<?= $root ?>index.php"><img class="img-fluid m-2 logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid " width="80" height="80" src="images/textGreen.svg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link login-link <?=$active1?>" href="index.php">Home</a>
+                <a class="nav-link login-link <?=$active1?>" href="<?= $root ?>index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link login-link <?=$active3?>" href="about.php">About</a>
+                <a class="nav-link login-link <?=$active3?>" href="<?= $root ?>about.php">About</a>
             </li>         
             <!--data-bs-auto-close="outside" -->
             <li class="nav-item dropdown login-link">
-            <a class="nav-link dropdown-toggle <?=$active2?>" href="category.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle <?=$active2?>" href="<?= $root ?>category.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Category</a>
             <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="category.php">Soups</a></li>
-            <li><a class="dropdown-item" href="#">Desserts</a></li>
-            <li><a class="dropdown-item" href="#">Salads</a></li>
-            <li><a class="dropdown-item" href="#">Snacks</a></li>
-            <li><a class="dropdown-item" href="#">Dinners</a></li>
-            <li><a class="dropdown-item" href="#">Bread</a></li>
+            <?php while ($main_category=mysqli_fetch_assoc($main_category_result)) : ?>
+            <li><a class="dropdown-item" href="<?=$root?>category.php?id=<?=$main_category['id']?>"><?=$main_category['name']?></a></li>
+            <?php endwhile; ?>
             <li><hr class="dropdown-divider"></li>
             <li class="dropend block-menu">
                 <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Cuisines of the world</a>
                 <ul class="dropdown-menu sub-menu">
-                <li><a class="dropdown-item" href="#">Italian</a></li>
-                <li><a class="dropdown-item" href="#">Spanish</a></li>
-                <li><a class="dropdown-item" href="#">Asian</a></li>
-                <li><a class="dropdown-item" href="#">American</a></li></ul>
+                    <?php while($addictional_category = mysqli_fetch_assoc($addictional_category_result)) : ?>
+                    <li><a class="dropdown-item" href="<?= $root ?>category.php?id=<?= $addictional_category['id'] ?>"><?= $addictional_category['name'] ?></a></li>
+                    <?php endwhile; ?>
+                </ul>
             </li>
             </ul>
             </li>
