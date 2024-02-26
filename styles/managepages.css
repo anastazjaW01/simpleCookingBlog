@@ -1,3 +1,5 @@
+@import url('dark_light_mood.css');
+
 /***** Media *****/
 
 
@@ -56,6 +58,7 @@
     margin-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
+    color: var(--main-color);
   }
 
  h4{
@@ -65,8 +68,8 @@
 /** Side Panel **/
 
   .manage-panel{
-    color: #ECEADF;
-    background-color: #257157;
+    color: var(--navbarColor);
+    background-color: var(--lightGreen);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,17 +79,17 @@
 
    a .manage-panel:hover{
     cursor: pointer;
-    background-color: #18604a;
+    background-color: var(--darkGreen);
   }
 
    a .manage-panel.active{
     cursor:default;
-    background-color: #18604a;
+    background-color: var(--darkGreen);
     color: #d8d7ce;
   }
 
   .manage{
-    box-shadow: 6px 6px 6px -6px #666;
+    box-shadow: 6px 6px 6px -6px var(--boxShadow);
   }
 
   .manage a{
@@ -104,34 +107,34 @@
   th, td{
     padding: 8px;
     text-align: left;
-    border-bottom: #c9c9c9 1px solid;
+    border-bottom: var(--table-border) 1px solid;
   }
 
   /* striped table */
   tr:nth-child(odd) {
-    background-color: #eceadf00;
+    background-color: var(--odd-bg-color);
     }
 
   tr:nth-child(even) {
-    background-color: #ECEADF;
+    background-color: var(--navbarColor);
     }
 
   /* Style for thead */
   .sticky-header th {
     position: sticky;
     top: 0;
-    background-color: #ECEADF;
+    background-color: var(--navbarColor);
     border-bottom: 1px solid #b4b4b4;
     color: rgba(0, 0, 0, 0.65);
   }
 
   /** Button **/
   .btn-danger{
-    background-color:  rgb(203, 62, 62);
+    background-color:  var(--btn-danger);
   }
 
   .btn-danger:hover{
-    background-color:#af3535;
+    background-color: var(--btn-danger-hover);
   }
 
   .btn-secondary{

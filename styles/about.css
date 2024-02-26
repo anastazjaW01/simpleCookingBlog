@@ -1,3 +1,4 @@
+@import url('dark_light_mood.css');
 /**Center Section **/
 
 .section{
@@ -8,16 +9,16 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  color: #18604a;
+  color: var(--darkGreen);
 }
 
 .section.snp {
-    background-color: #257157;
-    color: #ECEADF;
+    background-color: var(--lightGreen);
+    color: var(--navbarColor);
 }
 
 .title-section{
-    color: #18604a;
+    color: var(--darkGreen);
     font-size: 90px;
     font-weight: bold;
 }
@@ -47,8 +48,8 @@
     display: block;
     width: 1.5vw;
     height: 1.5vw;
-    border-bottom: 5px solid #18604a;
-    border-right: 5px solid #18604a;
+    border-bottom: 5px solid var(--darkGreen);
+    border-right: 5px solid var(--darkGreen);
     transform: rotate(45deg);
     margin: -10px;
     animation: animate 2s infinite;

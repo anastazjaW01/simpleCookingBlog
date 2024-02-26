@@ -1,0 +1,32 @@
+:root{
+
+    --backgroundColor: #faf9f7;
+    --main-color: #2d3135;
+    --navbarColor: #ECEADF;
+    --lighterGreen: #2f8b6b;
+    --lightGreen: #257157;
+    --darkGreen: #18604a;
+    --navlink: rgba(0,0,0,0.65);
+    --activnavLink: black;
+    --boxShadow: #666666ca;
+    --footerText:rgb(215, 215, 215);
+    --footerHoverText: rgb(255, 255, 255);
+    --white: #fff;
+    --card-date: #999999;
+    --card-title: #4b4b4b;
+    --little-card-subtitle: #666;
+    --small-color: #848484;
+    --table-border: #c9c9c9;
+    --odd-bg-table: #eceadf00;
+    --btn-danger: rgb(203, 62, 62);
+    --btn-danger-hover: #af3535;
+    --light-grey: #bababa;
+    --dark-grey: #3b3b3b;
+
+}
+
+.dark-theme{
+    --backgroundColor: #383838;
+   
+
+}

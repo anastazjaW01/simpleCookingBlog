@@ -1,3 +1,4 @@
+@import url('dark_light_mood.css');
 
 /***** Media *****/
 
@@ -50,10 +51,13 @@
     margin-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
+    color: var(--main-color);
 }
 
 .big-card{
-    box-shadow: 6px 6px 6px -6px #666;
+    box-shadow: 6px 6px 6px -6px var(--boxShadow);
+    background-color: var(--white);
+    border-color: var(--white);
 }
 
 .card-left{
@@ -76,18 +80,19 @@ height: 100%;
 }
 
 .ct-bg a{
-    color: #2f8b6b !important;
+    color: var(--lighterGreen) !important;
     text-decoration: none;
     }
     
 .cst-bg{
-    color:#849992 !important;
+    color: var(--small-color) !important;
     }
 
 .little-card{
-    box-shadow: 6px 6px 6px -6px #666;
+    box-shadow: 6px 6px 6px -6px var(--boxShadow);
     margin-left: 10%;
     margin-right: 10%;
+    background-color: var(--white);
 }
 
 .img-card{
@@ -111,14 +116,14 @@ height: 100%;
 }
 
 .date{
-    color:#999999 !important;
+    color:var(--card-date) !important;
 }
 
 .card-title{
-color: #4b4b4b !important;
+color: var(--card-title) !important;
 }
 
 .card-subtitle{
-    color:#666 !important;
+    color: var(--little-card-subtitle) !important;
 }
 

@@ -1,3 +1,4 @@
+@import url('dark_light_mood.css');
 /***** Media *****/
 
 @media only screen and (max-width: 992px) {
@@ -37,15 +38,16 @@
     margin-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
+    color: var(--main-color);
   }
 
   /** Search **/
 
 .search-panel{
-background-color: #fefefe;
-border: 3px solid #18604a;
+background-color: var(--white);
+border: 3px solid var(--darkGreen);
 border-radius: 20px 20px 20px 20px;
-box-shadow: 6px 6px 6px -6px #666666b1;
+box-shadow: 6px 6px 6px -6px var(--boxShadow);
 }
 
 .search-none{
@@ -61,17 +63,18 @@ padding-left: 3%;
 }
 
 .search-icon{
-    color: #18604a;
+    color: var(--darkGreen);
     font-size: 150%;
-    -webkit-text-stroke: 2px #18604a;
+    -webkit-text-stroke: 2px var(--darkGreen);;
 }
 
   /** Cards **/
 
   .little-card{
-    box-shadow: 6px 6px 6px -6px #666;
+    box-shadow: 6px 6px 6px -6px var(--boxShadow);
     margin-left: 10%;
     margin-right: 10%;
+    background-color: var(--white);
 }
 
 .img-card{
@@ -95,15 +98,15 @@ padding-left: 3%;
 }
 
 .date{
-    color:#999999 !important;
+    color:var(--card-date) !important;
 }
 
 .card-title{
-color: #4b4b4b !important;
+color: var(--card-title) !important;
 }
 
 .card-subtitle{
-    color:#666 !important;
+    color:var(--little-card-subtitle) !important;
 }
 
  

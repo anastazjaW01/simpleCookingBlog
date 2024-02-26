@@ -1,3 +1,4 @@
+@import url('dark_light_mood.css');
 /***** Media *****/
 
 @media only screen and (max-width: 992px) {
@@ -42,6 +43,7 @@
     margin-top: 3%;
     padding-left: 4%;
     padding-right: 4%;
+    color: var(--main-color);
   }
 
   /** Category title **/
@@ -79,7 +81,7 @@ h1{
     left: 0;
     right: 0;
     bottom: 0;
-    color: #ECEADF;
+    color: var(--navbarColor);
     text-shadow: 1px 2px 2px #3b3b3b4f;
 }
 
@@ -112,14 +114,14 @@ h1{
 }
 
 .date{
-    color:#999999 !important;
+    color: var(--card-date) !important;
 }
 
 .card-title{
-color: #4b4b4b !important;
+color: var(--card-title) !important;
 }
 
 .card-subtitle{
-    color:#666 !important;
+    color: var(--little-card-subtitle) !important;
 }
 

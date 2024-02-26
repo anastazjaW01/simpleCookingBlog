@@ -1,3 +1,5 @@
+@import url('dark_light_mood.css');
+
 /***** Media *****/
 
 /* LG */
@@ -87,9 +89,9 @@
   /** Form style**/
 
   .form-control:focus, .form-select:focus{
-    border-color: #ababab;
+    border-color: var(--light-grey);
     outline: 0;
-    box-shadow: 0 0 0 0.25rem #ECEADF;
+    box-shadow: 0 0 0 0.25rem var(--navbarColor);
   }
 
   /** Title **/
@@ -114,24 +116,24 @@
  }
 
   .star_rating li{
-    -webkit-text-stroke: 1px #18604a;
-    color: #ffffff;
+    -webkit-text-stroke: 1px var(--darkGreen);
+    color: var(--white);
     float: right;
     padding-right: 1%;
   }
 
   .star_rating li:hover, 
   .star_rating li:hover ~ li{
-        color: #18604a;
+        color: var(--darkGreen);
         cursor: pointer;
   }
 
   .star{
-    color: #ffffff;
+    color: var(--white);
   }
 
   .selected{
-    color: #18604a !important;
+    color: var(--darkGreen) !important;
   }
 
   li label{
@@ -145,7 +147,7 @@
   /** List of ingredients **/
 
   .ingredients, .category, .difficult{
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 12px;
     border: 1px solid #dfdfdf;
     padding-top: 0.5%;
@@ -162,7 +164,7 @@
 
   .ingredient input[type="text"]{
     border: none;
-    border-bottom: 1px solid #bababa;
+    border-bottom: 1px solid var(--light-grey);
     color: #000000c0;
     transition: all 0.5s;
     width: 80%;
@@ -170,8 +172,8 @@
 
   .ingredient input[type="text"]:focus-visible{
     box-shadow: none;
-    border-bottom: 1px solid #3b3b3b;
-    color: #bababa;
+    border-bottom: 1px solid var(--dark-grey);
+    color: var(--light-grey);
   }
 
   .ingredient i{
@@ -179,7 +181,7 @@
   }
 
   .bi-x{
-    color: #3b3b3b;
+    color: var(--dark-grey);
     font-weight: bold;
     -webkit-text-stroke: 1px;
     transition: all 0.5s;
@@ -199,19 +201,19 @@
 
   .add_ingredient{
     padding-top: 3px;
-    color: #3b3b3b;
+    color: var(--dark-grey);
     transition: 0.5s;
   }
 
   .add_ingredient:hover{
-    color: #bababa;
+    color: var(--light-grey);
     cursor: pointer;
   }
 
   /** Category **/
 
   input[type="radio"]{
-    accent-color: #257157;
+    accent-color: var(--lightGreen);
     color: #6b6b6b;
   }
 
@@ -227,7 +229,7 @@
 
   /** Time and Portion**/
   .bi-clock-fill, .bi-pie-chart-fill{
-    color: #18604a;
+    color: var(--darkGreen);
   }
 
   .form-select {
@@ -235,7 +237,7 @@
 }
 
 .form-select:focus {
-    color: #bababa;
+    color: var(--light-grey);
 }
 
  

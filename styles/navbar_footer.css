@@ -1,21 +1,22 @@
+@import url('dark_light_mood.css');
 body{
     width: 100%;
     height: 100%;
     min-height: 100vh;
     padding: 0;
     margin: 0;
-    background-color: #faf9f7;
+    background-color: var(--backgroundColor);
 }
 
 h3{
-    color: #18604a;
+    color: var(--darkGreen);
 }
 
 /* NAVBAR */
 
 .color-nav{
     height: 10%;
-    background-color: #ECEADF !important;
+    background-color: var(--navbarColor) !important;
 }
 
 .logo{
@@ -28,11 +29,11 @@ h3{
 }
 
 .btn-success{
-    background-color: #257157;
+    background-color: var(--lightGreen);
 }
 
 .btn-success:hover, .btn-success:focus{
-    background-color: #18604a;
+    background-color: var(--darkGreen);
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
@@ -52,6 +53,7 @@ h3{
     white-space: nowrap;
     position: relative;
     text-align: center;
+    color: var(navlink);
 }
 
 input:focus-visible{
@@ -62,7 +64,7 @@ input:focus-visible{
 .login-link::after{
     content: "";
     position: absolute;
-    background-color: #257157;
+    background-color: var(--lightGreen);
     box-shadow: 0 2px 5px rgba(108, 110, 109, 0.762);
     height: 2px;
     width: 0%;
@@ -76,7 +78,7 @@ width: 100%;
 }
 
 .login-link:active:after{
-    color:black;
+    color: var(activnavLink);
     width: 100%;
 }
 
@@ -84,11 +86,11 @@ width: 100%;
 /***** Footer *****/ 
 
 .footer{
-    background-color: #18604a;
-    color:rgb(215, 215, 215);
+    background-color: var(--darkGreen);
+    color: var(--footerText);
     text-align: center;
     font-size: small;
-    box-shadow: 0px -1px 9px 2px #666666ca;
+    box-shadow: 0px -1px 9px 2px var(boxShadow);
     width: 100%;
     padding-top: 1%;
     display: flex;
@@ -101,16 +103,16 @@ width: 100%;
 }
 
 .nolink{
-    color: rgb(215, 215, 215);
+    color: var(--footerText);
     text-decoration: none;
 }
 
 .nolink:hover{
-    color: rgb(255, 255, 255);
+    color: var(--footerHoverText);
 }
 
 .smLink{
-    color: rgba(215, 215, 215);
+    color: var(--footerText);
     margin: 1%;
     font-size: 120% !important;
     transition: 0.3s;
@@ -118,7 +120,7 @@ width: 100%;
 
 .smLink:hover{
     transition: 0.3s;
-    color: rgb(255, 255, 255);
+    color: var(--footerHoverText);
     margin: 4%;
     font-size: 160% !important;
 }
@@ -136,7 +138,7 @@ width: 100%;
     .login-link::after{
         content: "";
         position: absolute;
-        background-color: #257157;
+        background-color: var(--lightGreen);
         box-shadow: 0 2px 5px rgba(9, 121, 73, 0.762);
         height: 2px;
         width: 0%;
