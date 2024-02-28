@@ -1,4 +1,4 @@
-@import url('dark_light_mood.css');
+@import url('dark_light_mode.css');
 body{
     width: 100%;
     height: 100%;
@@ -29,15 +29,31 @@ h3{
 }
 
 .btn-success{
-    background-color: var(--lightGreen);
+    background-color: var(--lightGreenBut);
+    color: var(--btnText);
+    border-color: transparent;
 }
 
-.btn-success:hover, .btn-success:focus{
-    background-color: var(--darkGreen);
+.btn-success:hover, .btn-success:focus, .btn-success:active{
+    background-color: var(--darkGreenBut) !important;
+    color: var(--btnText) !important;
+    border-color: transparent;
+}
+
+.btn-successNav{
+    background-color: var(--lightGreenBut);
+    color: var(--footerText);
+    border-color: transparent;
+}
+
+.btn-successNav:hover, .btn-successNav:focus, .btn-successNav:active{
+    background-color: var(--darkGreenBut) !important;
+    color: var(--footerText) !important;
+    border-color: transparent;
 }
 
 .dropdown-item:focus, .dropdown-item:hover {
-    background-color: #bed5be;
+    background-color: var(--dropdown-item-hover);
     color: #ffffff;
 }
 
@@ -53,7 +69,14 @@ h3{
     white-space: nowrap;
     position: relative;
     text-align: center;
-    color: var(navlink);
+}
+
+.nav-link{
+    color: var(--navlink) !important;
+}
+
+input{
+    background-color: var(--white);
 }
 
 input:focus-visible{
@@ -65,7 +88,7 @@ input:focus-visible{
     content: "";
     position: absolute;
     background-color: var(--lightGreen);
-    box-shadow: 0 2px 5px rgba(108, 110, 109, 0.762);
+    box-shadow: 0 2px 5px var(--boxShadow);
     height: 2px;
     width: 0%;
     left: 0;
@@ -73,15 +96,13 @@ input:focus-visible{
     transition: 0.3s;
 }
 
-.login-link:hover:after{
+.login-link:hover:after, .login-link:active:after{
 width: 100%;
 }
 
-.login-link:active:after{
-    color: var(activnavLink);
-    width: 100%;
+.nav-link.active{
+    color: var(--activnavLink) !important;
 }
-
 
 /***** Footer *****/ 
 
@@ -90,7 +111,7 @@ width: 100%;
     color: var(--footerText);
     text-align: center;
     font-size: small;
-    box-shadow: 0px -1px 9px 2px var(boxShadow);
+    box-shadow: 0px -1px 9px 2px var(--boxShadow);
     width: 100%;
     padding-top: 1%;
     display: flex;

@@ -1,4 +1,4 @@
-@import url('dark_light_mood.css');
+@import url('dark_light_mode.css');
 
 /***** Media *****/
 
@@ -57,7 +57,6 @@
 .big-card{
     box-shadow: 6px 6px 6px -6px var(--boxShadow);
     background-color: var(--white);
-    border-color: var(--white);
 }
 
 .card-left{
@@ -123,7 +122,7 @@ height: 100%;
 color: var(--card-title) !important;
 }
 
-.card-subtitle{
+.card-subtitle, .text-body-secondary{
     color: var(--little-card-subtitle) !important;
 }
 

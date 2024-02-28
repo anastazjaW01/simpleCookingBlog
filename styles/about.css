@@ -1,4 +1,4 @@
-@import url('dark_light_mood.css');
+@import url('dark_light_mode.css');
 /**Center Section **/
 
 .section{
@@ -9,12 +9,12 @@
   justify-content: center;
   align-items: center;
   text-align: justify;
-  color: var(--darkGreen);
+  color: var(--aboutGreen);
 }
 
 .section.snp {
-    background-color: var(--lightGreen);
-    color: var(--navbarColor);
+    background-color: var(--darkGreen);
+    color: var(--aboutWhite);
 }
 
 .title-section{

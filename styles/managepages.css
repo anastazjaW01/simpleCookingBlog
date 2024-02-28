@@ -1,4 +1,4 @@
-@import url('dark_light_mood.css');
+@import url('dark_light_mode.css');
 
 /***** Media *****/
 
@@ -62,13 +62,13 @@
   }
 
  h4{
-    color: rgba(0, 0, 0, 0.75);
+    color: var(--header-colors);
   }
 
 /** Side Panel **/
 
   .manage-panel{
-    color: var(--navbarColor);
+    color: var(--btnText);
     background-color: var(--lightGreen);
     display: flex;
     justify-content: center;
@@ -85,7 +85,7 @@
    a .manage-panel.active{
     cursor:default;
     background-color: var(--darkGreen);
-    color: #d8d7ce;
+    color: var(--btnText);
   }
 
   .manage{
@@ -97,6 +97,10 @@
   }
 
 /** Table **/
+
+  .table{
+    color: var(--main-color) !important;
+  }
 
   .info-table {
     max-height: 400px; 
@@ -124,23 +128,31 @@
     position: sticky;
     top: 0;
     background-color: var(--navbarColor);
-    border-bottom: 1px solid #b4b4b4;
-    color: rgba(0, 0, 0, 0.65);
+    border-bottom: 1px solid var(--thead-border);
+    color: var(--header-colors);
   }
 
   /** Button **/
   .btn-danger{
     background-color:  var(--btn-danger);
+    border-color: transparent;
+    color: var(--btnText);
   }
 
   .btn-danger:hover{
     background-color: var(--btn-danger-hover);
+    border-color: transparent;
+    color: var(--btnText);
   }
 
   .btn-secondary{
-    background-color: #666666e3;
+    background-color: #888888;
+    border-color: transparent;
+    color: var(--btnText);
   }
 
   .btn-secondary:hover{
-    background-color: #666;
+    background-color: #727171;
+    border-color: transparent;
+    color: var(--btnText);
   }

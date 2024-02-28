@@ -1,0 +1,60 @@
+:root{
+
+    --backgroundColor: #faf9f7;
+    --main-color: #2d3135;
+    --navbarColor: #ECEADF;
+    --lighterGreen: #2f8b6b;
+    --lightGreen: #257157;
+    --darkGreen: #18604a;
+    --lightGreenBut: #257157;
+    --darkGreenBut: #18604a;
+    --aboutGreen: #18604a;
+    --aboutWhite: #ECEADF;
+    --btnText: #fdfdfd;
+    --navlink: rgba(0,0,0,0.65);
+    --activnavLink: black;
+    --dropdown-item-hover: #bed5be;;
+    --boxShadow: #666666ca;
+    --footerText:rgb(215, 215, 215);
+    --footerHoverText: rgb(255, 255, 255);
+    --white: #fff;
+    --card-date: #999999;
+    --card-title: #4b4b4b;
+    --little-card-subtitle: #666;
+    --small-color: #848484;
+    --table-border: #c9c9c9;
+    --thead-border: #b4b4b4;
+    --header-colors: rgba(0,0,0,0.75);
+    --odd-bg-table: #eceadf00;
+    --btn-danger: rgb(203, 62, 62);
+    --btn-danger-hover: #af3535;
+    --light-grey: #dddddd;
+    --dark-grey: #3b3b3b;
+
+}
+
+.dark-theme{
+    --backgroundColor: #2e2e2e;
+    --navbarColor: #40403d;
+    --main-color: #939594;
+    --lightGreenBut: #319572;
+    --darkGreenBut: #218567;
+    --btn-danger: rgb(217, 54, 54);
+    --btn-danger-hover: #b52323;
+    --aboutGreen: #2ab78d;
+    --aboutWhite: #181818;
+    --navlink: rgba(255, 255, 255, 0.764);
+    --activnavLink: white;
+    --dropdown-item-hover: #387860;
+    --boxShadow: #121212ca;
+    --white: #484847;
+    --card-title: #9c9c9c;
+    --little-card-subtitle: #838383;
+    --table-border: #1a1a1a;
+    --thead-border: rgb(11, 11, 11);
+    --header-colors: rgba(255, 255, 255, 0.75);
+    --light-grey: #212121;
+    --dark-grey: #9c9c9c;
+    --footerText:rgb(42, 42, 42);
+    --footerHoverText: rgb(28, 28, 28);
+}

@@ -1,4 +1,4 @@
-@import url('dark_light_mood.css');
+@import url('dark_light_mode.css');
 
 /***** Media *****/
 
@@ -88,10 +88,20 @@
 
   /** Form style**/
 
+  .form-control{
+    color: var(--main-color);
+    border: 1px solid var(--light-grey);
+    background-color: var(--white);
+  }
+
   .form-control:focus, .form-select:focus{
-    border-color: var(--light-grey);
+    border: 1px solid var(--light-grey);
     outline: 0;
     box-shadow: 0 0 0 0.25rem var(--navbarColor);
+  }
+
+  .form-floating label{
+    color: var(--main-color);
   }
 
   /** Title **/
@@ -100,10 +110,21 @@
     color: #6b6b6b;
   }
 
+  .input-group-text{
+    color: var(--main-color);
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+  }
+
   /* Recipe */
 
   #floatingTextarea{
     min-height: 220px;
+  }
+
+  textarea{
+    background-color: var(--white) !important;
+    color: var(--main-color) !important;
   }
 
   /** Star Rating **/
@@ -116,7 +137,7 @@
  }
 
   .star_rating li{
-    -webkit-text-stroke: 1px var(--darkGreen);
+    -webkit-text-stroke: 1px var(--darkGreenBut);
     color: var(--white);
     float: right;
     padding-right: 1%;
@@ -124,7 +145,7 @@
 
   .star_rating li:hover, 
   .star_rating li:hover ~ li{
-        color: var(--darkGreen);
+        color: var(--darkGreenBut);
         cursor: pointer;
   }
 
@@ -133,7 +154,7 @@
   }
 
   .selected{
-    color: var(--darkGreen) !important;
+    color: var(--darkGreenBut) !important;
   }
 
   li label{
@@ -147,9 +168,10 @@
   /** List of ingredients **/
 
   .ingredients, .category, .difficult{
+    color: var(--main-color);
     background-color: var(--white);
     border-radius: 12px;
-    border: 1px solid #dfdfdf;
+    border: 1px solid var(--light-grey);
     padding-top: 0.5%;
   }
 
@@ -165,7 +187,7 @@
   .ingredient input[type="text"]{
     border: none;
     border-bottom: 1px solid var(--light-grey);
-    color: #000000c0;
+    color: var(--main-color);
     transition: all 0.5s;
     width: 80%;
   }
@@ -173,7 +195,7 @@
   .ingredient input[type="text"]:focus-visible{
     box-shadow: none;
     border-bottom: 1px solid var(--dark-grey);
-    color: var(--light-grey);
+    color: rgb(199, 199, 199);
   }
 
   .ingredient i{
@@ -206,14 +228,14 @@
   }
 
   .add_ingredient:hover{
-    color: var(--light-grey);
+    color: rgb(199, 199, 199);
     cursor: pointer;
   }
 
   /** Category **/
 
   input[type="radio"]{
-    accent-color: var(--lightGreen);
+    accent-color: var(--lightGreenBut);
     color: #6b6b6b;
   }
 
@@ -229,15 +251,18 @@
 
   /** Time and Portion**/
   .bi-clock-fill, .bi-pie-chart-fill{
-    color: var(--darkGreen);
+    color: var(--darkGreenBut);
   }
 
   .form-select {
     transition: 0.5s;
+    color: var(--main-color);
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
 }
 
 .form-select:focus {
-    color: var(--light-grey);
+    color: rgb(199, 199, 199);
 }
 
  

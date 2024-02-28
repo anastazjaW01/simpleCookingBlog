@@ -1,4 +1,4 @@
-@import url('dark_light_mood.css');
+@import url('dark_light_mode.css');
 /***** Media *****/
 
 @media only screen and (max-width: 992px) {
@@ -63,9 +63,9 @@ padding-left: 3%;
 }
 
 .search-icon{
-    color: var(--darkGreen);
+    color: var(--darkGreenBut);
     font-size: 150%;
-    -webkit-text-stroke: 2px var(--darkGreen);;
+    -webkit-text-stroke: 2px var(--darkGreenBut);;
 }
 
   /** Cards **/

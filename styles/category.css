@@ -1,4 +1,4 @@
-@import url('dark_light_mood.css');
+@import url('dark_light_mode.css');
 /***** Media *****/
 
 @media only screen and (max-width: 992px) {
@@ -81,14 +81,15 @@ h1{
     left: 0;
     right: 0;
     bottom: 0;
-    color: var(--navbarColor);
+    color: #EDEDED;
     text-shadow: 1px 2px 2px #3b3b3b4f;
 }
 
   /** Cards **/
 
 .little-card{
-    box-shadow: 6px 6px 6px -6px #666;
+    background-color: var(--white);
+    box-shadow: 6px 6px 6px -6px var(--boxShadow);
     margin-left: 10%;
     margin-right: 10%;
 }
