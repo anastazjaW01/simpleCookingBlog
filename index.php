@@ -7,7 +7,7 @@ require "parts/navbar.php";
     <div class="row d-flex justify-content-center mx-lg-4 mx-md-2 mx-sm-1 px-lg-4 px-md-2 px-sm-1">
     <h3 class="d-flex justify-content-center pt-4">Hello foodie!</h3>
 
-    <div class="card big-card border flex-row mb-5 mt-3 p-0">
+    <div class="card big-card flex-row mb-5 mt-3 p-0">
       <div class="card-left"><img src="images/test1.jpg" class="card-img-top img-fluid img-big" alt="New"></div>
       <div class="card-body card-right">
       <h4 class="card-title ct-bg"><a href="#">Card title</a></h4>
