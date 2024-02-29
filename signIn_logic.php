@@ -31,6 +31,15 @@ if(isset($_POST['submit'])){
                 if($user_record['is_admin'] == 1){
                     $_SESSION['is_admin'] = true;
                 }
+
+                if(!empty($_POST["rememberMe"])) {
+                    setcookie("email", $email, time() + (10 * 365 * 24 * 60 * 60));
+                    setcookie("password", $password, time() + (10 * 365 * 24 * 60 * 60));
+                }else{
+                    setcookie("email", $email, time() + (-10 * 365 * 24 * 60 * 60));
+                    setcookie("password", $password, time() + (-10 * 365 * 24 * 60 * 60));
+                }
+    
                 //Log in user
                 header('location: ' . $root . 'admin_user/');
             }else{

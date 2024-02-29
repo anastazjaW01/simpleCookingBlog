@@ -45,16 +45,16 @@ unset($_SESSION['signIn-data']);
             <?php endif ?>
         <form action = "<?= $root ?>signIn_logic.php" method="POST" >
             <div class="form1 form-floating mt-2">
-                <input type="email" id="email" name="email" value="<?= $email ?>"  class="form-control border-success" placeholder="jan-kowalski@example.com">
+                <input type="email" id="email" name="email" value="<?php if(isset($_COOKIE["email"])) { echo $_COOKIE["email"]; } ?>"  class="form-control border-success" placeholder="jan-kowalski@example.com">
                 <label for="email">Login or email</label>
             </div>
             <div class=" form1 form-floating mt-3">
-                <input type="password" class="form-control border-success" id="password" name="password" placeholder="Password">
+                <input type="password" class="form-control border-success" id="password" name="password" placeholder="Password" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>">
                 <span id="eyeButton" class="eyeButton2" onclick="showHide()"><i class="bi bi-eye-fill" id="icon" onclick="changeIcon()"></i></span>
                 <label for="password">Password</label>
                 <div class="row mt-1">
                     <div class="col-6">
-                    <input class="form-check-input" name="is_featured" type="checkbox" id="flexCheckDefault" style="border: seagreen 1px solid" checked>
+                    <input class="form-check-input" name="rememberMe" <?php if(isset($_COOKIE["email"]) && isset($_COOKIE["password"])) { ?> checked <?php } ?> type="checkbox" id="flexCheckDefault" style="border: seagreen 1px solid">
                 <label class="form-check-label checkBtn" for="flexCheckDefault">
                     Remember me
                 </label>
@@ -78,3 +78,4 @@ unset($_SESSION['signIn-data']);
     <script src="scripts/eyeChange.js"></script>
     </body>
 </html>
+
