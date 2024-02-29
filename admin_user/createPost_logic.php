@@ -34,7 +34,29 @@ if(isset($_POST['submit'])){
         $_SESSION['add_post'] = "Please select difficulty level!";
     }else{
 
- 
+          //change image name
+          $time = time();
+          $image_name = $time.$image['name'];
+          $image_tmp = $image['tmp_name'];
+          $path_image = "../images/post_images/". $image_name;
+
+          //validation input file
+          $allowed_file = ['png', 'jpg', 'jpeg'];
+          $extension = explode('.', $image_name);
+          $extension = end($extension);
+
+          if(in_array($extension, $allowed_file)){
+            //check file size
+            if($image['size'] < 2000000){
+                //save file in images
+                move_uploaded_file($image_tmp, $path_image);
+            }else{
+                $_SESSION['add_post'] = "The photo is too big!
+                The size should be less than 2 meters.";
+            }
+          }else{
+            $_SESSION['add_post'] = "Photo must be in png, jpg or jpeg format!";
+          }
         
     }
 }
