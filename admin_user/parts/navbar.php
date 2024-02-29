@@ -115,7 +115,9 @@ elseif($name=="createpost"){
                 <ul class="dropdown-menu <?= $dropdownThemeClass ?> sub-menu">
                     <li><a class="dropdown-item" href="<?= $root ?>admin_user/createPost.php"><i class="bi bi-plus-lg pe-2"></i>Add post</a></li>
                     <li><a class="dropdown-item" href="<?= $root ?>admin_user/managePosts.php"><i class="bi bi-person-gear pe-2"></i>Manage panel</a></li>
-                    <li><form method="POST" action="<?= $root ?>colorMode.php"><button class="dropdown-item" name="theme" type="submit" id="toogle-btn"><?= $btnText ?></button>
+                    <li><form method="POST" action="<?= $root ?>colorMode.php">
+                    <input type="hidden" name="current_page" value="<?= htmlspecialchars($_SERVER['REQUEST_URI']) ?>">
+                    <button class="dropdown-item" name="theme" type="submit" id="toogle-btn"><?= $btnText ?></button>
                     </form></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="<?= $root ?>signOut.php"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a></li>
