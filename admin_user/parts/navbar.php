@@ -99,7 +99,7 @@ elseif($name=="createpost"){
                 <ul class="dropdown-menu sub-menu">
                     <li><a class="dropdown-item" href="<?= $root ?>admin_user/createPost.php"><i class="bi bi-plus-lg pe-2"></i>Add post</a></li>
                     <li><a class="dropdown-item" href="<?= $root ?>admin_user/managePosts.php"><i class="bi bi-person-gear pe-2"></i>Manage panel</a></li>
-                    <li><button class="dropdown-item" id="toogle-btn" onclick="changeColorMode()"><i class="bi bi-moon-stars pe-2"></i>Dark mode</button></li>
+                    <li><form method="POST" action="<?= $root ?>colorMode.php"><button class="dropdown-item" name="theme" type="submit" id="toogle-btn"><i class="bi bi-moon-stars pe-2"></i>Dark mode</button></form></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="<?= $root ?>signOut.php"><i class="bi bi-box-arrow-right pe-2"></i>Sign out</a></li>
                 </ul>
