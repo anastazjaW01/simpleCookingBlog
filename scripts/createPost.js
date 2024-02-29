@@ -41,7 +41,8 @@ function add_ingredient(){
 
     //add input
     var input = document.createElement("input");
-    input.type="text";
+    input.type = "text";
+    input.name = "ingridient[]";
     ingridient.appendChild(input);
 
     //add x icon
@@ -71,7 +72,7 @@ function selectTimeGenerate(selectTag){
     for(var i = 0.5; i <= 6; i=i+0.5){
 
         var option = document.createElement("option");
-        option.value = i;
+        option.value = parseFloat(i);
         option.text = i+"h";
         selectTag.appendChild(option);
 

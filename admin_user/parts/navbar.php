@@ -47,12 +47,12 @@ elseif($name=="manageposts"){
 elseif($name=="editpost"){ 
     $style="createpost";
     $title="Edit Post";
-    $script="<script src='../scripts/createPost.js'></script>";
+    $script="<script src='../scripts/createPost.js?v=<?php echo time(); ?>'></script>";
 }
 elseif($name=="createpost"){ 
     $style="createpost";
     $title="Create Post";
-    $script="<script src='../scripts/createPost.js'></script>";
+    $script="<script src='../scripts/createPost.js?v=<?php echo time(); ?>'></script>";
 }
 
 ?>

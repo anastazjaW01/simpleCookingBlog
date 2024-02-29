@@ -4,17 +4,17 @@ require "parts/navbar.php";
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
-                <form>
+                <form method="POST" action="<?php $root ?>createPost_logic.php" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 col-sm-12 mb-lg-0 pb-lg-0 mb-md-1 pb-md-1 mb-sm-3 pb-sm-3 pb-5 mb-5 left_section">
                         <div class="row" style="height: 80%;">
                             <div class="col-lg-8 col-md-8 col-sm-12">
                                 <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" id="floatingInput" placeholder="Fruit salad">
+                                        <input type="text" class="form-control" name="title" value="<?= $title ?>" id="floatingInput" placeholder="Fruit salad">
                                          <label for="floatingInput">Title</label>
                                 </div>
                                 <div class="form-floating">
-                                    <textarea class="form-control"  placeholder="Write recipe text here..." id="floatingTextarea"></textarea>
+                                    <textarea class="form-control" name="recipe" value="<?= $recipe ?>"  placeholder="Write recipe text here..." id="floatingTextarea"></textarea>
                                     <label for="floatingTextarea">Recipe</label>
                                 </div>
                             </div>
@@ -22,7 +22,7 @@ require "parts/navbar.php";
                                 <div class="ingredients p-1" id="ingredients" style="height:100%;"><h6>Ingredients</h6>
                                 <div class="ingredient">
                                     <i class="bi bi-dot"></i>
-                                    <input type="text" placeholder="ingredient">
+                                    <input type="text" name="ingridient[]" placeholder="ingredient">
                                     <i class="bi bi-x" id="remove"></i>
                                 </div>
                                 <div class="add_ingredient" id="add_ingredient" onclick="add_ingredient()">
@@ -33,13 +33,13 @@ require "parts/navbar.php";
                         <div class="row mt-3" style="height: 20%;">
                             <div class="col-lg-8 col-md-8 col-sm-12 col-12"><h6>Image</h6>
                             <div class="mb-3">
-                                <input class="form-control" type="file" accept=".jpg, .jpeg, .png" id="formFile">
+                                <input class="form-control" name="image" type="file" accept=".jpg, .jpeg, .png" id="formFile">
                             </div>    
                             </div>
                             <div class="col-lg-2 col-md-2 col-sm-6 col-12 ps-lg-2 ps-md-2 pe-md-1 px-sm-2"><h6>Time</h6>
                                 <div class="input-group mb-3">
                                  <label class="input-group-text" for="timeSelect"><i class="bi bi-clock-fill"></i></label>
-                                    <select class="form-select" id="timeSelect">
+                                    <select class="form-select" id="timeSelect" name="time">
                                          
                                     </select>
                                 </div>
@@ -47,7 +47,7 @@ require "parts/navbar.php";
                             <div class="col-lg-2 col-md-2 col-sm-6 col-12 pe-lg-2 pe-md-2 ps-md-1 px-sm-2"><h6>Portion</h6>
                             <div class="input-group mb-3">
                                  <label class="input-group-text" for="portionSelect"><i class="bi bi-pie-chart-fill"></i></label>
-                                    <select class="form-select" id="portionSelect">
+                                    <select class="form-select" id="portionSelect" name="portion">
 
                                     </select>
                                 </div>
