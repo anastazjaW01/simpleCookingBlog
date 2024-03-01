@@ -6,11 +6,11 @@ require "parts/navbar.php";
             <div class="container-fluid main-container">
             <!--Show an alert when an error occurs while creating a post-->
             <?php if(isset($_SESSION['add-post-succ'])):?>
-            <div>
-            <p class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div class="col-5>
+            <p class="alert alert-success alert-dismissible fade show" role="alert">
             <?=$_SESSION['add-post-succ'];
                 unset($_SESSION['add-post-succ']);?>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
             </p>
             </div>
             <?php endif ?>

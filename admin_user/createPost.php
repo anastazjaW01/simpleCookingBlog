@@ -1,12 +1,16 @@
 <?php
 $name = "createpost";
 require "parts/navbar.php";
+
+$post_title= isset($_SESSION['add-post-data']['title']) ? $_SESSION['add-post-data']['title'] : null;
+$recipe= isset($_SESSION['add-post-data']['recipe']) ? $_SESSION['add-post-data']['recipe'] : null;
+unset($_SESSION['add-post-data']);
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
             <!--Show an alert when an error occurs while creating a post-->
             <?php if(isset($_SESSION['add_post'])):?>
-            <div>
+            <div class="col-5">
             <p class="alert alert-danger alert-dismissible fade show" role="alert">
             <i class="bi bi-exclamation-circle"></i> 
             <?=$_SESSION['add_post'];
@@ -21,7 +25,7 @@ require "parts/navbar.php";
                         <div class="row" style="height: 80%;">
                             <div class="col-lg-8 col-md-8 col-sm-12">
                                 <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="title" value="" id="floatingInput" placeholder="Fruit salad">
+                                        <input type="text" class="form-control" name="title" value="<?= $post_title ?>" id="floatingInput" placeholder="Fruit salad">
                                          <label for="floatingInput">Title</label>
                                 </div>
                                 <div class="form-floating">
