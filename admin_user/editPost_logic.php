@@ -10,6 +10,7 @@ if(isset($_POST['submit'])){
     //get ingredients array
     $ingredients = isset($_POST['ingridient']) ? $_POST['ingridient'] : array();
     $ingredients_array = implode(',', $ingredients);
+    $previous_img_name=filter_var($_POST['previous_img_name'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $time = filter_var($_POST['time'],FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $portion = filter_var($_POST['portion'],FILTER_SANITIZE_NUMBER_INT);
     $category = filter_var($_POST['category'],FILTER_SANITIZE_NUMBER_INT);
@@ -32,6 +33,37 @@ if(isset($_POST['submit'])){
         $_SESSION['edit_post'] = "Can't edit post! Select value.";
     }else{
 
+        //delete actual photo if add new 
+        if($image['name']){
+            $previous_img_path = '../images/post_images'.$previous_img_name;
+            if($previous_img_path){
+                unlink($previous_img_path);
+            }
+
+            //change new photo
+            $current_time = time();
+            $image_name = $current_time.$image['name'];
+            $image_tmp = $image['tmp_name'];
+            $path_image = '..images/post_images/'.$image_name;
+
+            //validation input file
+          $allowed_file = ['png', 'jpg', 'jpeg'];
+          $extension = explode('.', $image_name);
+          $extension = end($extension);
+
+          if(in_array($extension, $allowed_file)){
+            //check file size
+            if($image['size'] < 2000000){
+                //save file in images
+                move_uploaded_file($image_tmp, $path_image);
+            }else{
+                $_SESSION['add_post'] = "The photo is too big!
+                The size should be less than 2 meters.";
+            }
+          }else{
+            $_SESSION['add_post'] = "Photo must be in png, jpg or jpeg format!";
+          }
+        }
     }
 }
 else{
