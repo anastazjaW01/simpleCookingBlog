@@ -1,21 +1,20 @@
 <?php 
-require 'config/connect.php';
-$connection = new mysqli($host, $user, $pass, $db_name);
+require 'config/database.php';
+//$connection = new mysqli($host, $user, $pass, $db_name);
 
 //get data from form
 if(isset($_POST['submit'])){
-    $autor_id = $_SESSION['user_id'];
+    $author_id = $_SESSION['user_id'];
     $title = filter_var($_POST['title'],FILTER_SANITIZE_SPECIAL_CHARS);
     $recipe = filter_var($_POST['recipe'],FILTER_SANITIZE_SPECIAL_CHARS);
     //get ingredients array
     $ingredients = isset($_POST['ingridient']) ? $_POST['ingridient'] : array();
     $ingredients_array = implode(',', $ingredients);
-    $time = (floatval($_POST['time']));
+    $time = filter_var(floatval($_POST['time']),FILTER_SANITIZE_NUMBER_FLOAT);
     $portion = filter_var($_POST['portion'],FILTER_SANITIZE_NUMBER_INT);
     $category = filter_var($_POST['category'],FILTER_SANITIZE_NUMBER_INT);
     $difficult = filter_var($_POST['star'],FILTER_SANITIZE_NUMBER_INT);
     $image = $_FILES['image'];
-
 
     //form validation
     if(!$title){
@@ -35,8 +34,8 @@ if(isset($_POST['submit'])){
     }else{
 
           //change image name
-          $time = time();
-          $image_name = $time.$image['name'];
+          $current_time = time();
+          $image_name = $current_time.$image['name'];
           $image_tmp = $image['tmp_name'];
           $path_image = "../images/post_images/". $image_name;
 
@@ -57,9 +56,26 @@ if(isset($_POST['submit'])){
           }else{
             $_SESSION['add_post'] = "Photo must be in png, jpg or jpeg format!";
           }
-        
     }
-}
+
+    //back to createPost page if something is wrong 
+    if(isset($_SESSION['add_post'])){
+        $_SESSION['add-post-data'] = $_POST;
+        header('location: ' . $root . 'admin_user/createPost.php');
+        die();
+    }else{
+
+        //add post to database
+        $query = "INSERT INTO posts (title, recipe_text, ingridients, post_image, time_needed, portion_amount, difficult, category_id, user_id) VALUES ('$title', '$recipe', '$ingredients_array', '$image_name', $time, $portion, $difficult, $category, $author_id);";
+        $result = mysqli_query($conn,$query);
+        if(!mysqli_errno($conn)){
+            $_SESSION['add-post-succ'] = "New post added successfully!";
+            header('location: ' .$root. 'admin_user/');
+            die();
+        }
+    }
+}else{
 
 //back to createPost.php page if something is wrong 
 header('location: ' .$root. 'admin_user/createPost.php');
+}
