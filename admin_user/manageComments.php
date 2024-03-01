@@ -8,10 +8,10 @@ require "parts/navbar.php";
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12 col-12 side-panel">
                     <div class="manage">
-                    <a href="createPost.php"><div class="manage-panel">ADD POST</div></a>
-                    <a href="managePosts.php"><div class="manage-panel">MANAGE POSTS</div></a>
-                    <a href="manageComments.php"><div class="manage-panel active">MANAGE COMMENTS</div></a>
-                    <a href="manageUsers.php"><div class="manage-panel">MANAGE USERS</div></a>
+                    <a href="<?= $root ?>admin_user/createPost.php"><div class="manage-panel">ADD POST</div></a>
+                    <a href="<?= $root ?>admin_user/"><div class="manage-panel">MANAGE POSTS</div></a>
+                    <a href="<?= $root ?>admin_user/manageComments.php"><div class="manage-panel active">MANAGE COMMENTS</div></a>
+                    <a href="<?= $root ?>admin_user/manageUsers.php"><div class="manage-panel">MANAGE USERS</div></a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 col-12  info-table ">
