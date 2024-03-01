@@ -4,13 +4,24 @@ require "parts/navbar.php";
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
+            <!--Show an alert when an error occurs while creating a post-->
+            <?php if(isset($_SESSION['add_post'])):?>
+            <div>
+            <p class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-circle"></i> 
+            <?=$_SESSION['add_post'];
+                unset($_SESSION['add_post']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
                 <form method="POST" action="<?php $root ?>createPost_logic.php" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 col-sm-12 mb-lg-0 pb-lg-0 mb-md-1 pb-md-1 mb-sm-3 pb-sm-3 pb-5 mb-5 left_section">
                         <div class="row" style="height: 80%;">
                             <div class="col-lg-8 col-md-8 col-sm-12">
                                 <div class="form-floating mb-3">
-                                        <input type="text" class="form-control" name="title" value="<?= $title ?>" id="floatingInput" placeholder="Fruit salad">
+                                        <input type="text" class="form-control" name="title" value="" id="floatingInput" placeholder="Fruit salad">
                                          <label for="floatingInput">Title</label>
                                 </div>
                                 <div class="form-floating">
@@ -71,8 +82,8 @@ require "parts/navbar.php";
                 </div>
                 <div class="row mt-3 pt-3">
                     <div class="col-lg-8 col-md-12 col-sm-12 mt-3 pt-3 pb-3 mb-3 pb-sm-0 mb-sm-0 pb-md-3 mb-md-3 pb-lg-0 mb-lg-0"><div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-12 mb-2" ><button class="btn btn-success" style="width: 100%;" type="reset">Reset</button></div>
-                    <div class="col-lg-4 col-md-6 col-sm-12"><button class="btn btn-success" style="width: 100%;"type="submit">Submit</button></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-2" ><button class="btn btn-success" style="width: 100%;" type="reset" name="reset">Reset</button></div>
+                    <div class="col-lg-4 col-md-6 col-sm-12"><button class="btn btn-success" style="width: 100%;"type="submit" name="submit">Submit</button></div>
                     </div></div>
                 </div>
                 </form>
