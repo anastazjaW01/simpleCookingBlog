@@ -40,6 +40,7 @@ $get_all_posts = mysqli_query($conn,$query_admin);
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 col-12  info-table ">
                     <form>
+                        <!--Tabel view for administrator-->
                         <?php if(isset($_SESSION['is_admin'])) : ?>
                         <?php if(mysqli_num_rows($get_all_posts) > 0) : ?>
                     <table class="table">
@@ -57,7 +58,7 @@ $get_all_posts = mysqli_query($conn,$query_admin);
                             <?php while($admin_posts = mysqli_fetch_assoc($get_all_posts)) : ?>
                                 <?php 
                                 //get name from table categories
-                                $category_id = $admin_posts['$category_id'];
+                                $category_id = $admin_posts['category_id'];
                                 $category_query = "SELECT name FROM categories WHERE id = $category_id";
                                 $category_result = mysqli_query($conn, $category_query);
                                 $category = mysqli_fetch_assoc($category_result);
@@ -80,7 +81,44 @@ $get_all_posts = mysqli_query($conn,$query_admin);
                         </tbody>
                     </table>
                     <?php else : ?>
-                        <div class="alert alert-danger d-flex align-items-center fw-bold" role="alert"><?= "No posts to show." ?></div>
+                        <!--Alert if there are no matching posts in the database-->
+                        <div class="alert alert-secondary d-flex align-items-center fw-bold" role="alert"><?= "No posts to show!"; ?></div>
+                    <?php endif; ?>
+                    <?php else : ?>
+                    <!--Table view for logged in user-->
+                    <?php if(mysqli_num_rows($get_posts) > 0) : ?>
+                    <table class="table">
+                        <thead class="table-light sticky-header">
+                            <tr>
+                                <th scope="col" class="col-4">Title</th>
+                                <th scope="col" class="col-4">Category</th>
+                                <th scope="col" class="col-2">Date</th>
+                                <th scope="col" class="col-1">Edit </th>
+                                <th scope="col" class="col-1">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php while($user_post = mysqli_fetch_assoc($get_posts)) : ?>
+                                <?php 
+                                //get name from table categories where user_id is user session
+                                $category_id = $user_post['category_id'];
+                                $category_query = "SELECT name FROM categories WHERE id = $category_id";
+                                $category_result = mysqli_query($conn, $category_query);
+                                $category = mysqli_fetch_assoc($category_result);
+                                ?>
+                            <tr>
+                                <td scope="row"><?= $user_post['title'] ?></td>
+                                <td><?= $category['name'] ?></td>
+                                <td><small><?= $user_post['date_time'] ?></small></td>
+                                <td><a href = "<?= $root ?>admin_user/editPost.php?id=<?= $user_post['id'] ?>"><button class="btn btn-secondary" type="button"> Edit </button></a></td>
+                                <td><a href = "<?= $root ?>admin_user/deletePost.php?id=<?= $user_post['id'] ?>"><button class="btn btn-danger" type="button">Delete</button></a></td>
+                            </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                    <?php else : ?>
+                        <!--Alert if there are no matching posts in the database-->
+                        <div class="alert alert-secondary d-flex align-items-center fw-bold" role="alert"><?= "No posts to show." ?></div>
                     <?php endif; ?>
                     <?php endif; ?>
                     </form>
