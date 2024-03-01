@@ -65,6 +65,25 @@ if(isset($_POST['submit'])){
           }
         }
     }
+
+    //back 
+    if($_SESSION['edit_post']){
+        header('location: ' . $root . 'admin_user/');
+        die();
+    }else{
+
+        //change image name
+        $edit_image = isset($image_name) ? $image_name : $previous_img_name;
+
+        //edit post in database
+        $query = "UPDATE posts SET title = '$title' recipe_text = '$recipe', ingridients = '$ingredients_array', post_image = '$edit_image' time_needed = $time, portion_amount = $portion, difficult = $difficult, category_id = $category, user_id = $author_id LIMIT 1";
+        $result = mysqli_query($conn,$query);
+        if(!mysqli_errno($conn)){
+            $_SESSION['edit-post-succ'] = "New post added successfully!";
+            header('location: ' .$root. 'admin_user/');
+            die();
+        }
+    }
 }
 else{
     header('location: ' . $root . 'admin_user/');
