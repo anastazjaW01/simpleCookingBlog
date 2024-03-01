@@ -10,7 +10,7 @@ if(isset($_POST['submit'])){
     //get ingredients array
     $ingredients = isset($_POST['ingridient']) ? $_POST['ingridient'] : array();
     $ingredients_array = implode(',', $ingredients);
-    $time = filter_var(floatval($_POST['time']),FILTER_SANITIZE_NUMBER_FLOAT);
+    $time = filter_var($_POST['time'],FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $portion = filter_var($_POST['portion'],FILTER_SANITIZE_NUMBER_INT);
     $category = filter_var($_POST['category'],FILTER_SANITIZE_NUMBER_INT);
     $difficult = filter_var($_POST['star'],FILTER_SANITIZE_NUMBER_INT);
