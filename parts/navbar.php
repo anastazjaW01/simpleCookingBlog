@@ -16,19 +16,19 @@ $addictional_category_query = "SELECT * FROM categories WHERE type=1";
 $addictional_category_result = mysqli_query($conn, $addictional_category_query);
 
 //get color_mode from database
-
+if(isset($_SESSION['user_id'])){
 $query_color_mode = "SELECT * FROM colormode WHERE user_id = $id";
 $result_color_mode = mysqli_query($conn, $query_color_mode); // Corrected variable name
 $theme = mysqli_fetch_assoc($result_color_mode); // Corrected variable name
 $color_mode = $theme['color_mode'];
 
 //conditions for color theme 
-
 $bodyThemeClass = ($color_mode == 0) ? '' : 'dark-theme';
 $logoTheme = ($color_mode == 0) ? 'path13547.svg' : 'pathWhite.svg';
 $logoTextTheme = ($color_mode == 0) ? 'textGreen.svg' : 'textWhite.svg';
 $dropdownThemeClass = ($color_mode == 0) ? '' : 'dropdown-menu-dark';
 $btnText = ($color_mode == 0) ? '<i class="bi bi-moon-stars pe-2"></i>Dark mode' : '<i class="bi bi-brightness-high pe-2"></i>Light mode';
+}
 
 $script="";
 
@@ -71,14 +71,22 @@ elseif($name=="about"){
         <script src="scripts/colorTheme.js?v=<?php echo time(); ?>"></script>
         <link rel="Shortcut icon" href="images/pathwhite.svg">
     </head>
+    <?php if(isset($_SESSION['user_id'])) : ?>
     <body class="<?= $bodyThemeClass ?>">
+    <?php else : ?>
+    <body>
+    <?php endif; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <div class="container-fluid p-0 position-relative" style="min-height:100vw">
     <!--Navbar--> 
     <nav class="color-nav navbar navbar-expand-lg bg-body-tertiary p-0">
     <div class="container-fluid">
+    <?php if(isset($_SESSION['user_id'])) : ?>
     <a class="navbar-brand" aria-current="page" href="<?= $root ?>index.php"><img class="img-fluid m-2 logo" id="logo" width="40" height="40" src="images/<?= $logoTheme ?>"><img class="img-fluid" id="logoText" width="80" height="80" src="images/<?= $logoTextTheme ?>"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <?php else : ?>
+    <a class="navbar-brand" aria-current="page" href="<?= $root ?>index.php"><img class="img-fluid m-2 logo" id="logo" width="40" height="40" src="images/path13547.svg"><img class="img-fluid" id="logoText" width="80" height="80" src="images/textGreen.svg"></a>
+    <?php endif; ?>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
