@@ -18,11 +18,32 @@ $get_all_posts = mysqli_query($conn,$query_admin);
             <div class="container-fluid main-container">
             <!--Show an alert when an error occurs while creating a post-->
             <?php if(isset($_SESSION['add-post-succ'])):?>
-            <div class="col-5>
+            <div class="col-5">
             <p class="alert alert-success alert-dismissible fade show" role="alert">
             <?=$_SESSION['add-post-succ'];
                 unset($_SESSION['add-post-succ']);?>
+            <button type="button" class="btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
+            <!--Show an alert when an error occurs while creating a post-->
+            <?php if(isset($_SESSION['edit-post-succ'])):?>
+            <div class="col-5">
+            <p class="alert alert-success alert-dismissible fade show" role="alert">
+            <?=$_SESSION['edit-post-succ'];
+                unset($_SESSION['edit-post-succ']);?>
             <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
+             <!--Show an alert when an error occurs while editing a post-->
+             <?php if(isset($_SESSION['edit_post'])):?>
+            <div class="col-5">
+            <p class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-circle"></i> 
+            <?=$_SESSION['edit_post'];
+                unset($_SESSION['edit_post']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </p>
             </div>
             <?php endif ?>
