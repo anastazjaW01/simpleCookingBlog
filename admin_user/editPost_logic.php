@@ -4,7 +4,7 @@ require 'config/database.php';
 
 //get variables from form
 if(isset($_POST['submit'])){
-    $author_id = $_SESSION['user_id'];
+    $id = $_POST['id'];
     $title = filter_var($_POST['title'],FILTER_SANITIZE_SPECIAL_CHARS);
     $recipe = filter_var($_POST['recipe'],FILTER_SANITIZE_SPECIAL_CHARS);
     //get ingredients array
@@ -57,18 +57,18 @@ if(isset($_POST['submit'])){
                 //save file in images
                 move_uploaded_file($image_tmp, $path_image);
             }else{
-                $_SESSION['add_post'] = "The photo is too big!
+                $_SESSION['edit_post'] = "The photo is too big!
                 The size should be less than 2 meters.";
             }
           }else{
-            $_SESSION['add_post'] = "Photo must be in png, jpg or jpeg format!";
+            $_SESSION['edit_post'] = "Photo must be in png, jpg or jpeg format!";
           }
         }
     }
 
     //back 
     if($_SESSION['edit_post']){
-        header('location: ' . $root . 'admin_user/');
+        header('location: ' . $root . 'admin_user/editPost.php?id='. $id);
         die();
     }else{
 
@@ -76,10 +76,10 @@ if(isset($_POST['submit'])){
         $edit_image = isset($image_name) ? $image_name : $previous_img_name;
 
         //edit post in database
-        $query = "UPDATE posts SET title = '$title' recipe_text = '$recipe', ingridients = '$ingredients_array', post_image = '$edit_image' time_needed = $time, portion_amount = $portion, difficult = $difficult, category_id = $category, user_id = $author_id LIMIT 1";
+        $query = "UPDATE posts SET title = '$title', recipe_text = '$recipe', ingridients = '$ingredients_array', post_image = '$edit_image', time_needed = $time, portion_amount = $portion, difficult = $difficult, category_id = $category, id = $id LIMIT 1";
         $result = mysqli_query($conn,$query);
         if(!mysqli_errno($conn)){
-            $_SESSION['edit-post-succ'] = "New post added successfully!";
+            $_SESSION['edit-post-succ'] = "New post edited successfully!";
             header('location: ' .$root. 'admin_user/');
             die();
         }
@@ -87,5 +87,6 @@ if(isset($_POST['submit'])){
 }
 else{
     header('location: ' . $root . 'admin_user/');
+    $_SESSION['edit_post'] = "The post hasn't been edited!";
     die();
 }
