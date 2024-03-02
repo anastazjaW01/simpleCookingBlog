@@ -16,22 +16,32 @@ $get_all_posts = mysqli_query($conn,$query_admin);
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
-            <!--Show an alert when an error occurs while creating a post-->
+            <!--Show an alert when post creating succesfully -->
             <?php if(isset($_SESSION['add-post-succ'])):?>
             <div class="col-5">
             <p class="alert alert-success alert-dismissible fade show" role="alert">
             <?=$_SESSION['add-post-succ'];
                 unset($_SESSION['add-post-succ']);?>
-            <button type="button" class="btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
             </p>
             </div>
             <?php endif ?>
-            <!--Show an alert when an error occurs while creating a post-->
+            <!--Show an alert when post editing succesfully-->
             <?php if(isset($_SESSION['edit-post-succ'])):?>
             <div class="col-5">
             <p class="alert alert-success alert-dismissible fade show" role="alert">
             <?=$_SESSION['edit-post-succ'];
                 unset($_SESSION['edit-post-succ']);?>
+            <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
+             <!--Show an alert when post deleting succesfully-->
+             <?php if(isset($_SESSION['delete-post-succ'])):?>
+            <div class="col-5">
+            <p class="alert alert-success alert-dismissible fade show" role="alert">
+            <?=$_SESSION['delete-post-succ'];
+                unset($_SESSION['delete-post-succ']);?>
             <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
             </p>
             </div>
