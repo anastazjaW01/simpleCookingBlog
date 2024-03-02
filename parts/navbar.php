@@ -71,6 +71,7 @@ elseif($name=="about"){
         <script src="scripts/colorTheme.js?v=<?php echo time(); ?>"></script>
         <link rel="Shortcut icon" href="images/pathwhite.svg">
     </head>
+    <!--Set style for user logged in and not logged in--> 
     <?php if(isset($_SESSION['user_id'])) : ?>
     <body class="<?= $bodyThemeClass ?>">
     <?php else : ?>
