@@ -41,7 +41,7 @@ $category = mysqli_fetch_assoc($category_result);
                         $author = mysqli_fetch_assoc($author_result);
                   ?>
                   <p class="card-subtitle"><?= $author['login']?> | <?= $category['name'] ?></p>
-                  <p class="card-subtitle"><small class="date"><?= date("m.d.Y - H:i",strtotime($post['date_time'])) ?></small></p>
+                  <p class="card-subtitle"><small class="date"><?= date("m.d.Y",strtotime($post['date_time'])) ?></small></p>
                   <p class="card-text text"><?= substr($post['recipe_text'],0,150)?></p>
                   <a href="<?= $root ?>singlePost.php?id=<?= $post['id'] ?>" class="btn btn-success" style="width:70%;">Read more</a>
               </div>
@@ -52,8 +52,8 @@ $category = mysqli_fetch_assoc($category_result);
   </div>
   <?php else : ?>
     <div class="row">
-      <div class="elem col-lg-4 col-md-6 col-sm-12 mb-5">
-      <p>There are no posts for this category!</p>
+      <div class="elem col-lg-6 col-md-6 col-sm-12 mb-5 justify-content-center">
+      <h2 class="text-secondary">There are no posts for this category :&#40;</h2>
       </div>
     </div>
   <?php endif; ?>

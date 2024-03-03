@@ -24,7 +24,7 @@
     }
 
     .img-card{
-        height: 200px !important;
+        height: 280px;
     }
   }
 
@@ -96,6 +96,8 @@ h1{
 .img-card{
     height: 190.925px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     border-top-left-radius: var(--bs-card-inner-border-radius) !important;
     border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
