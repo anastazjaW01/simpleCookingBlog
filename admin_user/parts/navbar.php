@@ -129,9 +129,9 @@ elseif($name=="createpost"){
             </li>
             <?php endif; ?>
                 </ul>
-                <form class="d-flex input-group justify-content-end searchForm mt-2 mt-sm-2 mt-md-2" role="search" action="../search.php">
-                    <input class="search form-control-sm border-0" type="search" placeholder="Search" aria-label="Search" aria-describedby="searchbtn">
-                    <button class="btn btn-sm btn-successNav border-0" type="submit" id="searchbtn"><i class="bi bi-search"></i></button>
+                <form class="d-flex input-group justify-content-end searchForm mt-2 mt-sm-2 mt-md-2" role="search" action="<?= $root ?>search.php" method="GET">
+                    <input class="search form-control-sm border-0" type="search" name="search" placeholder="Search" aria-label="Search" aria-describedby="searchbtn">
+                    <button class="btn btn-sm btn-successNav border-0" type="submit" name="submit" id="searchbtn"><i class="bi bi-search"></i></button>
                 </form>
                 </div>  
                 </div>
