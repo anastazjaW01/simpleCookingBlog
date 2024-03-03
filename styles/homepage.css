@@ -14,9 +14,17 @@
         padding-bottom: 35% !important;
     }
 
+    .card-right a{
+        width: 100% !important;
+    } 
+
     .little-card{
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+
+    .img-card{
+        height: 280px;
     }
 
     .elem{
@@ -60,13 +68,21 @@
 }
 
 .card-left{
-    width: 100%;
+    width: 50%;
 }
 
 .card-right{
 padding-top: 3%;
 padding-right: 2%;
+width: 50%;
+display: flex!important;
+flex-direction: column;
 }
+
+.card-right a{
+    margin-top: auto;
+    width: 50%;
+} 
 
 .img-big{
 max-height: 450px;
@@ -97,11 +113,14 @@ height: 100%;
 .img-card{
     height: 190.925px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     border-top-left-radius: var(--bs-card-inner-border-radius) !important;
     border-top-right-radius: var(--bs-card-inner-border-radius) !important;
 }
 
 .img-card img{
+    object-position: center !important;
     transition: .5s ease;
 }
 
