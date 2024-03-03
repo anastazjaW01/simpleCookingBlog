@@ -1,52 +1,77 @@
 <?php
 $name = "singlePost";
 require "parts/navbar.php";
+
+//get post from database
+if(isset($_GET['id'])){
+    $id = filter_var($_GET['id'],FILTER_SANITIZE_NUMBER_INT);
+    $query = "SELECT * FROM posts WHERE id=$id";
+    $result = mysqli_query($conn, $query);
+    $post = mysqli_fetch_assoc($result);
+}else{
+    die();
+}
+
+//separate ingredients
+$ingredients = $post['ingridients'];
+$ingredients_array = explode(',', $ingredients);
+
+//get stars amount
+$stars = $post['difficult'];
+
+//get autor info from database
+$author_id = $post['user_id'];
+$author_query = "SELECT * FROM users where id=$author_id";
+$author_result = mysqli_query($conn, $author_query);
+$author = mysqli_fetch_assoc($author_result);
+
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
                 <div class="row p-0">
+                    <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 d-flex justify-content-center">
+                        <img class="img-fluid post_img" src="images/post_images/<?= $post['post_image'] ?>">
+                    </div>
+                    <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 ">
+                        <h2><?= $post['title'] ?></h2>
+                    </div>
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
-                        <img class="img-fluid post_img" src="images/cookingVlog.jpg"></div>
-                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 ">
-                        <h2>Title</h2></div>
-                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
-                        <p><small>Person 12.04.2024</small></p></div>
-                        <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 mb-3">
-                            <div class="row text-center recipe_info_text">
-                                <div class="col-4">Time</div>
-                                <div class="col-4">Difficulty level</div>
-                                <div class="col-4">Portion</div>
-                            </div>
-                            <div class="row text-center recipe_info_icon">
-                                <div class="col-4"><p><i class="bi bi-clock-fill"></i> 2h </p></div>
-                                <div class="col-4"><p>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
-                                    <i class="bi bi-star"></i>
-                                </p></div>
-                                <div class="col-4"><p><i class="bi bi-pie-chart-fill"></i> 3</p></div>
-                            </div>
+                        <p><small><?= $author['login'] ?> | <?= date("m.d.Y",strtotime($post['date_time'])) ?></small></p>
+                    </div>
+                    <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 mb-3">
+                        <div class="row text-center recipe_info_text">
+                            <div class="col-4">Time</div>
+                            <div class="col-4">Difficulty level</div>
+                            <div class="col-4">Portion</div>
                         </div>
-                        <div class="col-lg-3 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
+                        <div class="row text-center recipe_info_icon">
+                            <div class="col-4"><p><i class="bi bi-clock-fill"></i> <?= $post['time_needed'] ?> </p></div>
+                            <div class="col-4"><p>
+                                    <?php for($i = 1; $i <= 5; $i++){
+                                        if($i <= $stars){
+                                            echo '<i class="bi bi-star-fill pe-1"></i>';
+                                        }else{
+                                            echo '<i class="bi bi-star pe-1"></i>';
+                                        }
+                                    } ?>
+                            </p></div>
+                            <div class="col-4"><p><i class="bi bi-pie-chart-fill"></i> <?= $post['portion_amount'] ?></p></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <h4>Ingridients</h4>
                         <ul id="ingridientsList">
-                            <li class="ingridient" onclick="deleteIngridient(this)"><span> milk</span></li>
-                            <li class="ingridient" onclick="deleteIngridient(this)"><span>sugar</span></li>
-                            <li class="ingridient" onclick="deleteIngridient(this)"><span>1kg flavour</span></li>
-                            <li class="ingridient" onclick="deleteIngridient(this)"><span> eggs</span></li>
-                            <li class="ingridient" onclick="deleteIngridient(this)"><span>1 glass water</span></li>
-                        </ul></div>
-                        <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-0">
+                        <?php foreach($ingredients_array as $ingredient) : ?>
+                            <li class="ingridient" onclick="deleteIngridient(this)"><span><?= $ingredient ?></span></li>
+                         <?php endforeach; ?>  
+                        </ul>
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-12 p-0">
                         <div>
                             <h4>Recipe</h4>
                             <p class="recipe_text">
-                            Do zrobienia ciasta na dowolne pierogi potrzebujesz również: czysty blat lub stolnica do wałkowania ciasta; wałek; okrągła wykrawaczka do pierogów lub szklankę średnica około 7-9 cm; bawełniana ściereczka; szeroki garnek; i cedzak do łowienia pierogów.
-                            Kalorie policzone zostały na podstawie użytych przeze mnie składników. Jest to więc orientacyjna ilość kalorii, ponieważ Twoje składniki mogą mieć inną ilość kalorii niż te, których użyłam ja. Podczas liczenia kalorii nie uwzględniłam wybranego przez Ciebie farszu. Podałam kaloryczność "pustego" pieroga zakładając, że wyszło Ci 60 sztuk.
-                            Do szerokiej miski przesiej mąkę. Dodaj sól oraz olej np. rzepakowy. Olej z pestek winogron oraz inne oleje o delikatnym smaku również się sprawdzą. Wlej szklankę gorącej, przegotowanej wody (250 ml) i wyrabiaj chwilę ciasto - najlepiej ręcznie. Na początku, jeśli ciasto jest gorące, możesz je zamieszać łyżką.
-                            Ciasto można też śmiało wyrabiać w maszynie np. w Thermomix. Ciasto powinno być miękkie, plastyczne i elastyczne. Kulę ciasta zawiń w folię i odłóż na 30 minut. Ciasto po leżakowaniu nie będzie się kurczyć podczas wałkowania.    
-                        </p>
+                             &ensp;&ensp; <?= $post['recipe_text'] ?>    
+                            </p>
                         </div>
                     </div>
                 </div>
