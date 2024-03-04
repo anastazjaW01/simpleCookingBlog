@@ -86,9 +86,10 @@ $author = mysqli_fetch_assoc($author_result);
                                 </h2>
                                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        <form class="form-check p-0 d-flex flex-column align-items-end">
-                                    <textarea class="form-check border-success mb-1" id="comment" name="comment" rows="3" placeholder="Write something nice..." style="width: 100%;"></textarea>
-                                    <button class="btn btn-success" type="submit" style="width: 30%;">Submit</button>
+                                        <form class="form-check p-0 d-flex flex-column align-items-end" method="POST" action="<?= $root ?>addComment.php" enctype="multipart/form-data">
+                                        <input  type="hidden" name="id" value="<?=$post['id'] ?>" >
+                                        <textarea class="form-check border-success mb-1" id="comment" name="comment" rows="3" placeholder="Write something nice..." style="width: 100%;"></textarea>
+                                        <button class="btn btn-success" type="submit" name="submit" style="width: 30%;">Submit</button>
                                         </form>
                                     </div>
                                 </div>
