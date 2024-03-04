@@ -25,6 +25,9 @@ $author_query = "SELECT * FROM users where id=$author_id";
 $author_result = mysqli_query($conn, $author_query);
 $author = mysqli_fetch_assoc($author_result);
 
+$com_query = "SELECT * FROM comments WHERE post_id=$id ORDER BY id DESC";
+$comment = mysqli_query($conn, $com_query);
+
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
@@ -100,8 +103,21 @@ $author = mysqli_fetch_assoc($author_result);
                 <div class="row mt-2">
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <h4>Comments</h4>
-                        <p class=""><small>User</small> This post has no comments yet</p>
+                        <?php if(mysqli_num_rows($comment)>0) : ?>
+                        <?php while($com=mysqli_fetch_assoc($comment)) : ?>
+                            <?php
+                                $comm_author_id = $com['user_id'];
+                                $comm_author = "SELECT * FROM users WHERE id=$comm_author_id";
+                                $comm_author_result = mysqli_query($conn, $comm_author);
+                                $author_comm = mysqli_fetch_assoc($comm_author_result);
+                                
+                            ?>
+                        <p class=""><small><?= $author_comm['login'] ?></small> <?= $com['comm_text'] ?></p>
                         <hr>
+                        <?php endwhile; ?>
+                        <?php else : ?>
+                        <p ><?= "There are no comments here yet" ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
