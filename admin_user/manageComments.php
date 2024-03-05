@@ -7,6 +7,16 @@ $comment_result = mysqli_query($conn, $comment_query);
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
+            <!--Show an alert when post creating successfully -->
+            <?php if(isset($_SESSION['delete-com-succ'])):?>
+            <div class="col-5">
+            <p class="alert alert-success alert-dismissible fade show" role="alert">
+            <?=$_SESSION['delete-com-succ'];
+                unset($_SESSION['delete-com-succ']);?>
+            <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
             <div class="row"><h4>Hello Admin!</h4></div>
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12 col-12 side-panel">
