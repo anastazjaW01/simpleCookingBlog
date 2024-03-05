@@ -1,5 +1,5 @@
 <?php
-require 'config/connect.php';
+require 'config/database.php';
 
 $id = filter_var($_POST['id'],FILTER_SANITIZE_NUMBER_INT);
 
