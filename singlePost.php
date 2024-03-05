@@ -32,6 +32,26 @@ $comment = mysqli_query($conn, $com_query);
             <!--Container-->
             <div class="container-fluid main-container">
                 <div class="row p-0">
+                <?php if(isset($_SESSION['add-comm-succ'])):?>
+                     <div class="col-6 offset-3">
+                        <p class="alert alert-success alert-dismissible fade show" role="alert">
+                        <?=$_SESSION['add-comm-succ'];
+                            unset($_SESSION['add-comm-succ']);?>
+                        <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
+                         </p>
+                     </div>
+                 <?php endif ?>
+                 <!--Show an alert when an error occurs while adding comment-->
+                <?php if(isset($_SESSION['add-comm-error'])):?>
+                    <div class="col-6 offset-3">
+                        <p class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="bi bi-exclamation-circle"></i> 
+                            <?=$_SESSION['add-comm-error'];
+                                unset($_SESSION['add-comm-error']);?>
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </p>
+                    </div>
+                <?php endif ?>
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 d-flex justify-content-center">
                         <img class="img-fluid post_img" src="images/post_images/<?= $post['post_image'] ?>">
                     </div>
