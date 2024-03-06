@@ -1,6 +1,11 @@
 <?php
 $name = "manageusers";
 require "parts/navbar.php";
+
+//get user info from database without admin
+$current_user = $_SESSION['user_id'];
+$user_query = "SELECT * FROM users WHERE NOT id=$current_user";
+$user_result = mysqli_query($conn, $user_query);
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
@@ -15,6 +20,7 @@ require "parts/navbar.php";
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-12 col-sm-12 col-12  info-table ">
+                <?php if(mysqli_num_rows($user_result) > 0) : ?>
                     <table class="table">
                         <thead class="table-light sticky-header">
                             <tr>
@@ -25,56 +31,25 @@ require "parts/navbar.php";
                             </tr>
                         </thead>
                         <tbody>
+                        <?php while($user = mysqli_fetch_assoc($user_result)) : ?>
+                            <?php
+                                    $id = $user['id'];
+                                    $post_number = "SELECT COUNT(*) AS posts_number FROM posts WHERE user_id=$id";
+                                    $post_number_result = mysqli_query($conn, $post_number);
+                                    $number = mysqli_fetch_assoc($post_number_result);
+                            ?>
                             <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
+                                <td scope="row"><?= $user['email'] ?></td>
+                                <td><?= $user['login'] ?></td>
+                                <td><?= $number['posts_number'] ?></td>
+                                <td><button class="btn btn-danger" href="<?= $root ?>admin_user/deleteUser.php?id=<?= $user['id'] ?>" type="submit">Delete</button></td>
                             </tr>
-                            <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
-                            </tr>
-                            <tr>
-                                <td scope="row">jane.roster@gmail.com</td>
-                                <td>Jane1204</td>
-                                <td>12</td>
-                                <td><button class="btn btn-danger">Delete</button></td>
-                            </tr>
+                        <?php endwhile; ?>
                         </tbody>
                     </table>
+                    <?php else : ?>
+                        <div class="alert alert-secondary d-flex align-items-center fw-bold" role="alert"><?= "No users to show." ?></div>
+                    <?php endif; ?>  
                 </div>
             </div>
             </div>
