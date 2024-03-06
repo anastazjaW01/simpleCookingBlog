@@ -17,7 +17,7 @@ if(isset($_GET['id'])){
         $image_result=mysqli_query($conn,$image_query);
         if(mysqli_num_rows($image_result) > 0){
             while ($image=mysqli_fetch_assoc($image_result)){
-                $img_path='../images/post_images'.$image['post_image'];
+                $img_path='../images/post_images/'.$image['post_image'];
             if($img_path){
                 unlink($img_path);
                 }
@@ -25,7 +25,7 @@ if(isset($_GET['id'])){
         }
 
         //delete user from database
-        $delete_user="DELETE FROM user WHERE id=$id";
+        $delete_user="DELETE FROM users WHERE id=$id";
         $delete_result=mysqli_query($conn,$delete_user);
         if(mysqli_errno($conn)){
         $_SESSION['delete_user']="The user '{$user['login']}' cannot be deleted from the database !";

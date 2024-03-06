@@ -56,7 +56,7 @@ $comment_result = mysqli_query($conn, $comment_query);
                                 <td scope="row"><?= $title['title'] ?></td>
                                 <td><?= substr($comment['comm_text'], 0, 100) ?></td>
                                 <td><?= $author['login'] ?></td>
-                                <td><button class="btn btn-danger" href="<?= $root ?>admin_user/deleteComm.php?id=<?= $comment['id'] ?>" type="submit">Delete</button></td>
+                                <td><a href="<?= $root ?>admin_user/deleteComm.php?id=<?= $comment['id'] ?>"><button class="btn btn-danger" type="submit">Delete</button></a></td>
                             </tr>
                             <?php endwhile; ?>
                         </tbody>

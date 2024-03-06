@@ -63,7 +63,7 @@ $user_result = mysqli_query($conn, $user_query);
                                 <td scope="row"><?= $user['email'] ?></td>
                                 <td><?= $user['login'] ?></td>
                                 <td><?= $number['posts_number'] ?></td>
-                                <td><button class="btn btn-danger" href="<?= $root ?>admin_user/deleteUsers.php?id=<?= $user['id'] ?>" type="submit">Delete</button></td>
+                                <td><a href="<?= $root ?>admin_user/deleteUsers.php?id=<?= $user['id'] ?>"><button class="btn btn-danger" type="submit">Delete</button></a></td>
                             </tr>
                         <?php endwhile; ?>
                         </tbody>
