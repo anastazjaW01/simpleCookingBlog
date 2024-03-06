@@ -9,6 +9,27 @@ $user_result = mysqli_query($conn, $user_query);
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
+                 <!--Show an alert when user deleting successfully-->
+             <?php if(isset($_SESSION['delete_user_succ'])):?>
+            <div class="col-6 offset-3">
+            <p class="alert alert-success alert-dismissible fade show" role="alert">
+            <?=$_SESSION['delete_user_succ'];
+                unset($_SESSION['delete_user_succ']);?>
+            <button type="button" class="btn-close btn-close-white " data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
+             <!--Show an alert when an error occurs while deleting user-->
+             <?php if(isset($_SESSION['delete_user'])):?>
+            <div class="col-6 offset-3">
+            <p class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-circle"></i> 
+            <?=$_SESSION['delete_user'];
+                unset($_SESSION['delete_user']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
             <div class="row"><h4>Hello Admin!</h4></div>
             <div class="row">
                 <div class="col-lg-3 col-md-12 col-sm-12 col-12 side-panel">
@@ -42,7 +63,7 @@ $user_result = mysqli_query($conn, $user_query);
                                 <td scope="row"><?= $user['email'] ?></td>
                                 <td><?= $user['login'] ?></td>
                                 <td><?= $number['posts_number'] ?></td>
-                                <td><button class="btn btn-danger" href="<?= $root ?>admin_user/deleteUser.php?id=<?= $user['id'] ?>" type="submit">Delete</button></td>
+                                <td><button class="btn btn-danger" href="<?= $root ?>admin_user/deleteUsers.php?id=<?= $user['id'] ?>" type="submit">Delete</button></td>
                             </tr>
                         <?php endwhile; ?>
                         </tbody>
