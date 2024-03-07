@@ -34,6 +34,34 @@ function crypto_rand_secure($min, $max){
     return $min + $rnd;
 }
 
+//send email with verification code
+function sendResetCodeByEmail($email, $sixDigitCode){
+    $subject = "Reset password - verification code.";
+    $message = "Your verification code is: " . $sixDigitCode;
+    $headers = "From: example@example.com";
+
+    if(mail($email, $subject, $message, $headers)){
+        echo "The message with the reset code was sent to: $email";
+        mail($email, $subject, $message, $headers);
+    }else{
+        echo "There was a problem while sending the message.";
+    }
+}
+
+//set code in database
+function handlePasswordReset($email, $sixDigitCode){
+    sendResetCodeByEmail($email, $sixDigitCode);
+    require 'config/connect.php';
+    
+    $conn = new mysqli($host, $user, $pass, $db_name);
+    $query_code = "UPDATE users SET token='$sixDigitCode' WHERE email='$email'";
+    $result = mysqli_query($conn, $query_code);
+
+    if($result){
+        return $sixDigitCode;
+    }
+}
+
 
 
 
