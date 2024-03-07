@@ -19,7 +19,7 @@ require "parts/navbar.php";
     <div class="row reveal align-items-center">
     <div class="col-6 img-p">
             <div class="img-container">
-            <img class="img-fluid" src="images/soup0.jpg" alt="pic1"></div>
+            <img class="img-fluid" src="images/soup0.jpg?v=<?php echo time(); ?>" alt="pic1"></div>
         </div>
         <div class="col-6 text-styling">
             <p><h2>Welcome to <small>Simple</small><b>Cooking</b>!</h2>

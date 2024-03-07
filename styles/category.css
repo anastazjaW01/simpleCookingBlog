@@ -41,8 +41,8 @@
 .main-container{
     padding-bottom: 5%;
     margin-top: 3%;
-    padding-left: 4%;
-    padding-right: 4%;
+    /*padding-left: 4%;
+    padding-right: 4%; */
     color: var(--main-color);
   }
 

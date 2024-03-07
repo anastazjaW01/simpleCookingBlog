@@ -20,9 +20,9 @@ $category = mysqli_fetch_assoc($category_result);
 
 ?>
         <!--Container-->
-  <div class="container-fluid main-container">
+  <div class="container-fluid main-container ps-0">
     <div class="row parent">
-      <div id="child_background" style="background-image: url(http://localhost/simpleCookingBlog/images/category/<?= $category['photo'] ?>);"></div>
+      <div id="child_background" style="background-image: url(http://localhost/simpleCookingBlog/images/category/<?= $category['photo'] ?>?v=<?php echo time(); ?>);"></div>
       <h1 class="col-2 offset-5 d-flex justify-content-center align-content-center"><?= $category['name'] ?></h1>
     </div>
   <?php if(mysqli_num_rows($result) > 0) : ?>
@@ -52,7 +52,7 @@ $category = mysqli_fetch_assoc($category_result);
   </div>
   <?php else : ?>
     <div class="row">
-      <div class="elem col-lg-6 col-md-6 col-sm-12 mb-5 justify-content-center">
+      <div class="elem col-lg-6 offset-lg-3 col-md-6 offset-md-3 col-sm-12 offset-sm-0 mb-5 d-flex justify-content-center">
       <h2 class="text-secondary">There are no posts for this category :&#40;</h2>
       </div>
     </div>
