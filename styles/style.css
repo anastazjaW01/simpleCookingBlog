@@ -37,7 +37,7 @@ transform: rotate(180deg);
     position: center;
 }
 
-h3{
+h3, h5{
     color: #18604a;
     text-align: center;
 }
