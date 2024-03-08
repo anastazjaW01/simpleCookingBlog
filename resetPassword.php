@@ -21,17 +21,17 @@ session_start();
             <h3>Simple Cooking</h3> 
         </div>
         <!-- show alert by php when validation error occurs -->
-        <?php if(isset($_SESSION['signIn'])):?>
+        <?php if(isset($_SESSION['reset_pass'])):?>
             <div>
             <p class="alert alert-danger alert-dismissible fade show" role="alert">
             <i class="bi bi-exclamation-circle"></i> 
-            <?=$_SESSION['signIn'];
-                unset($_SESSION['signIn']);?>
+            <?=$_SESSION['reset_pass'];
+                unset($_SESSION['reset_pass']);?>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </p>
             </div>
         <?php endif ?>
-        <form action = "<?= $root ?>signIn_logic.php" method="POST" >
+        <form action = "resetPassword_logic.php" method="POST" >
             <div class="form1 form-floating mt-2">
                 <input type="password" class="form-control border-success" id="password" name="password" placeholder="Hasło" required>
                 <span id="eyeButton" onclick="showHide()"><i class="bi bi-eye-fill tt" id="icon" onclick="changeIcon()" title="Show password"></i></span>
