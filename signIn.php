@@ -43,6 +43,16 @@ unset($_SESSION['signIn-data']);
             </p>
             </div>
             <?php endif ?>
+        <!-- show alert by php when password was resset -->
+          <?php if(isset($_SESSION['reset_pass_succ'])):?>
+            <div>
+            <p class="alert alert-success alert-dismissible fade show d-flex " role="alert">
+            <?=$_SESSION['reset_pass_succ'];
+                unset($_SESSION['reset_pass_succ']);?>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+            <?php endif ?>
         <form action = "<?= $root ?>signIn_logic.php" method="POST" >
             <div class="form1 form-floating mt-2">
                 <input type="email" id="email" name="email" value="<?php if(isset($_COOKIE["email"])) { echo $_COOKIE["email"]; } ?>"  class="form-control border-success" placeholder="jan-kowalski@example.com">
