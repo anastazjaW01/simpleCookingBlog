@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,7 +37,7 @@
                 <label for="code">Code</label>
             </div>
             <div class="form1 mt-3">
-                <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="send" name="submit" onclick="changeText()">Send</button>
+                <button type="submit" class="btn btn-success col-12 mt-2 mb-1" id="send" name="submit" >Send</button>
             </div>
         </form>
         </div>
