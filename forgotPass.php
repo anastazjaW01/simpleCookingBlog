@@ -23,6 +23,17 @@ unset($_SESSION['forgot_data']);
         <img class="logo" src="images/path13547.svg" width=50 height="50"/>
             <h3>Forgot password?</h3> 
         </div>
+        <!-- show alert by php when validation error occurs -->
+        <?php if(isset($_SESSION['forgot'])):?>
+            <div>
+            <p class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-circle"></i> 
+            <?=$_SESSION['forgot'];
+                unset($_SESSION['forgot']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+        <?php endif ?>
         <form action="forgotPass_logic.php" method="POST">
             <div class="form1 form-floating mt-2">
                 <input type="email" id="email" name="email" value=""  class="form-control border-success" placeholder="jan-kowalski@example.com">
