@@ -17,7 +17,18 @@
         <img class="logo" src="images/path13547.svg" width=50 height="50"/>
             <h5>Enter the verification code</h5> 
         </div>
-        <form action="<?= $root ?>" method="POST" autocomplete="off">
+        <!-- show alert by php when validation error occurs -->
+        <?php if(isset($_SESSION['code'])):?>
+            <div>
+            <p class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-circle"></i> 
+            <?=$_SESSION['code'];
+                unset($_SESSION['code']);?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </p>
+            </div>
+        <?php endif ?>
+        <form action="confirmCode_logic.php" method="POST" autocomplete="off">
             <div class="form1 form-floating mt-2">
                 <input type="text" id="code" placeholder="Code" name="code" value="" maxlength="6"  class="form-control border-success" required>
                 <label for="code">Code</label>
