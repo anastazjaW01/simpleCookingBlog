@@ -1,6 +1,20 @@
 <?php
 require 'config/database.php';
 
+//add like function
+function add_like($conn, $post_id, $user_id){
+    $query = "INSERT INTO likes (post_id, user_id) VALUES (?, ?)";
+    $stmt = $conn -> prepare($query);
+    $stmt -> bind_param('ii', $post_id, $user_id);
+    $stmt -> execute();
+
+    $like_query = "UPDATE posts SET likes = likes + 1 WHERE id = ?";
+    $stmt = $conn -> prepare($like_query);
+    $stmt -> bind_param('i', $post_id);
+    $stmt -> execute();
+
+}  
+
 if(isset($_SESSION['user_id'])){
 
     if(isset($_GET['id'])){
