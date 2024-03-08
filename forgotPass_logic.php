@@ -16,9 +16,9 @@ if(isset($_POST['submit'])){
     if(mysqli_num_rows($email_query_result) > 0){
         $_SESSION['token'] = $sixDigitCode;
         handlePasswordReset($email, $sixDigitCode);
-        echo "The reset code was sent to your email address.";
+
         header('Location:' . $root . 'confirmVerificationCode.php');
-        exit();
+        die();
     }else{
         $_SESSION['forgot'] = "Email doesn't exist!";
         die();
