@@ -1,9 +1,10 @@
 <?php 
-
+session_start();
 require 'config/connectSession.php';
 $connection = new mysqli($host, $user, $pass, $db_name);
 
-if(isset($_SESSION['submit'])){
+if(isset($_SESSION['token'])){
+    if(isset($_POST['submit'])){
     $code = filter_var($_POST['code'], FILTER_SANITIZE_NUMBER_INT);
     $token = $_SESSION['token'];
 
@@ -18,4 +19,7 @@ if(isset($_SESSION['submit'])){
     }else{
         $_SESSION['code'] = "Invalid code!";
     }
+  }
 }
+header('Location: ' . $root . 'confirmVerificationCode.php');
+die();
