@@ -23,6 +23,16 @@ $first_category = mysqli_fetch_assoc($first_category_result);
 $query = "SELECT * FROM posts WHERE date_time < (SELECT MAX(date_time) FROM posts) ORDER BY date_time DESC";
 $result = mysqli_query($conn, $query);
 
+//get likes info from database
+$user = $_SESSION['user_id'];
+$first_post = $first['id'];
+$like_query = "SELECT * FROM likes WHERE user_id = $user AND post_id = $first_post";
+$like_result = mysqli_query($conn, $like_query);
+(mysqli_num_rows($like_result) > 0) ? $class = 'bi bi-heart-fill ps-2' : $class = 'bi bi-heart ps-2';
+
+//style for user logged in and user not logged in
+(isset($_SESSION['user_id'])) ? $f_class = $class : $f_class = 'bi bi-heart ps-2';
+
 ?>
     <!--Container-->
     <div class="container-fluid main-container" >
@@ -37,7 +47,7 @@ $result = mysqli_query($conn, $query);
       <p class="card-text start-text"> <?= substr($first['recipe_text'], 0, 200) ?>...</p>
       <p class="card-text"><small class="text-body-secondary">Last updated <?= date("H:i A",strtotime($first['date_time'])) ?></small></p>
       <div><a href="<?= $root ?>singlePost.php?id=<?= $first['id'] ?>" class="btn btn-success">Read more</a>
-      <a class="" href="<?= $root ?>addLikes_logic.php?id=<?= $first['id'] ?>"><i class="bi bi-heart ps-2" style="font-size:large;">
+      <a class="" href="<?= $root ?>addLikes_logic.php?id=<?= $first['id'] ?>"><i class="<?= $f_class ?>" style="font-size:large;">
       <small style="font-size:70%;"><?= $first['likes'] ?></small></i></a></div>
       </div>
       </div>
