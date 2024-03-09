@@ -15,6 +15,20 @@ function add_like($conn, $post_id, $user_id){
 
 }  
 
+//remove like function
+function remove_like($conn, $post_id, $user_id){
+    $query = "DELETE FROM likes WHERE post_id = ? AND user_id = ?";
+    $stmt = $conn -> prepare($query);
+    $stmt -> bind_param('ii', $post_id, $user_id);
+    $stmt -> execute();
+
+    $like_query = "UPDATE posts SET likes = likes - 1 WHERE id = ?";
+    $stmt = $conn -> prepare($like_query);
+    $stmt -> bind_param('i', $post_id);
+    $stmt -> execute();
+
+} 
+
 if(isset($_SESSION['user_id'])){
 
     if(isset($_GET['id'])){
