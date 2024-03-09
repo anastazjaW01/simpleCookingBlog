@@ -47,8 +47,8 @@ $like_result = mysqli_query($conn, $like_query);
       <p class="card-text start-text"> <?= substr($first['recipe_text'], 0, 200) ?>...</p>
       <p class="card-text"><small class="text-body-secondary">Last updated <?= date("H:i A",strtotime($first['date_time'])) ?></small></p>
       <div><a href="<?= $root ?>singlePost.php?id=<?= $first['id'] ?>" class="btn btn-success">Read more</a>
-      <a class="" href="<?= $root ?>addLikes_logic.php?id=<?= $first['id'] ?>"><i class="<?= $f_class ?>" style="font-size:large;">
-      <small style="font-size:70%;"><?= $first['likes'] ?></small></i></a></div>
+      <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $first['id'] ?>"><i class="<?= $f_class ?>" style="font-size:large;">
+      <small><?= $first['likes'] ?></small></i></a></div>
       </div>
       </div>
     </div>
@@ -87,8 +87,8 @@ $like_result = mysqli_query($conn, $like_query);
     <p class="card-subtitle"><small class="date"><?= date("m.d.Y",strtotime($post['date_time'])) ?></small></p>
     <p class="card-text"><?= substr($post['recipe_text'], 0, 150) ?>...</p>
     <a href="<?= $root ?>singlePost.php?id=<?= $post['id'] ?>" class="btn btn-success" style="width:70%;">Read more</a>
-    <a class="" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="<?= $all_class ?>" style="font-size:large;">
-    <small style="font-size:70%;"><?= $post['likes'] ?></small></i></a>
+    <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="<?= $all_class ?>" style="font-size:large;">
+    <small><?= $post['likes'] ?></small></i></a>
     </div>
     </div>
   </div>

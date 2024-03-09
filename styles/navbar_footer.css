@@ -162,6 +162,17 @@ width: 100%;
     justify-content: end;
 }
 
+/*** LIKES ***/
+.like{
+    text-decoration: none;
+    color: var(--darkGreenBut);
+}
+
+.like small{
+    font-size: 70%;
+    color: #939594;
+}
+
 /***** Footer *****/ 
 
 .footer{
