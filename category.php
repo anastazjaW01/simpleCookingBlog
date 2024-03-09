@@ -39,11 +39,23 @@ $category = mysqli_fetch_assoc($category_result);
                         $author_query = "SELECT * FROM users where id=$author_id";
                         $author_result = mysqli_query($conn, $author_query);
                         $author = mysqli_fetch_assoc($author_result);
+
+                        //get likes info from database
+                        $user = $_SESSION['user_id'];
+                        $all_post = $post['id'];
+                        $like_query = "SELECT * FROM likes WHERE user_id = $user AND post_id = $all_post";
+                        $like_result = mysqli_query($conn, $like_query);
+                        (mysqli_num_rows($like_result) > 0) ? $class = 'bi bi-heart-fill ps-2' : $class = 'bi bi-heart ps-2';
+
+                        //style for user logged in and user not logged in
+                        (isset($_SESSION['user_id'])) ? $all_class = $class : $all_class = 'bi bi-heart ps-2';
                   ?>
                   <p class="card-subtitle"><?= $author['login']?> | <?= $category['name'] ?></p>
                   <p class="card-subtitle"><small class="date"><?= date("m.d.Y",strtotime($post['date_time'])) ?></small></p>
                   <p class="card-text text"><?= substr($post['recipe_text'],0,150)?></p>
                   <a href="<?= $root ?>singlePost.php?id=<?= $post['id'] ?>" class="btn btn-success" style="width:70%;">Read more</a>
+                  <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="<?= $all_class ?>" style="font-size:large;">
+                  <small><?= $post['likes'] ?></small></i></a>
               </div>
           </div>
         </div>
