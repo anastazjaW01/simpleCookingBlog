@@ -28,6 +28,16 @@ $author = mysqli_fetch_assoc($author_result);
 $com_query = "SELECT * FROM comments WHERE post_id=$id ORDER BY id DESC";
 $comment = mysqli_query($conn, $com_query);
 
+//get likes info from database
+$user = $_SESSION['user_id'];
+$all_post = $_GET['id'];
+$like_query = "SELECT * FROM likes WHERE user_id = $user AND post_id = $all_post";
+$like_result = mysqli_query($conn, $like_query);
+(mysqli_num_rows($like_result) > 0) ? $class = 'bi bi-heart-fill ps-2' : $class = 'bi bi-heart ps-2';
+ 
+//style for user logged in and user not logged in
+(isset($_SESSION['user_id'])) ? $all_class = $class : $all_class = 'bi bi-heart ps-2';
+
 ?>
             <!--Container-->
             <div class="container-fluid main-container">
@@ -56,7 +66,10 @@ $comment = mysqli_query($conn, $com_query);
                         <img class="img-fluid post_img" src="images/post_images/<?= $post['post_image'] ?>">
                     </div>
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 ">
-                        <h2><?= $post['title'] ?></h2>
+                        <h2><?= $post['title'] ?>
+                        <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="<?= $all_class ?>" style="font-size:large;">
+                        <small><?= $post['likes'] ?></small></i></a>
+                        </h2>    
                     </div>
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
                         <p><small><?= $author['login'] ?> | <?= date("m.d.Y",strtotime($post['date_time'])) ?></small></p>
