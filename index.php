@@ -68,6 +68,15 @@ $like_result = mysqli_query($conn, $like_query);
         $category_query = "SELECT * FROM categories where id=$category_id";
         $category_result = mysqli_query($conn, $category_query);
         $category = mysqli_fetch_assoc($category_result);
+
+        //get all likes info from database
+        $all_post = $post['id'];
+        $likes_query = "SELECT * FROM likes WHERE user_id = $user AND post_id = $all_post";
+        $likes_result = mysqli_query($conn, $likes_query);
+        (mysqli_num_rows($likes_result) > 0) ? $class = 'bi bi-heart-fill ps-2' : $class = 'bi bi-heart ps-2';
+
+        //style for user logged in and user not logged in
+        (isset($_SESSION['user_id'])) ? $all_class = $class : $all_class = 'bi bi-heart ps-2';
     ?>
     <div class="elem col-lg-4 col-md-6 col-sm-12 mb-3">
     <div class="card little-card">
@@ -78,7 +87,7 @@ $like_result = mysqli_query($conn, $like_query);
     <p class="card-subtitle"><small class="date"><?= date("m.d.Y",strtotime($post['date_time'])) ?></small></p>
     <p class="card-text"><?= substr($post['recipe_text'], 0, 150) ?>...</p>
     <a href="<?= $root ?>singlePost.php?id=<?= $post['id'] ?>" class="btn btn-success" style="width:70%;">Read more</a>
-    <a class="" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="bi bi-heart ps-2" style="font-size:large;">
+    <a class="" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="<?= $all_class ?>" style="font-size:large;">
     <small style="font-size:70%;"><?= $post['likes'] ?></small></i></a>
     </div>
     </div>
