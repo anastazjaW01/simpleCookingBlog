@@ -67,8 +67,11 @@ $like_result = mysqli_query($conn, $like_query);
                     </div>
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0 ">
                         <h2><?= $post['title'] ?>
-                        <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="<?= $all_class ?>" style="font-size:large;">
-                        <small><?= $post['likes'] ?></small></i></a>
+                        <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>">
+                            <i class="<?= $all_class ?>" style="font-size:large;">
+                                <small><?= $post['likes'] > 0 ? $post['likes'] : '' ?></small>
+                            </i>
+                        </a>
                         </h2>    
                     </div>
                     <div class="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 p-0">
