@@ -54,8 +54,11 @@ $category = mysqli_fetch_assoc($category_result);
                   <p class="card-subtitle"><small class="date"><?= date("m.d.Y",strtotime($post['date_time'])) ?></small></p>
                   <p class="card-text text"><?= substr($post['recipe_text'],0,150)?></p>
                   <a href="<?= $root ?>singlePost.php?id=<?= $post['id'] ?>" class="btn btn-success" style="width:70%;">Read more</a>
-                  <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>"><i class="<?= $all_class ?>" style="font-size:large;">
-                  <small><?= $post['likes'] ?></small></i></a>
+                  <a class="like" href="<?= $root ?>addLikes_logic.php?id=<?= $post['id'] ?>">
+                    <i class="<?= $all_class ?>" style="font-size:large;">
+                      <small><?= $post['likes'] > 0 ? $post['likes'] : '' ?></small>
+                    </i>
+                  </a>
               </div>
           </div>
         </div>
