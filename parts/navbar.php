@@ -1,6 +1,8 @@
 <?php
 require './config/database.php';
 
+$_SESSION['url'] = $_SERVER['REQUEST_URI'];
+
 //get user from database
 if(isset($_SESSION['user_id'])){
     $id = filter_var($_SESSION['user_id'],FILTER_SANITIZE_NUMBER_INT);
@@ -29,6 +31,8 @@ $logoTextTheme = ($color_mode == 0) ? 'textGreen.svg' : 'textWhite.svg';
 $dropdownThemeClass = ($color_mode == 0) ? '' : 'dropdown-menu-dark';
 $btnText = ($color_mode == 0) ? '<i class="bi bi-moon-stars pe-2"></i>Dark mode' : '<i class="bi bi-brightness-high pe-2"></i>Light mode';
 }
+
+$currentPath = $_SERVER['REQUEST_URI'];
 
 $script="";
 

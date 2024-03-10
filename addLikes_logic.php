@@ -1,6 +1,8 @@
 <?php
 require 'config/database.php';
 
+$url = $_SESSION['url'];
+
 //add like function
 function add_like($conn, $post_id, $user_id){
     $query = "INSERT INTO likes (post_id, user_id) VALUES (?, ?)";
@@ -52,7 +54,7 @@ if(isset($_SESSION['user_id'])){
         }
     }
 
-    header('location: ' . $root . 'index.php');
+    header('location: ' . $url);
     die();
 
 } else {
