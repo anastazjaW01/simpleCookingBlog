@@ -1,4 +1,5 @@
-![Logo](images/path13547.svg)
+![logoCooking](https://github.com/anastazjaW01/simpleCookingBlog/assets/126695947/d19c646e-2654-4707-9a12-4d97e052d866)
+
 
 
 
@@ -15,11 +16,19 @@ https://github.com/anastazjaW01/simpleCookingBlog/assets/126695947/bd8be297-79f4
 
 
 
-### User view
+### Create post
+
+
+
+https://github.com/anastazjaW01/simpleCookingBlog/assets/126695947/b06e4b08-431a-4ac4-8ccb-c3480f8c00da
 
 
 
 ### Admin view
+
+
+
+https://github.com/anastazjaW01/simpleCookingBlog/assets/126695947/4ec33c48-b153-47ab-b0ce-bbb9323ae838
 
 
 
