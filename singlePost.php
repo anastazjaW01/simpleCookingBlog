@@ -29,11 +29,13 @@ $com_query = "SELECT * FROM comments WHERE post_id=$id ORDER BY id DESC";
 $comment = mysqli_query($conn, $com_query);
 
 //get likes info from database
+if(isset($_SESSION['user_id'])){
 $user = $_SESSION['user_id'];
 $all_post = $_GET['id'];
 $like_query = "SELECT * FROM likes WHERE user_id = $user AND post_id = $all_post";
 $like_result = mysqli_query($conn, $like_query);
 (mysqli_num_rows($like_result) > 0) ? $class = 'bi bi-heart-fill ps-2' : $class = 'bi bi-heart ps-2';
+}
  
 //style for user logged in and user not logged in
 (isset($_SESSION['user_id'])) ? $all_class = $class : $all_class = 'bi bi-heart ps-2';

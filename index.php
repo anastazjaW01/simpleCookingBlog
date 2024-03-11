@@ -24,12 +24,13 @@ $query = "SELECT * FROM posts WHERE date_time < (SELECT MAX(date_time) FROM post
 $result = mysqli_query($conn, $query);
 
 //get likes info from database
+if(isset($_SESSION['user_id'])){
 $user = $_SESSION['user_id'];
 $first_post = $first['id'];
 $like_query = "SELECT * FROM likes WHERE user_id = $user AND post_id = $first_post";
 $like_result = mysqli_query($conn, $like_query);
 (mysqli_num_rows($like_result) > 0) ? $class = 'bi bi-heart-fill ps-2' : $class = 'bi bi-heart ps-2';
-
+}
 //style for user logged in and user not logged in
 (isset($_SESSION['user_id'])) ? $f_class = $class : $f_class = 'bi bi-heart ps-2';
 
@@ -74,10 +75,12 @@ $like_result = mysqli_query($conn, $like_query);
         $category = mysqli_fetch_assoc($category_result);
 
         //get all likes info from database
+        if(isset($_SESSION['user_id'])){
         $all_post = $post['id'];
         $likes_query = "SELECT * FROM likes WHERE user_id = $user AND post_id = $all_post";
         $likes_result = mysqli_query($conn, $likes_query);
         (mysqli_num_rows($likes_result) > 0) ? $class = 'bi bi-heart-fill ps-2' : $class = 'bi bi-heart ps-2';
+        }
 
         //style for user logged in and user not logged in
         (isset($_SESSION['user_id'])) ? $all_class = $class : $all_class = 'bi bi-heart ps-2';
