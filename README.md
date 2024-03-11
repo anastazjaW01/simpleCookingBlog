@@ -5,10 +5,25 @@
 # SimpleCookingBlog 
 
 
-
 Simple Cooking Blog is a web application that serves as a culinary blog with the ability to create, edit and delete posts, add comments and likes. The application allows you to register, log in and manage from the admin level.
 
-## Features 
+### Registration and login
+
+
+
+https://github.com/anastazjaW01/simpleCookingBlog/assets/126695947/bd8be297-79f4-4384-93c3-65f72ed01d9e
+
+
+
+### User view
+
+
+
+### Admin view
+
+
+
+## Aplication Features 
 
 ### Adding Posts
 - Adding posts by a logged in user. Determining the title, recipe text, ingredients, selecting a photo for the post, time needed to complete, number of servings, categories and difficulty level.
